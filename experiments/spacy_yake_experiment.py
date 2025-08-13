@@ -607,7 +607,16 @@ class SpacyYakeExperiment:
         
         for metric, weight in weights.items():
             if metric in results[0]:
-                values = [r[metric]['mean'] for r in results if metric in r and isinstance(r[metric], dict) and 'mean' in r[metric]]
+                values = []
+                for r in results:
+                    if metric in r:
+                        if isinstance(r[metric], dict) and 'mean' in r[metric]:
+                            # spaCy+YAKE format: {'mean': value, 'std': value, ...}
+                            values.append(r[metric]['mean'])
+                        elif isinstance(r[metric], (int, float)):
+                            # Baseline format: {'accuracy': value, ...}
+                            values.append(r[metric])
+                
                 if values:
                     if metric in ['processing_time', 'memory_usage']:
                         # Lower is better - invert and normalize

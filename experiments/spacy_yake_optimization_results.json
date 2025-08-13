@@ -1,0 +1,2875 @@
+{
+  "all_configurations": [
+    {
+      "config": {
+        "name": "Default",
+        "n_gram": 1,
+        "dedup_lim": 0.9,
+        "top_keywords": 20,
+        "min_score": 0.1,
+        "max_entities": 10,
+        "max_chunks": 15,
+        "entity_weight": 0.8,
+        "chunk_weight": 0.6
+      },
+      "avg_processing_time": 0.008858044942220053,
+      "avg_confidence": 0.8900937542619592,
+      "total_keywords": 49,
+      "results": [
+        {
+          "keywords": [
+            {
+              "keyword": "Machine",
+              "score": 0.7416830712200126,
+              "rank": 1,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "approaches",
+              "score": 0.7416830712200126,
+              "rank": 2,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "learning",
+              "score": 0.6026344174397849,
+              "rank": 3,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "algorithms",
+              "score": 0.6026344174397849,
+              "rank": 4,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "natural",
+              "score": 0.6026344174397849,
+              "rank": 5,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "language",
+              "score": 0.6026344174397849,
+              "rank": 6,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "processing",
+              "score": 0.6026344174397849,
+              "rank": 7,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "applications",
+              "score": 0.6026344174397849,
+              "rank": 8,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "social",
+              "score": 0.6026344174397849,
+              "rank": 9,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "media",
+              "score": 0.6026344174397849,
+              "rank": 10,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "analysis",
+              "score": 0.6026344174397849,
+              "rank": 11,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "require",
+              "score": 0.6026344174397849,
+              "rank": 12,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "sophisticated",
+              "score": 0.6026344174397849,
+              "rank": 13,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "Machine learning algorithms",
+              "score": 0.3,
+              "rank": 14,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "natural language processing applications",
+              "score": 0.3,
+              "rank": 15,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "social media analysis",
+              "score": 0.3,
+              "rank": 16,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "sophisticated approaches",
+              "score": 0.3,
+              "rank": 17,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            }
+          ],
+          "processing_time": 0.013313055038452148,
+          "confidence": 0.8477849843692741,
+          "entities_count": 0,
+          "noun_chunks_count": 4,
+          "yake_keywords_count": 13
+        },
+        {
+          "keywords": [
+            {
+              "keyword": "AI",
+              "score": 0.8,
+              "rank": 1,
+              "type": "entity_gpe",
+              "relevance": 0.8
+            },
+            {
+              "keyword": "Sustainable",
+              "score": 0.7416830712200126,
+              "rank": 2,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "insights",
+              "score": 0.7416830712200126,
+              "rank": 3,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "fashion",
+              "score": 0.6026344174397849,
+              "rank": 4,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "innovation",
+              "score": 0.6026344174397849,
+              "rank": 5,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "digital",
+              "score": 0.6026344174397849,
+              "rank": 6,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "age",
+              "score": 0.6026344174397849,
+              "rank": 7,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "transforms",
+              "score": 0.6026344174397849,
+              "rank": 8,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "traditional",
+              "score": 0.6026344174397849,
+              "rank": 9,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "retail",
+              "score": 0.6026344174397849,
+              "rank": 10,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "blockchain",
+              "score": 0.6026344174397849,
+              "rank": 11,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "technology",
+              "score": 0.6026344174397849,
+              "rank": 12,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "AI-driven",
+              "score": 0.6026344174397849,
+              "rank": 13,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "Sustainable fashion innovation",
+              "score": 0.3,
+              "rank": 14,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "the digital age",
+              "score": 0.3,
+              "rank": 15,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "traditional retail",
+              "score": 0.3,
+              "rank": 16,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "blockchain technology",
+              "score": 0.3,
+              "rank": 17,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "AI-driven insights",
+              "score": 0.3,
+              "rank": 18,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            }
+          ],
+          "processing_time": 0.006299018859863281,
+          "confidence": 0.9449839064909931,
+          "entities_count": 1,
+          "noun_chunks_count": 5,
+          "yake_keywords_count": 12
+        },
+        {
+          "keywords": [
+            {
+              "keyword": "physicists",
+              "score": 0.7416830712200126,
+              "rank": 1,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "computer",
+              "score": 0.7416830712200126,
+              "rank": 2,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "scientists",
+              "score": 0.7416830712200126,
+              "rank": 3,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "mathematicians",
+              "score": 0.7416830712200126,
+              "rank": 4,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "quantum",
+              "score": 0.6026344174397849,
+              "rank": 5,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "computing",
+              "score": 0.6026344174397849,
+              "rank": 6,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "paradigm",
+              "score": 0.6026344174397849,
+              "rank": 7,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "shift",
+              "score": 0.6026344174397849,
+              "rank": 8,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "necessitates",
+              "score": 0.6026344174397849,
+              "rank": 9,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "interdisciplinary",
+              "score": 0.6026344174397849,
+              "rank": 10,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "collaboration",
+              "score": 0.6026344174397849,
+              "rank": 11,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "The quantum computing paradigm shift",
+              "score": 0.3,
+              "rank": 12,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "interdisciplinary collaboration",
+              "score": 0.3,
+              "rank": 13,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "computer scientists",
+              "score": 0.3,
+              "rank": 14,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            }
+          ],
+          "processing_time": 0.0069620609283447266,
+          "confidence": 0.8775123719256104,
+          "entities_count": 0,
+          "noun_chunks_count": 5,
+          "yake_keywords_count": 11
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "High Precision",
+        "n_gram": 1,
+        "dedup_lim": 0.95,
+        "top_keywords": 15,
+        "min_score": 0.2,
+        "max_entities": 8,
+        "max_chunks": 10,
+        "entity_weight": 0.9,
+        "chunk_weight": 0.7
+      },
+      "avg_processing_time": 0.0065890153249104815,
+      "avg_confidence": 0.9161908597708294,
+      "total_keywords": 49,
+      "results": [
+        {
+          "keywords": [
+            {
+              "keyword": "Machine",
+              "score": 0.7416830712200126,
+              "rank": 1,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "approaches",
+              "score": 0.7416830712200126,
+              "rank": 2,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "learning",
+              "score": 0.6026344174397849,
+              "rank": 3,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "algorithms",
+              "score": 0.6026344174397849,
+              "rank": 4,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "natural",
+              "score": 0.6026344174397849,
+              "rank": 5,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "language",
+              "score": 0.6026344174397849,
+              "rank": 6,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "processing",
+              "score": 0.6026344174397849,
+              "rank": 7,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "applications",
+              "score": 0.6026344174397849,
+              "rank": 8,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "social",
+              "score": 0.6026344174397849,
+              "rank": 9,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "media",
+              "score": 0.6026344174397849,
+              "rank": 10,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "analysis",
+              "score": 0.6026344174397849,
+              "rank": 11,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "require",
+              "score": 0.6026344174397849,
+              "rank": 12,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "sophisticated",
+              "score": 0.6026344174397849,
+              "rank": 13,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "Machine learning algorithms",
+              "score": 0.39999999999999997,
+              "rank": 14,
+              "type": "noun_chunk",
+              "relevance": 0.7
+            },
+            {
+              "keyword": "natural language processing applications",
+              "score": 0.39999999999999997,
+              "rank": 15,
+              "type": "noun_chunk",
+              "relevance": 0.7
+            },
+            {
+              "keyword": "social media analysis",
+              "score": 0.39999999999999997,
+              "rank": 16,
+              "type": "noun_chunk",
+              "relevance": 0.7
+            },
+            {
+              "keyword": "sophisticated approaches",
+              "score": 0.39999999999999997,
+              "rank": 17,
+              "type": "noun_chunk",
+              "relevance": 0.7
+            }
+          ],
+          "processing_time": 0.006818056106567383,
+          "confidence": 0.8713143961339799,
+          "entities_count": 0,
+          "noun_chunks_count": 4,
+          "yake_keywords_count": 13
+        },
+        {
+          "keywords": [
+            {
+              "keyword": "AI",
+              "score": 0.9000000000000001,
+              "rank": 1,
+              "type": "entity_gpe",
+              "relevance": 0.9
+            },
+            {
+              "keyword": "Sustainable",
+              "score": 0.7416830712200126,
+              "rank": 2,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "insights",
+              "score": 0.7416830712200126,
+              "rank": 3,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "fashion",
+              "score": 0.6026344174397849,
+              "rank": 4,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "innovation",
+              "score": 0.6026344174397849,
+              "rank": 5,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "digital",
+              "score": 0.6026344174397849,
+              "rank": 6,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "age",
+              "score": 0.6026344174397849,
+              "rank": 7,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "transforms",
+              "score": 0.6026344174397849,
+              "rank": 8,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "traditional",
+              "score": 0.6026344174397849,
+              "rank": 9,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "retail",
+              "score": 0.6026344174397849,
+              "rank": 10,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "blockchain",
+              "score": 0.6026344174397849,
+              "rank": 11,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "technology",
+              "score": 0.6026344174397849,
+              "rank": 12,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "AI-driven",
+              "score": 0.6026344174397849,
+              "rank": 13,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "Sustainable fashion innovation",
+              "score": 0.39999999999999997,
+              "rank": 14,
+              "type": "noun_chunk",
+              "relevance": 0.7
+            },
+            {
+              "keyword": "the digital age",
+              "score": 0.39999999999999997,
+              "rank": 15,
+              "type": "noun_chunk",
+              "relevance": 0.7
+            },
+            {
+              "keyword": "traditional retail",
+              "score": 0.39999999999999997,
+              "rank": 16,
+              "type": "noun_chunk",
+              "relevance": 0.7
+            },
+            {
+              "keyword": "blockchain technology",
+              "score": 0.39999999999999997,
+              "rank": 17,
+              "type": "noun_chunk",
+              "relevance": 0.7
+            },
+            {
+              "keyword": "AI-driven insights",
+              "score": 0.39999999999999997,
+              "rank": 18,
+              "type": "noun_chunk",
+              "relevance": 0.7
+            }
+          ],
+          "processing_time": 0.006163120269775391,
+          "confidence": 0.9783172398243263,
+          "entities_count": 1,
+          "noun_chunks_count": 5,
+          "yake_keywords_count": 12
+        },
+        {
+          "keywords": [
+            {
+              "keyword": "physicists",
+              "score": 0.7416830712200126,
+              "rank": 1,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "computer",
+              "score": 0.7416830712200126,
+              "rank": 2,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "scientists",
+              "score": 0.7416830712200126,
+              "rank": 3,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "mathematicians",
+              "score": 0.7416830712200126,
+              "rank": 4,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "quantum",
+              "score": 0.6026344174397849,
+              "rank": 5,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "computing",
+              "score": 0.6026344174397849,
+              "rank": 6,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "paradigm",
+              "score": 0.6026344174397849,
+              "rank": 7,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "shift",
+              "score": 0.6026344174397849,
+              "rank": 8,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "necessitates",
+              "score": 0.6026344174397849,
+              "rank": 9,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "interdisciplinary",
+              "score": 0.6026344174397849,
+              "rank": 10,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "collaboration",
+              "score": 0.6026344174397849,
+              "rank": 11,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "The quantum computing paradigm shift",
+              "score": 0.39999999999999997,
+              "rank": 12,
+              "type": "noun_chunk",
+              "relevance": 0.7
+            },
+            {
+              "keyword": "interdisciplinary collaboration",
+              "score": 0.39999999999999997,
+              "rank": 13,
+              "type": "noun_chunk",
+              "relevance": 0.7
+            },
+            {
+              "keyword": "computer scientists",
+              "score": 0.39999999999999997,
+              "rank": 14,
+              "type": "noun_chunk",
+              "relevance": 0.7
+            }
+          ],
+          "processing_time": 0.006785869598388672,
+          "confidence": 0.8989409433541818,
+          "entities_count": 0,
+          "noun_chunks_count": 5,
+          "yake_keywords_count": 11
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "High Recall",
+        "n_gram": 2,
+        "dedup_lim": 0.8,
+        "top_keywords": 30,
+        "min_score": 0.05,
+        "max_entities": 15,
+        "max_chunks": 20,
+        "entity_weight": 0.7,
+        "chunk_weight": 0.5
+      },
+      "avg_processing_time": 0.017719348271687824,
+      "avg_confidence": 0.9255396220822406,
+      "total_keywords": 60,
+      "results": [
+        {
+          "keywords": [
+            {
+              "keyword": "Machine learning",
+              "score": 0.7505961599793436,
+              "rank": 1,
+              "type": "yake_keyword",
+              "relevance": 0.9505961599793437
+            },
+            {
+              "keyword": "sophisticated approaches",
+              "score": 0.7505961599793436,
+              "rank": 2,
+              "type": "yake_keyword",
+              "relevance": 0.9505961599793437
+            },
+            {
+              "keyword": "Machine",
+              "score": 0.7416830712200126,
+              "rank": 3,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "approaches",
+              "score": 0.7416830712200126,
+              "rank": 4,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "learning algorithms",
+              "score": 0.7029960071342576,
+              "rank": 5,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "natural language",
+              "score": 0.7029960071342576,
+              "rank": 6,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "language processing",
+              "score": 0.7029960071342576,
+              "rank": 7,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "processing applications",
+              "score": 0.7029960071342576,
+              "rank": 8,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "social media",
+              "score": 0.7029960071342576,
+              "rank": 9,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "media analysis",
+              "score": 0.7029960071342576,
+              "rank": 10,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "analysis require",
+              "score": 0.7029960071342576,
+              "rank": 11,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "require sophisticated",
+              "score": 0.7029960071342576,
+              "rank": 12,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "learning",
+              "score": 0.6026344174397849,
+              "rank": 13,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "algorithms",
+              "score": 0.6026344174397849,
+              "rank": 14,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "natural",
+              "score": 0.6026344174397849,
+              "rank": 15,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "language",
+              "score": 0.6026344174397849,
+              "rank": 16,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "processing",
+              "score": 0.6026344174397849,
+              "rank": 17,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "applications",
+              "score": 0.6026344174397849,
+              "rank": 18,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "social",
+              "score": 0.6026344174397849,
+              "rank": 19,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "media",
+              "score": 0.6026344174397849,
+              "rank": 20,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            }
+          ],
+          "processing_time": 0.02031683921813965,
+          "confidence": 0.8939816707892743,
+          "entities_count": 0,
+          "noun_chunks_count": 4,
+          "yake_keywords_count": 23
+        },
+        {
+          "keywords": [
+            {
+              "keyword": "Sustainable fashion",
+              "score": 0.7505961599793436,
+              "rank": 1,
+              "type": "yake_keyword",
+              "relevance": 0.9505961599793437
+            },
+            {
+              "keyword": "AI-driven insights",
+              "score": 0.7505961599793436,
+              "rank": 2,
+              "type": "yake_keyword",
+              "relevance": 0.9505961599793437
+            },
+            {
+              "keyword": "Sustainable",
+              "score": 0.7416830712200126,
+              "rank": 3,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "insights",
+              "score": 0.7416830712200126,
+              "rank": 4,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "fashion innovation",
+              "score": 0.7029960071342576,
+              "rank": 5,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "digital age",
+              "score": 0.7029960071342576,
+              "rank": 6,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "age transforms",
+              "score": 0.7029960071342576,
+              "rank": 7,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "transforms traditional",
+              "score": 0.7029960071342576,
+              "rank": 8,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "traditional retail",
+              "score": 0.7029960071342576,
+              "rank": 9,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "blockchain technology",
+              "score": 0.7029960071342576,
+              "rank": 10,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "AI",
+              "score": 0.7,
+              "rank": 11,
+              "type": "entity_gpe",
+              "relevance": 0.7
+            },
+            {
+              "keyword": "fashion",
+              "score": 0.6026344174397849,
+              "rank": 12,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "innovation",
+              "score": 0.6026344174397849,
+              "rank": 13,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "digital",
+              "score": 0.6026344174397849,
+              "rank": 14,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "age",
+              "score": 0.6026344174397849,
+              "rank": 15,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "transforms",
+              "score": 0.6026344174397849,
+              "rank": 16,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "traditional",
+              "score": 0.6026344174397849,
+              "rank": 17,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "retail",
+              "score": 0.6026344174397849,
+              "rank": 18,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "blockchain",
+              "score": 0.6026344174397849,
+              "rank": 19,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "technology",
+              "score": 0.6026344174397849,
+              "rank": 20,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            }
+          ],
+          "processing_time": 0.015613079071044922,
+          "confidence": 0.9741876415231577,
+          "entities_count": 1,
+          "noun_chunks_count": 5,
+          "yake_keywords_count": 20
+        },
+        {
+          "keywords": [
+            {
+              "keyword": "computer scientists",
+              "score": 0.7742913828560065,
+              "rank": 1,
+              "type": "yake_keyword",
+              "relevance": 0.9742913828560066
+            },
+            {
+              "keyword": "physicists",
+              "score": 0.7416830712200126,
+              "rank": 2,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "computer",
+              "score": 0.7416830712200126,
+              "rank": 3,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "scientists",
+              "score": 0.7416830712200126,
+              "rank": 4,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "mathematicians",
+              "score": 0.7416830712200126,
+              "rank": 5,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "quantum computing",
+              "score": 0.7029960071342576,
+              "rank": 6,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "computing paradigm",
+              "score": 0.7029960071342576,
+              "rank": 7,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "paradigm shift",
+              "score": 0.7029960071342576,
+              "rank": 8,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "shift necessitates",
+              "score": 0.7029960071342576,
+              "rank": 9,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "necessitates interdisciplinary",
+              "score": 0.7029960071342576,
+              "rank": 10,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "interdisciplinary collaboration",
+              "score": 0.7029960071342576,
+              "rank": 11,
+              "type": "yake_keyword",
+              "relevance": 0.9029960071342576
+            },
+            {
+              "keyword": "quantum",
+              "score": 0.6026344174397849,
+              "rank": 12,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "computing",
+              "score": 0.6026344174397849,
+              "rank": 13,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "paradigm",
+              "score": 0.6026344174397849,
+              "rank": 14,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "shift",
+              "score": 0.6026344174397849,
+              "rank": 15,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "necessitates",
+              "score": 0.6026344174397849,
+              "rank": 16,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "interdisciplinary",
+              "score": 0.6026344174397849,
+              "rank": 17,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "collaboration",
+              "score": 0.6026344174397849,
+              "rank": 18,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "The quantum computing paradigm shift",
+              "score": 0.2,
+              "rank": 19,
+              "type": "noun_chunk",
+              "relevance": 0.5
+            },
+            {
+              "keyword": "interdisciplinary collaboration",
+              "score": 0.2,
+              "rank": 20,
+              "type": "noun_chunk",
+              "relevance": 0.5
+            }
+          ],
+          "processing_time": 0.017228126525878906,
+          "confidence": 0.90844955393429,
+          "entities_count": 0,
+          "noun_chunks_count": 5,
+          "yake_keywords_count": 18
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "Balanced",
+        "n_gram": 1,
+        "dedup_lim": 0.9,
+        "top_keywords": 25,
+        "min_score": 0.15,
+        "max_entities": 12,
+        "max_chunks": 18,
+        "entity_weight": 0.8,
+        "chunk_weight": 0.6
+      },
+      "avg_processing_time": 0.006454308827718099,
+      "avg_confidence": 0.8900937542619592,
+      "total_keywords": 49,
+      "results": [
+        {
+          "keywords": [
+            {
+              "keyword": "Machine",
+              "score": 0.7416830712200126,
+              "rank": 1,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "approaches",
+              "score": 0.7416830712200126,
+              "rank": 2,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "learning",
+              "score": 0.6026344174397849,
+              "rank": 3,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "algorithms",
+              "score": 0.6026344174397849,
+              "rank": 4,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "natural",
+              "score": 0.6026344174397849,
+              "rank": 5,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "language",
+              "score": 0.6026344174397849,
+              "rank": 6,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "processing",
+              "score": 0.6026344174397849,
+              "rank": 7,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "applications",
+              "score": 0.6026344174397849,
+              "rank": 8,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "social",
+              "score": 0.6026344174397849,
+              "rank": 9,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "media",
+              "score": 0.6026344174397849,
+              "rank": 10,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "analysis",
+              "score": 0.6026344174397849,
+              "rank": 11,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "require",
+              "score": 0.6026344174397849,
+              "rank": 12,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "sophisticated",
+              "score": 0.6026344174397849,
+              "rank": 13,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "Machine learning algorithms",
+              "score": 0.3,
+              "rank": 14,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "natural language processing applications",
+              "score": 0.3,
+              "rank": 15,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "social media analysis",
+              "score": 0.3,
+              "rank": 16,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "sophisticated approaches",
+              "score": 0.3,
+              "rank": 17,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            }
+          ],
+          "processing_time": 0.00659489631652832,
+          "confidence": 0.8477849843692741,
+          "entities_count": 0,
+          "noun_chunks_count": 4,
+          "yake_keywords_count": 13
+        },
+        {
+          "keywords": [
+            {
+              "keyword": "AI",
+              "score": 0.8,
+              "rank": 1,
+              "type": "entity_gpe",
+              "relevance": 0.8
+            },
+            {
+              "keyword": "Sustainable",
+              "score": 0.7416830712200126,
+              "rank": 2,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "insights",
+              "score": 0.7416830712200126,
+              "rank": 3,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "fashion",
+              "score": 0.6026344174397849,
+              "rank": 4,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "innovation",
+              "score": 0.6026344174397849,
+              "rank": 5,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "digital",
+              "score": 0.6026344174397849,
+              "rank": 6,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "age",
+              "score": 0.6026344174397849,
+              "rank": 7,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "transforms",
+              "score": 0.6026344174397849,
+              "rank": 8,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "traditional",
+              "score": 0.6026344174397849,
+              "rank": 9,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "retail",
+              "score": 0.6026344174397849,
+              "rank": 10,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "blockchain",
+              "score": 0.6026344174397849,
+              "rank": 11,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "technology",
+              "score": 0.6026344174397849,
+              "rank": 12,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "AI-driven",
+              "score": 0.6026344174397849,
+              "rank": 13,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "Sustainable fashion innovation",
+              "score": 0.3,
+              "rank": 14,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "the digital age",
+              "score": 0.3,
+              "rank": 15,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "traditional retail",
+              "score": 0.3,
+              "rank": 16,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "blockchain technology",
+              "score": 0.3,
+              "rank": 17,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "AI-driven insights",
+              "score": 0.3,
+              "rank": 18,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            }
+          ],
+          "processing_time": 0.0061948299407958984,
+          "confidence": 0.9449839064909931,
+          "entities_count": 1,
+          "noun_chunks_count": 5,
+          "yake_keywords_count": 12
+        },
+        {
+          "keywords": [
+            {
+              "keyword": "physicists",
+              "score": 0.7416830712200126,
+              "rank": 1,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "computer",
+              "score": 0.7416830712200126,
+              "rank": 2,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "scientists",
+              "score": 0.7416830712200126,
+              "rank": 3,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "mathematicians",
+              "score": 0.7416830712200126,
+              "rank": 4,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "quantum",
+              "score": 0.6026344174397849,
+              "rank": 5,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "computing",
+              "score": 0.6026344174397849,
+              "rank": 6,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "paradigm",
+              "score": 0.6026344174397849,
+              "rank": 7,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "shift",
+              "score": 0.6026344174397849,
+              "rank": 8,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "necessitates",
+              "score": 0.6026344174397849,
+              "rank": 9,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "interdisciplinary",
+              "score": 0.6026344174397849,
+              "rank": 10,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "collaboration",
+              "score": 0.6026344174397849,
+              "rank": 11,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "The quantum computing paradigm shift",
+              "score": 0.3,
+              "rank": 12,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "interdisciplinary collaboration",
+              "score": 0.3,
+              "rank": 13,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "computer scientists",
+              "score": 0.3,
+              "rank": 14,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            }
+          ],
+          "processing_time": 0.006573200225830078,
+          "confidence": 0.8775123719256104,
+          "entities_count": 0,
+          "noun_chunks_count": 5,
+          "yake_keywords_count": 11
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "Fast Processing",
+        "n_gram": 1,
+        "dedup_lim": 0.85,
+        "top_keywords": 15,
+        "min_score": 0.25,
+        "max_entities": 5,
+        "max_chunks": 8,
+        "entity_weight": 0.8,
+        "chunk_weight": 0.6
+      },
+      "avg_processing_time": 0.006506284077962239,
+      "avg_confidence": 0.8900937542619592,
+      "total_keywords": 49,
+      "results": [
+        {
+          "keywords": [
+            {
+              "keyword": "Machine",
+              "score": 0.7416830712200126,
+              "rank": 1,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "approaches",
+              "score": 0.7416830712200126,
+              "rank": 2,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "learning",
+              "score": 0.6026344174397849,
+              "rank": 3,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "algorithms",
+              "score": 0.6026344174397849,
+              "rank": 4,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "natural",
+              "score": 0.6026344174397849,
+              "rank": 5,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "language",
+              "score": 0.6026344174397849,
+              "rank": 6,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "processing",
+              "score": 0.6026344174397849,
+              "rank": 7,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "applications",
+              "score": 0.6026344174397849,
+              "rank": 8,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "social",
+              "score": 0.6026344174397849,
+              "rank": 9,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "media",
+              "score": 0.6026344174397849,
+              "rank": 10,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "analysis",
+              "score": 0.6026344174397849,
+              "rank": 11,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "require",
+              "score": 0.6026344174397849,
+              "rank": 12,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "sophisticated",
+              "score": 0.6026344174397849,
+              "rank": 13,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "Machine learning algorithms",
+              "score": 0.3,
+              "rank": 14,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "natural language processing applications",
+              "score": 0.3,
+              "rank": 15,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "social media analysis",
+              "score": 0.3,
+              "rank": 16,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "sophisticated approaches",
+              "score": 0.3,
+              "rank": 17,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            }
+          ],
+          "processing_time": 0.0065212249755859375,
+          "confidence": 0.8477849843692741,
+          "entities_count": 0,
+          "noun_chunks_count": 4,
+          "yake_keywords_count": 13
+        },
+        {
+          "keywords": [
+            {
+              "keyword": "AI",
+              "score": 0.8,
+              "rank": 1,
+              "type": "entity_gpe",
+              "relevance": 0.8
+            },
+            {
+              "keyword": "Sustainable",
+              "score": 0.7416830712200126,
+              "rank": 2,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "insights",
+              "score": 0.7416830712200126,
+              "rank": 3,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "fashion",
+              "score": 0.6026344174397849,
+              "rank": 4,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "innovation",
+              "score": 0.6026344174397849,
+              "rank": 5,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "digital",
+              "score": 0.6026344174397849,
+              "rank": 6,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "age",
+              "score": 0.6026344174397849,
+              "rank": 7,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "transforms",
+              "score": 0.6026344174397849,
+              "rank": 8,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "traditional",
+              "score": 0.6026344174397849,
+              "rank": 9,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "retail",
+              "score": 0.6026344174397849,
+              "rank": 10,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "blockchain",
+              "score": 0.6026344174397849,
+              "rank": 11,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "technology",
+              "score": 0.6026344174397849,
+              "rank": 12,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "AI-driven",
+              "score": 0.6026344174397849,
+              "rank": 13,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "Sustainable fashion innovation",
+              "score": 0.3,
+              "rank": 14,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "the digital age",
+              "score": 0.3,
+              "rank": 15,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "traditional retail",
+              "score": 0.3,
+              "rank": 16,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "blockchain technology",
+              "score": 0.3,
+              "rank": 17,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "AI-driven insights",
+              "score": 0.3,
+              "rank": 18,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            }
+          ],
+          "processing_time": 0.006201744079589844,
+          "confidence": 0.9449839064909931,
+          "entities_count": 1,
+          "noun_chunks_count": 5,
+          "yake_keywords_count": 12
+        },
+        {
+          "keywords": [
+            {
+              "keyword": "physicists",
+              "score": 0.7416830712200126,
+              "rank": 1,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "computer",
+              "score": 0.7416830712200126,
+              "rank": 2,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "scientists",
+              "score": 0.7416830712200126,
+              "rank": 3,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "mathematicians",
+              "score": 0.7416830712200126,
+              "rank": 4,
+              "type": "yake_keyword",
+              "relevance": 0.8416830712200127
+            },
+            {
+              "keyword": "quantum",
+              "score": 0.6026344174397849,
+              "rank": 5,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "computing",
+              "score": 0.6026344174397849,
+              "rank": 6,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "paradigm",
+              "score": 0.6026344174397849,
+              "rank": 7,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "shift",
+              "score": 0.6026344174397849,
+              "rank": 8,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "necessitates",
+              "score": 0.6026344174397849,
+              "rank": 9,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "interdisciplinary",
+              "score": 0.6026344174397849,
+              "rank": 10,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "collaboration",
+              "score": 0.6026344174397849,
+              "rank": 11,
+              "type": "yake_keyword",
+              "relevance": 0.7026344174397849
+            },
+            {
+              "keyword": "The quantum computing paradigm shift",
+              "score": 0.3,
+              "rank": 12,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "interdisciplinary collaboration",
+              "score": 0.3,
+              "rank": 13,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            },
+            {
+              "keyword": "computer scientists",
+              "score": 0.3,
+              "rank": 14,
+              "type": "noun_chunk",
+              "relevance": 0.6
+            }
+          ],
+          "processing_time": 0.0067958831787109375,
+          "confidence": 0.8775123719256104,
+          "entities_count": 0,
+          "noun_chunks_count": 5,
+          "yake_keywords_count": 11
+        }
+      ]
+    }
+  ],
+  "best_by_time": {
+    "config": {
+      "name": "Balanced",
+      "n_gram": 1,
+      "dedup_lim": 0.9,
+      "top_keywords": 25,
+      "min_score": 0.15,
+      "max_entities": 12,
+      "max_chunks": 18,
+      "entity_weight": 0.8,
+      "chunk_weight": 0.6
+    },
+    "avg_processing_time": 0.006454308827718099,
+    "avg_confidence": 0.8900937542619592,
+    "total_keywords": 49,
+    "results": [
+      {
+        "keywords": [
+          {
+            "keyword": "Machine",
+            "score": 0.7416830712200126,
+            "rank": 1,
+            "type": "yake_keyword",
+            "relevance": 0.8416830712200127
+          },
+          {
+            "keyword": "approaches",
+            "score": 0.7416830712200126,
+            "rank": 2,
+            "type": "yake_keyword",
+            "relevance": 0.8416830712200127
+          },
+          {
+            "keyword": "learning",
+            "score": 0.6026344174397849,
+            "rank": 3,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "algorithms",
+            "score": 0.6026344174397849,
+            "rank": 4,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "natural",
+            "score": 0.6026344174397849,
+            "rank": 5,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "language",
+            "score": 0.6026344174397849,
+            "rank": 6,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "processing",
+            "score": 0.6026344174397849,
+            "rank": 7,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "applications",
+            "score": 0.6026344174397849,
+            "rank": 8,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "social",
+            "score": 0.6026344174397849,
+            "rank": 9,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "media",
+            "score": 0.6026344174397849,
+            "rank": 10,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "analysis",
+            "score": 0.6026344174397849,
+            "rank": 11,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "require",
+            "score": 0.6026344174397849,
+            "rank": 12,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "sophisticated",
+            "score": 0.6026344174397849,
+            "rank": 13,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "Machine learning algorithms",
+            "score": 0.3,
+            "rank": 14,
+            "type": "noun_chunk",
+            "relevance": 0.6
+          },
+          {
+            "keyword": "natural language processing applications",
+            "score": 0.3,
+            "rank": 15,
+            "type": "noun_chunk",
+            "relevance": 0.6
+          },
+          {
+            "keyword": "social media analysis",
+            "score": 0.3,
+            "rank": 16,
+            "type": "noun_chunk",
+            "relevance": 0.6
+          },
+          {
+            "keyword": "sophisticated approaches",
+            "score": 0.3,
+            "rank": 17,
+            "type": "noun_chunk",
+            "relevance": 0.6
+          }
+        ],
+        "processing_time": 0.00659489631652832,
+        "confidence": 0.8477849843692741,
+        "entities_count": 0,
+        "noun_chunks_count": 4,
+        "yake_keywords_count": 13
+      },
+      {
+        "keywords": [
+          {
+            "keyword": "AI",
+            "score": 0.8,
+            "rank": 1,
+            "type": "entity_gpe",
+            "relevance": 0.8
+          },
+          {
+            "keyword": "Sustainable",
+            "score": 0.7416830712200126,
+            "rank": 2,
+            "type": "yake_keyword",
+            "relevance": 0.8416830712200127
+          },
+          {
+            "keyword": "insights",
+            "score": 0.7416830712200126,
+            "rank": 3,
+            "type": "yake_keyword",
+            "relevance": 0.8416830712200127
+          },
+          {
+            "keyword": "fashion",
+            "score": 0.6026344174397849,
+            "rank": 4,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "innovation",
+            "score": 0.6026344174397849,
+            "rank": 5,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "digital",
+            "score": 0.6026344174397849,
+            "rank": 6,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "age",
+            "score": 0.6026344174397849,
+            "rank": 7,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "transforms",
+            "score": 0.6026344174397849,
+            "rank": 8,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "traditional",
+            "score": 0.6026344174397849,
+            "rank": 9,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "retail",
+            "score": 0.6026344174397849,
+            "rank": 10,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "blockchain",
+            "score": 0.6026344174397849,
+            "rank": 11,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "technology",
+            "score": 0.6026344174397849,
+            "rank": 12,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "AI-driven",
+            "score": 0.6026344174397849,
+            "rank": 13,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "Sustainable fashion innovation",
+            "score": 0.3,
+            "rank": 14,
+            "type": "noun_chunk",
+            "relevance": 0.6
+          },
+          {
+            "keyword": "the digital age",
+            "score": 0.3,
+            "rank": 15,
+            "type": "noun_chunk",
+            "relevance": 0.6
+          },
+          {
+            "keyword": "traditional retail",
+            "score": 0.3,
+            "rank": 16,
+            "type": "noun_chunk",
+            "relevance": 0.6
+          },
+          {
+            "keyword": "blockchain technology",
+            "score": 0.3,
+            "rank": 17,
+            "type": "noun_chunk",
+            "relevance": 0.6
+          },
+          {
+            "keyword": "AI-driven insights",
+            "score": 0.3,
+            "rank": 18,
+            "type": "noun_chunk",
+            "relevance": 0.6
+          }
+        ],
+        "processing_time": 0.0061948299407958984,
+        "confidence": 0.9449839064909931,
+        "entities_count": 1,
+        "noun_chunks_count": 5,
+        "yake_keywords_count": 12
+      },
+      {
+        "keywords": [
+          {
+            "keyword": "physicists",
+            "score": 0.7416830712200126,
+            "rank": 1,
+            "type": "yake_keyword",
+            "relevance": 0.8416830712200127
+          },
+          {
+            "keyword": "computer",
+            "score": 0.7416830712200126,
+            "rank": 2,
+            "type": "yake_keyword",
+            "relevance": 0.8416830712200127
+          },
+          {
+            "keyword": "scientists",
+            "score": 0.7416830712200126,
+            "rank": 3,
+            "type": "yake_keyword",
+            "relevance": 0.8416830712200127
+          },
+          {
+            "keyword": "mathematicians",
+            "score": 0.7416830712200126,
+            "rank": 4,
+            "type": "yake_keyword",
+            "relevance": 0.8416830712200127
+          },
+          {
+            "keyword": "quantum",
+            "score": 0.6026344174397849,
+            "rank": 5,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "computing",
+            "score": 0.6026344174397849,
+            "rank": 6,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "paradigm",
+            "score": 0.6026344174397849,
+            "rank": 7,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "shift",
+            "score": 0.6026344174397849,
+            "rank": 8,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "necessitates",
+            "score": 0.6026344174397849,
+            "rank": 9,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "interdisciplinary",
+            "score": 0.6026344174397849,
+            "rank": 10,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "collaboration",
+            "score": 0.6026344174397849,
+            "rank": 11,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "The quantum computing paradigm shift",
+            "score": 0.3,
+            "rank": 12,
+            "type": "noun_chunk",
+            "relevance": 0.6
+          },
+          {
+            "keyword": "interdisciplinary collaboration",
+            "score": 0.3,
+            "rank": 13,
+            "type": "noun_chunk",
+            "relevance": 0.6
+          },
+          {
+            "keyword": "computer scientists",
+            "score": 0.3,
+            "rank": 14,
+            "type": "noun_chunk",
+            "relevance": 0.6
+          }
+        ],
+        "processing_time": 0.006573200225830078,
+        "confidence": 0.8775123719256104,
+        "entities_count": 0,
+        "noun_chunks_count": 5,
+        "yake_keywords_count": 11
+      }
+    ]
+  },
+  "best_by_confidence": {
+    "config": {
+      "name": "High Recall",
+      "n_gram": 2,
+      "dedup_lim": 0.8,
+      "top_keywords": 30,
+      "min_score": 0.05,
+      "max_entities": 15,
+      "max_chunks": 20,
+      "entity_weight": 0.7,
+      "chunk_weight": 0.5
+    },
+    "avg_processing_time": 0.017719348271687824,
+    "avg_confidence": 0.9255396220822406,
+    "total_keywords": 60,
+    "results": [
+      {
+        "keywords": [
+          {
+            "keyword": "Machine learning",
+            "score": 0.7505961599793436,
+            "rank": 1,
+            "type": "yake_keyword",
+            "relevance": 0.9505961599793437
+          },
+          {
+            "keyword": "sophisticated approaches",
+            "score": 0.7505961599793436,
+            "rank": 2,
+            "type": "yake_keyword",
+            "relevance": 0.9505961599793437
+          },
+          {
+            "keyword": "Machine",
+            "score": 0.7416830712200126,
+            "rank": 3,
+            "type": "yake_keyword",
+            "relevance": 0.8416830712200127
+          },
+          {
+            "keyword": "approaches",
+            "score": 0.7416830712200126,
+            "rank": 4,
+            "type": "yake_keyword",
+            "relevance": 0.8416830712200127
+          },
+          {
+            "keyword": "learning algorithms",
+            "score": 0.7029960071342576,
+            "rank": 5,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "natural language",
+            "score": 0.7029960071342576,
+            "rank": 6,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "language processing",
+            "score": 0.7029960071342576,
+            "rank": 7,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "processing applications",
+            "score": 0.7029960071342576,
+            "rank": 8,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "social media",
+            "score": 0.7029960071342576,
+            "rank": 9,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "media analysis",
+            "score": 0.7029960071342576,
+            "rank": 10,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "analysis require",
+            "score": 0.7029960071342576,
+            "rank": 11,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "require sophisticated",
+            "score": 0.7029960071342576,
+            "rank": 12,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "learning",
+            "score": 0.6026344174397849,
+            "rank": 13,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "algorithms",
+            "score": 0.6026344174397849,
+            "rank": 14,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "natural",
+            "score": 0.6026344174397849,
+            "rank": 15,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "language",
+            "score": 0.6026344174397849,
+            "rank": 16,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "processing",
+            "score": 0.6026344174397849,
+            "rank": 17,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "applications",
+            "score": 0.6026344174397849,
+            "rank": 18,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "social",
+            "score": 0.6026344174397849,
+            "rank": 19,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "media",
+            "score": 0.6026344174397849,
+            "rank": 20,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          }
+        ],
+        "processing_time": 0.02031683921813965,
+        "confidence": 0.8939816707892743,
+        "entities_count": 0,
+        "noun_chunks_count": 4,
+        "yake_keywords_count": 23
+      },
+      {
+        "keywords": [
+          {
+            "keyword": "Sustainable fashion",
+            "score": 0.7505961599793436,
+            "rank": 1,
+            "type": "yake_keyword",
+            "relevance": 0.9505961599793437
+          },
+          {
+            "keyword": "AI-driven insights",
+            "score": 0.7505961599793436,
+            "rank": 2,
+            "type": "yake_keyword",
+            "relevance": 0.9505961599793437
+          },
+          {
+            "keyword": "Sustainable",
+            "score": 0.7416830712200126,
+            "rank": 3,
+            "type": "yake_keyword",
+            "relevance": 0.8416830712200127
+          },
+          {
+            "keyword": "insights",
+            "score": 0.7416830712200126,
+            "rank": 4,
+            "type": "yake_keyword",
+            "relevance": 0.8416830712200127
+          },
+          {
+            "keyword": "fashion innovation",
+            "score": 0.7029960071342576,
+            "rank": 5,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "digital age",
+            "score": 0.7029960071342576,
+            "rank": 6,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "age transforms",
+            "score": 0.7029960071342576,
+            "rank": 7,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "transforms traditional",
+            "score": 0.7029960071342576,
+            "rank": 8,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "traditional retail",
+            "score": 0.7029960071342576,
+            "rank": 9,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "blockchain technology",
+            "score": 0.7029960071342576,
+            "rank": 10,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "AI",
+            "score": 0.7,
+            "rank": 11,
+            "type": "entity_gpe",
+            "relevance": 0.7
+          },
+          {
+            "keyword": "fashion",
+            "score": 0.6026344174397849,
+            "rank": 12,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "innovation",
+            "score": 0.6026344174397849,
+            "rank": 13,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "digital",
+            "score": 0.6026344174397849,
+            "rank": 14,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "age",
+            "score": 0.6026344174397849,
+            "rank": 15,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "transforms",
+            "score": 0.6026344174397849,
+            "rank": 16,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "traditional",
+            "score": 0.6026344174397849,
+            "rank": 17,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "retail",
+            "score": 0.6026344174397849,
+            "rank": 18,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "blockchain",
+            "score": 0.6026344174397849,
+            "rank": 19,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "technology",
+            "score": 0.6026344174397849,
+            "rank": 20,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          }
+        ],
+        "processing_time": 0.015613079071044922,
+        "confidence": 0.9741876415231577,
+        "entities_count": 1,
+        "noun_chunks_count": 5,
+        "yake_keywords_count": 20
+      },
+      {
+        "keywords": [
+          {
+            "keyword": "computer scientists",
+            "score": 0.7742913828560065,
+            "rank": 1,
+            "type": "yake_keyword",
+            "relevance": 0.9742913828560066
+          },
+          {
+            "keyword": "physicists",
+            "score": 0.7416830712200126,
+            "rank": 2,
+            "type": "yake_keyword",
+            "relevance": 0.8416830712200127
+          },
+          {
+            "keyword": "computer",
+            "score": 0.7416830712200126,
+            "rank": 3,
+            "type": "yake_keyword",
+            "relevance": 0.8416830712200127
+          },
+          {
+            "keyword": "scientists",
+            "score": 0.7416830712200126,
+            "rank": 4,
+            "type": "yake_keyword",
+            "relevance": 0.8416830712200127
+          },
+          {
+            "keyword": "mathematicians",
+            "score": 0.7416830712200126,
+            "rank": 5,
+            "type": "yake_keyword",
+            "relevance": 0.8416830712200127
+          },
+          {
+            "keyword": "quantum computing",
+            "score": 0.7029960071342576,
+            "rank": 6,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "computing paradigm",
+            "score": 0.7029960071342576,
+            "rank": 7,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "paradigm shift",
+            "score": 0.7029960071342576,
+            "rank": 8,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "shift necessitates",
+            "score": 0.7029960071342576,
+            "rank": 9,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "necessitates interdisciplinary",
+            "score": 0.7029960071342576,
+            "rank": 10,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "interdisciplinary collaboration",
+            "score": 0.7029960071342576,
+            "rank": 11,
+            "type": "yake_keyword",
+            "relevance": 0.9029960071342576
+          },
+          {
+            "keyword": "quantum",
+            "score": 0.6026344174397849,
+            "rank": 12,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "computing",
+            "score": 0.6026344174397849,
+            "rank": 13,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "paradigm",
+            "score": 0.6026344174397849,
+            "rank": 14,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "shift",
+            "score": 0.6026344174397849,
+            "rank": 15,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "necessitates",
+            "score": 0.6026344174397849,
+            "rank": 16,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "interdisciplinary",
+            "score": 0.6026344174397849,
+            "rank": 17,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "collaboration",
+            "score": 0.6026344174397849,
+            "rank": 18,
+            "type": "yake_keyword",
+            "relevance": 0.7026344174397849
+          },
+          {
+            "keyword": "The quantum computing paradigm shift",
+            "score": 0.2,
+            "rank": 19,
+            "type": "noun_chunk",
+            "relevance": 0.5
+          },
+          {
+            "keyword": "interdisciplinary collaboration",
+            "score": 0.2,
+            "rank": 20,
+            "type": "noun_chunk",
+            "relevance": 0.5
+          }
+        ],
+        "processing_time": 0.017228126525878906,
+        "confidence": 0.90844955393429,
+        "entities_count": 0,
+        "noun_chunks_count": 5,
+        "yake_keywords_count": 18
+      }
+    ]
+  },
+  "recommendations": []
+}

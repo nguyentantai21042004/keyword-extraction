@@ -109,7 +109,7 @@ class ExperimentVisualizer:
         plt.tight_layout()
         plt.savefig('experiment_visualizations/performance_comparison.png', dpi=300, bbox_inches='tight')
         print("✅ Created performance comparison chart")
-        plt.show()
+        # plt.show()  # Comment out to avoid display
     
     def create_radar_chart(self):
         """Create radar chart for method comparison"""
@@ -193,7 +193,7 @@ class ExperimentVisualizer:
         plt.tight_layout()
         plt.savefig('experiment_visualizations/radar_chart.png', dpi=300, bbox_inches='tight')
         print("✅ Created radar chart")
-        plt.show()
+        # plt.show()  # Comment out to avoid display
     
     def create_domain_performance_chart(self):
         """Create domain performance chart"""
@@ -242,7 +242,7 @@ class ExperimentVisualizer:
         plt.tight_layout()
         plt.savefig('experiment_visualizations/domain_performance.png', dpi=300, bbox_inches='tight')
         print("✅ Created domain performance chart")
-        plt.show()
+        # plt.show()  # Comment out to avoid display
     
     def create_processing_time_analysis(self):
         """Create processing time analysis chart"""
@@ -300,7 +300,7 @@ class ExperimentVisualizer:
         plt.tight_layout()
         plt.savefig('experiment_visualizations/processing_time_analysis.png', dpi=300, bbox_inches='tight')
         print("✅ Created processing time analysis chart")
-        plt.show()
+        # plt.show()  # Comment out to avoid display
     
     def create_all_charts(self):
         """Create all charts"""
