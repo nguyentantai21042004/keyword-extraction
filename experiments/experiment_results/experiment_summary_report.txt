@@ -1,0 +1,107 @@
+🧪 SPAÇY + YAKE ALGORITHM EXPERIMENT SUMMARY REPORT
+============================================================
+
+EXPERIMENT SUMMARY:
+--------------------
+Total Test Cases: 10
+Total Iterations: 50
+spaCy + YAKE Success Rate: 100.0%
+Baseline Methods Tested: rake, tfidf, hybrid_ensemble
+Experiment Timestamp: 2025-08-13T10:07:22.110545
+
+PERFORMANCE RANKING:
+--------------------
+Best Method: spacy_yake
+Best Score: 0.670
+
+Method Rankings:
+1. spacy_yake: 0.670
+2. rake: 0.000
+3. tfidf: 0.000
+4. hybrid_ensemble: 0.000
+
+SPAÇY + YAKE OVERALL PERFORMANCE:
+------------------------------
+Processing Time:
+  Mean: 0.0075
+  Std: 0.0029
+  Range: 0.0021 - 0.0104
+  Median: 0.0089
+
+Memory Usage:
+  Mean: 0.0628
+  Std: 0.1224
+  Range: 0.0000 - 0.4188
+  Median: 0.0141
+
+Confidence Score:
+  Mean: 0.8530
+  Std: 0.0958
+  Range: 0.6897 - 1.0000
+  Median: 0.8304
+
+Accuracy:
+  Mean: 0.1622
+  Std: 0.1846
+  Range: 0.0000 - 0.5263
+  Median: 0.0870
+
+Keywords Count:
+  Mean: 13.8000
+  Std: 5.4553
+  Range: 3.0000 - 20.0000
+  Median: 15.0000
+
+BASELINE METHODS PERFORMANCE:
+------------------------------
+RAKE:
+
+TFIDF:
+
+HYBRID_ENSEMBLE:
+
+DOMAIN-SPECIFIC PERFORMANCE:
+------------------------------
+Social Media:
+  Test Cases: 2
+  Avg Accuracy: 0.437
+  Avg Confidence: 0.907
+  Avg Processing Time: 0.008s
+
+Business:
+  Test Cases: 2
+  Avg Accuracy: 0.037
+  Avg Confidence: 0.883
+  Avg Processing Time: 0.010s
+
+Technical:
+  Test Cases: 2
+  Avg Accuracy: 0.000
+  Avg Confidence: 0.747
+  Avg Processing Time: 0.008s
+
+Short Text:
+  Test Cases: 2
+  Avg Accuracy: 0.200
+  Avg Confidence: 0.897
+  Avg Processing Time: 0.002s
+
+Challenging:
+  Test Cases: 2
+  Avg Accuracy: 0.137
+  Avg Confidence: 0.830
+  Avg Processing Time: 0.009s
+
+STATISTICAL INSIGHTS:
+--------------------
+Accuracy-Complexity Correlation: -0.214
+Processing Time-Accuracy Correlation: -0.311
+Overall Accuracy Consistency (Std): 0.185
+
+OPTIMIZATION RECOMMENDATIONS:
+-------------------------
+• Consider tuning YAKE parameters for better accuracy
+
+============================================================
+Report generated automatically by spaCy + YAKE Experiment Framework
+For detailed analysis, check the JSON files in this directory.

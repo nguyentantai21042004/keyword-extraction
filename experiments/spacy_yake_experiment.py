@@ -19,6 +19,11 @@ import json
 import os
 from datetime import datetime
 
+# Add parent directory to path to import modules
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 # Import our algorithm
 from multi_method_extractor import SpacyYakeExtractor, RakeExtractor, TfIdfExtractor
 from hybrid_ensemble import HybridEnsembleExtractor
@@ -520,7 +525,7 @@ class SpacyYakeExperiment:
         
         for metric in metrics:
             if metric in results[0]:
-                values = [r[metric]['mean'] for r in results if metric in r and 'mean' in r[metric]]
+                values = [r[metric]['mean'] for r in results if metric in r and isinstance(r[metric], dict) and 'mean' in r[metric]]
                 if values:
                     overall_stats[metric] = {
                         'mean': np.mean(values),
@@ -578,7 +583,7 @@ class SpacyYakeExperiment:
         
         for metric, weight in weights.items():
             if metric in results[0]:
-                values = [r[metric]['mean'] for r in results if metric in r and 'mean' in r[metric]]
+                values = [r[metric]['mean'] for r in results if metric in r and isinstance(r[metric], dict) and 'mean' in r[metric]]
                 if values:
                     if metric in ['processing_time', 'memory_usage']:
                         # Lower is better - invert and normalize
@@ -678,19 +683,39 @@ class SpacyYakeExperiment:
             return np.corrcoef(accuracies, numeric_complexities)[0, 1]
         return 0.0
     
+    def _convert_numpy_types(self, obj):
+        """Convert numpy types to native Python types for JSON serialization"""
+        if isinstance(obj, np.bool_):
+            return bool(obj)
+        elif isinstance(obj, np.integer):
+            return int(obj)
+        elif isinstance(obj, np.floating):
+            return float(obj)
+        elif isinstance(obj, np.ndarray):
+            return obj.tolist()
+        elif isinstance(obj, dict):
+            return {key: self._convert_numpy_types(value) for key, value in obj.items()}
+        elif isinstance(obj, list):
+            return [self._convert_numpy_types(item) for item in obj]
+        return obj
+
     def _save_experiment_results(self, comprehensive_analysis: Dict):
         """Save experiment results to files"""
         
         # Create results directory
         os.makedirs('experiment_results', exist_ok=True)
         
+        # Convert numpy types to native Python types
+        detailed_analysis_clean = self._convert_numpy_types(self.detailed_analysis)
+        comprehensive_analysis_clean = self._convert_numpy_types(comprehensive_analysis)
+        
         # Save detailed results
         with open('experiment_results/detailed_analysis.json', 'w', encoding='utf-8') as f:
-            json.dump(self.detailed_analysis, f, indent=2, ensure_ascii=False)
+            json.dump(detailed_analysis_clean, f, indent=2, ensure_ascii=False)
         
         # Save comprehensive analysis
         with open('experiment_results/comprehensive_analysis.json', 'w', encoding='utf-8') as f:
-            json.dump(comprehensive_analysis, f, indent=2, ensure_ascii=False)
+            json.dump(comprehensive_analysis_clean, f, indent=2, ensure_ascii=False)
         
         # Save summary report
         self._generate_summary_report(comprehensive_analysis)

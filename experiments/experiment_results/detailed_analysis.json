@@ -1,0 +1,1836 @@
+{
+  "SM_001": {
+    "test_case_info": {
+      "id": "SM_001",
+      "category": "social_media",
+      "text": "Just discovered #sustainablefashion trends! @patagonia's new eco-line is amazing 🌱 The collection features organic cotton and recycled materials. #ecofriendly #fashiontech",
+      "expected_keywords": [
+        "sustainable fashion",
+        "patagonia",
+        "eco-line",
+        "organic cotton",
+        "recycled materials",
+        "ecofriendly",
+        "fashiontech"
+      ],
+      "complexity": "high",
+      "hashtags": true,
+      "mentions": true,
+      "emojis": true
+    },
+    "spacy_yake_stats": {
+      "processing_time": {
+        "mean": 0.00991668701171875,
+        "std": 0.0031986497011870256,
+        "min": 0.008055686950683594,
+        "max": 0.01630091667175293
+      },
+      "memory_usage": {
+        "mean": 0.41875,
+        "std": 0.8140849924915703,
+        "min": 0.0,
+        "max": 2.046875
+      },
+      "confidence_score": {
+        "mean": 0.8143709530095096,
+        "std": 1.1102230246251565e-16
+      },
+      "accuracy": {
+        "mean": 0.34782608695652173,
+        "std": 0.0
+      },
+      "keywords_count": {
+        "mean": 17.0,
+        "std": 0.0
+      },
+      "success_rate": 1.0
+    },
+    "baseline_stats": {
+      "rake": {
+        "processing_time": 0.0002178668975830078,
+        "memory_usage": 0.0,
+        "confidence_score": 0.0,
+        "accuracy": 0.0,
+        "keywords_count": 0.0,
+        "success_rate": 1.0
+      },
+      "tfidf": {
+        "processing_time": 0.0009875297546386719,
+        "memory_usage": 0.04375,
+        "confidence_score": 0.28867513459481287,
+        "accuracy": 0.14814814814814817,
+        "keywords_count": 20.0,
+        "success_rate": 1.0
+      },
+      "hybrid_ensemble": {
+        "processing_time": 0.009850835800170899,
+        "memory_usage": 0.175,
+        "confidence_score": 0.5319238419949278,
+        "accuracy": 0.29629629629629634,
+        "keywords_count": 20.0,
+        "success_rate": 1.0
+      }
+    },
+    "performance_comparison": {
+      "processing_time": {
+        "rake": {
+          "baseline_value": 0.0002178668975830078,
+          "spacy_yake_value": 0.00991668701171875,
+          "improvement_percent": -4451.718100240752,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.0009875297546386719,
+          "spacy_yake_value": 0.00991668701171875,
+          "improvement_percent": -904.1912119748913,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.009850835800170899,
+          "spacy_yake_value": 0.00991668701171875,
+          "improvement_percent": -0.668483496057344,
+          "better_than_baseline": false
+        }
+      },
+      "memory_usage": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.41875,
+          "improvement_percent": -Infinity,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.04375,
+          "spacy_yake_value": 0.41875,
+          "improvement_percent": -857.1428571428571,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.175,
+          "spacy_yake_value": 0.41875,
+          "improvement_percent": -139.2857142857143,
+          "better_than_baseline": false
+        }
+      },
+      "confidence_score": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.8143709530095096,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 0.28867513459481287,
+          "spacy_yake_value": 0.8143709530095096,
+          "improvement_percent": 182.10637336415147,
+          "better_than_baseline": true
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.5319238419949278,
+          "spacy_yake_value": 0.8143709530095096,
+          "improvement_percent": 53.09916358614266,
+          "better_than_baseline": true
+        }
+      },
+      "accuracy": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.34782608695652173,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 0.14814814814814817,
+          "spacy_yake_value": 0.34782608695652173,
+          "improvement_percent": 134.78260869565213,
+          "better_than_baseline": true
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.29629629629629634,
+          "spacy_yake_value": 0.34782608695652173,
+          "improvement_percent": 17.39130434782607,
+          "better_than_baseline": true
+        }
+      },
+      "keywords_count": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 17.0,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 20.0,
+          "spacy_yake_value": 17.0,
+          "improvement_percent": -15.0,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 20.0,
+          "spacy_yake_value": 17.0,
+          "improvement_percent": -15.0,
+          "better_than_baseline": false
+        }
+      }
+    },
+    "statistical_significance": {
+      "mean_accuracy": 0.34782608695652173,
+      "std_accuracy": 0.0,
+      "confidence_interval_95": 0.0,
+      "confidence_range": [
+        0.34782608695652173,
+        0.34782608695652173
+      ],
+      "sample_size": 5
+    }
+  },
+  "SM_002": {
+    "test_case_info": {
+      "id": "SM_002",
+      "category": "social_media",
+      "text": "Need insights on influencer marketing for beauty brands targeting Gen Z #beautytech #influencer #genz #beauty #marketing #digital",
+      "expected_keywords": [
+        "influencer marketing",
+        "beauty brands",
+        "gen z",
+        "beautytech",
+        "beauty",
+        "marketing",
+        "digital"
+      ],
+      "complexity": "medium",
+      "hashtags": true,
+      "mentions": false,
+      "emojis": false
+    },
+    "spacy_yake_stats": {
+      "processing_time": {
+        "mean": 0.00568242073059082,
+        "std": 0.00037280672099493167,
+        "min": 0.0053212642669677734,
+        "max": 0.006358146667480469
+      },
+      "memory_usage": {
+        "mean": 0.0375,
+        "std": 0.06745947857788408,
+        "min": 0.0,
+        "max": 0.171875
+      },
+      "confidence_score": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "accuracy": {
+        "mean": 0.5263157894736842,
+        "std": 0.0
+      },
+      "keywords_count": {
+        "mean": 14.0,
+        "std": 0.0
+      },
+      "success_rate": 1.0
+    },
+    "baseline_stats": {
+      "rake": {
+        "processing_time": 0.00035648345947265626,
+        "memory_usage": 0.0,
+        "confidence_score": 0.0,
+        "accuracy": 0.0,
+        "keywords_count": 0.0,
+        "success_rate": 1.0
+      },
+      "tfidf": {
+        "processing_time": 0.0006714820861816406,
+        "memory_usage": 0.0,
+        "confidence_score": 0.3481553119113957,
+        "accuracy": 0.4444444444444445,
+        "keywords_count": 20.0,
+        "success_rate": 1.0
+      },
+      "hybrid_ensemble": {
+        "processing_time": 0.006683540344238281,
+        "memory_usage": 0.003125,
+        "confidence_score": 0.6522232967867094,
+        "accuracy": 0.5185185185185185,
+        "keywords_count": 20.0,
+        "success_rate": 1.0
+      }
+    },
+    "performance_comparison": {
+      "processing_time": {
+        "rake": {
+          "baseline_value": 0.00035648345947265626,
+          "spacy_yake_value": 0.00568242073059082,
+          "improvement_percent": -1494.0208667736756,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.0006714820861816406,
+          "spacy_yake_value": 0.00568242073059082,
+          "improvement_percent": -746.2505325948018,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.006683540344238281,
+          "spacy_yake_value": 0.00568242073059082,
+          "improvement_percent": 14.97888188122485,
+          "better_than_baseline": true
+        }
+      },
+      "memory_usage": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.0375,
+          "improvement_percent": -Infinity,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.0375,
+          "improvement_percent": -Infinity,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.003125,
+          "spacy_yake_value": 0.0375,
+          "improvement_percent": -1099.9999999999998,
+          "better_than_baseline": false
+        }
+      },
+      "confidence_score": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 1.0,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 0.3481553119113957,
+          "spacy_yake_value": 1.0,
+          "improvement_percent": 187.2281323269014,
+          "better_than_baseline": true
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.6522232967867094,
+          "spacy_yake_value": 1.0,
+          "improvement_percent": 53.32172354570475,
+          "better_than_baseline": true
+        }
+      },
+      "accuracy": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.5263157894736842,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 0.4444444444444445,
+          "spacy_yake_value": 0.5263157894736842,
+          "improvement_percent": 18.42105263157893,
+          "better_than_baseline": true
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.5185185185185185,
+          "spacy_yake_value": 0.5263157894736842,
+          "improvement_percent": 1.5037593984962405,
+          "better_than_baseline": true
+        }
+      },
+      "keywords_count": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 14.0,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 20.0,
+          "spacy_yake_value": 14.0,
+          "improvement_percent": -30.0,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 20.0,
+          "spacy_yake_value": 14.0,
+          "improvement_percent": -30.0,
+          "better_than_baseline": false
+        }
+      }
+    },
+    "statistical_significance": {
+      "mean_accuracy": 0.5263157894736842,
+      "std_accuracy": 0.0,
+      "confidence_interval_95": 0.0,
+      "confidence_range": [
+        0.5263157894736842,
+        0.5263157894736842
+      ],
+      "sample_size": 5
+    }
+  },
+  "BUS_001": {
+    "test_case_info": {
+      "id": "BUS_001",
+      "category": "business",
+      "text": "Market analysis of renewable energy sector shows significant growth in solar and wind power technologies. Investment in clean energy reached $500 billion in 2023, with solar leading at 45% market share.",
+      "expected_keywords": [
+        "market analysis",
+        "renewable energy",
+        "solar power",
+        "wind power",
+        "investment",
+        "clean energy",
+        "market share"
+      ],
+      "complexity": "high",
+      "hashtags": false,
+      "mentions": false,
+      "emojis": false
+    },
+    "spacy_yake_stats": {
+      "processing_time": {
+        "mean": 0.009881830215454102,
+        "std": 0.0012095973935862027,
+        "min": 0.008977890014648438,
+        "max": 0.012274026870727539
+      },
+      "memory_usage": {
+        "mean": 0.10625,
+        "std": 0.05711145900780333,
+        "min": 0.03125,
+        "max": 0.203125
+      },
+      "confidence_score": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "accuracy": {
+        "mean": 0.07407407407407408,
+        "std": 0.0
+      },
+      "keywords_count": {
+        "mean": 20.0,
+        "std": 0.0
+      },
+      "success_rate": 1.0
+    },
+    "baseline_stats": {
+      "rake": {
+        "processing_time": 0.00024976730346679685,
+        "memory_usage": 0.0,
+        "confidence_score": 0.0,
+        "accuracy": 0.0,
+        "keywords_count": 0.0,
+        "success_rate": 1.0
+      },
+      "tfidf": {
+        "processing_time": 0.0014387130737304687,
+        "memory_usage": 0.009375,
+        "confidence_score": 0.10875290696438518,
+        "accuracy": 0.14814814814814817,
+        "keywords_count": 20.0,
+        "success_rate": 1.0
+      },
+      "hybrid_ensemble": {
+        "processing_time": 0.010740041732788086,
+        "memory_usage": 0.0375,
+        "confidence_score": 0.6163129360446578,
+        "accuracy": 0.07407407407407408,
+        "keywords_count": 20.0,
+        "success_rate": 1.0
+      }
+    },
+    "performance_comparison": {
+      "processing_time": {
+        "rake": {
+          "baseline_value": 0.00024976730346679685,
+          "spacy_yake_value": 0.009881830215454102,
+          "improvement_percent": -3856.414662084766,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.0014387130737304687,
+          "spacy_yake_value": 0.009881830215454102,
+          "improvement_percent": -586.8520482566619,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.010740041732788086,
+          "spacy_yake_value": 0.009881830215454102,
+          "improvement_percent": 7.990765200790283,
+          "better_than_baseline": true
+        }
+      },
+      "memory_usage": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.10625,
+          "improvement_percent": -Infinity,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.009375,
+          "spacy_yake_value": 0.10625,
+          "improvement_percent": -1033.3333333333335,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.0375,
+          "spacy_yake_value": 0.10625,
+          "improvement_percent": -183.33333333333334,
+          "better_than_baseline": false
+        }
+      },
+      "confidence_score": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 1.0,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 0.10875290696438518,
+          "spacy_yake_value": 1.0,
+          "improvement_percent": 819.515650581629,
+          "better_than_baseline": true
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.6163129360446578,
+          "spacy_yake_value": 1.0,
+          "improvement_percent": 62.25523455953235,
+          "better_than_baseline": true
+        }
+      },
+      "accuracy": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.07407407407407408,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 0.14814814814814817,
+          "spacy_yake_value": 0.07407407407407408,
+          "improvement_percent": -50.0,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.07407407407407408,
+          "spacy_yake_value": 0.07407407407407408,
+          "improvement_percent": 0.0,
+          "better_than_baseline": false
+        }
+      },
+      "keywords_count": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 20.0,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 20.0,
+          "spacy_yake_value": 20.0,
+          "improvement_percent": 0.0,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 20.0,
+          "spacy_yake_value": 20.0,
+          "improvement_percent": 0.0,
+          "better_than_baseline": false
+        }
+      }
+    },
+    "statistical_significance": {
+      "mean_accuracy": 0.07407407407407408,
+      "std_accuracy": 0.0,
+      "confidence_interval_95": 0.0,
+      "confidence_range": [
+        0.07407407407407408,
+        0.07407407407407408
+      ],
+      "sample_size": 5
+    }
+  },
+  "BUS_002": {
+    "test_case_info": {
+      "id": "BUS_002",
+      "category": "business",
+      "text": "Digital transformation strategies for traditional retail businesses in the post-pandemic era. Key focus areas: e-commerce integration, omnichannel experience, and customer data analytics.",
+      "expected_keywords": [
+        "digital transformation",
+        "retail businesses",
+        "post-pandemic era",
+        "e-commerce integration",
+        "omnichannel experience",
+        "customer data analytics"
+      ],
+      "complexity": "high",
+      "hashtags": false,
+      "mentions": false,
+      "emojis": false
+    },
+    "spacy_yake_stats": {
+      "processing_time": {
+        "mean": 0.010367250442504883,
+        "std": 0.0007218609300477927,
+        "min": 0.009842157363891602,
+        "max": 0.011789083480834961
+      },
+      "memory_usage": {
+        "mean": 0.028125,
+        "std": 0.02688226645950821,
+        "min": 0.0,
+        "max": 0.078125
+      },
+      "confidence_score": {
+        "mean": 0.7660801640741769,
+        "std": 0.0
+      },
+      "accuracy": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "keywords_count": {
+        "mean": 19.0,
+        "std": 0.0
+      },
+      "success_rate": 1.0
+    },
+    "baseline_stats": {
+      "rake": {
+        "processing_time": 0.00022644996643066405,
+        "memory_usage": 0.0,
+        "confidence_score": 0.0,
+        "accuracy": 0.0,
+        "keywords_count": 0.0,
+        "success_rate": 1.0
+      },
+      "tfidf": {
+        "processing_time": 0.000682210922241211,
+        "memory_usage": 0.0,
+        "confidence_score": 0.08084520834544431,
+        "accuracy": 0.15384615384615383,
+        "keywords_count": 20.0,
+        "success_rate": 1.0
+      },
+      "hybrid_ensemble": {
+        "processing_time": 0.011525487899780274,
+        "memory_usage": 0.0,
+        "confidence_score": 0.4717748796963228,
+        "accuracy": 0.0,
+        "keywords_count": 20.0,
+        "success_rate": 1.0
+      }
+    },
+    "performance_comparison": {
+      "processing_time": {
+        "rake": {
+          "baseline_value": 0.00022644996643066405,
+          "spacy_yake_value": 0.010367250442504883,
+          "improvement_percent": -4478.163823962939,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.000682210922241211,
+          "spacy_yake_value": 0.010367250442504883,
+          "improvement_percent": -1419.6547144754315,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.011525487899780274,
+          "spacy_yake_value": 0.010367250442504883,
+          "improvement_percent": 10.049357279681598,
+          "better_than_baseline": true
+        }
+      },
+      "memory_usage": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.028125,
+          "improvement_percent": -Infinity,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.028125,
+          "improvement_percent": -Infinity,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.028125,
+          "improvement_percent": -Infinity,
+          "better_than_baseline": false
+        }
+      },
+      "confidence_score": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.7660801640741769,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 0.08084520834544431,
+          "spacy_yake_value": 0.7660801640741769,
+          "improvement_percent": 847.5888302505019,
+          "better_than_baseline": true
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.4717748796963228,
+          "spacy_yake_value": 0.7660801640741769,
+          "improvement_percent": 62.38256783983406,
+          "better_than_baseline": true
+        }
+      },
+      "accuracy": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": NaN,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.15384615384615383,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": -100.0,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": NaN,
+          "better_than_baseline": false
+        }
+      },
+      "keywords_count": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 19.0,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 20.0,
+          "spacy_yake_value": 19.0,
+          "improvement_percent": -5.0,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 20.0,
+          "spacy_yake_value": 19.0,
+          "improvement_percent": -5.0,
+          "better_than_baseline": false
+        }
+      }
+    },
+    "statistical_significance": {
+      "mean_accuracy": 0.0,
+      "std_accuracy": 0.0,
+      "confidence_interval_95": 0.0,
+      "confidence_range": [
+        0.0,
+        0.0
+      ],
+      "sample_size": 5
+    }
+  },
+  "TECH_001": {
+    "test_case_info": {
+      "id": "TECH_001",
+      "category": "technical",
+      "text": "Machine learning algorithms for natural language processing applications in social media sentiment analysis. Implementation using transformer models and attention mechanisms.",
+      "expected_keywords": [
+        "machine learning",
+        "natural language processing",
+        "sentiment analysis",
+        "transformer models",
+        "attention mechanisms"
+      ],
+      "complexity": "high",
+      "hashtags": false,
+      "mentions": false,
+      "emojis": false
+    },
+    "spacy_yake_stats": {
+      "processing_time": {
+        "mean": 0.008669376373291016,
+        "std": 0.00034290384193226623,
+        "min": 0.008375167846679688,
+        "max": 0.009339094161987305
+      },
+      "memory_usage": {
+        "mean": 0.003125,
+        "std": 0.006250000000000001,
+        "min": 0.0,
+        "max": 0.015625
+      },
+      "confidence_score": {
+        "mean": 0.6896823243543811,
+        "std": 0.0
+      },
+      "accuracy": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "keywords_count": {
+        "mean": 16.0,
+        "std": 0.0
+      },
+      "success_rate": 1.0
+    },
+    "baseline_stats": {
+      "rake": {
+        "processing_time": 0.00020613670349121094,
+        "memory_usage": 0.0,
+        "confidence_score": 0.0,
+        "accuracy": 0.0,
+        "keywords_count": 0.0,
+        "success_rate": 1.0
+      },
+      "tfidf": {
+        "processing_time": 0.0005829811096191406,
+        "memory_usage": 0.0,
+        "confidence_score": 0.10050378152592121,
+        "accuracy": 0.16000000000000003,
+        "keywords_count": 20.0,
+        "success_rate": 1.0
+      },
+      "hybrid_ensemble": {
+        "processing_time": 0.009597587585449218,
+        "memory_usage": 0.003125,
+        "confidence_score": 0.42888496184151687,
+        "accuracy": 0.08000000000000002,
+        "keywords_count": 20.0,
+        "success_rate": 1.0
+      }
+    },
+    "performance_comparison": {
+      "processing_time": {
+        "rake": {
+          "baseline_value": 0.00020613670349121094,
+          "spacy_yake_value": 0.008669376373291016,
+          "improvement_percent": -4105.644228544992,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.0005829811096191406,
+          "spacy_yake_value": 0.008669376373291016,
+          "improvement_percent": -1387.076721740553,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.009597587585449218,
+          "spacy_yake_value": 0.008669376373291016,
+          "improvement_percent": 9.671297124346662,
+          "better_than_baseline": true
+        }
+      },
+      "memory_usage": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.003125,
+          "improvement_percent": -Infinity,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.003125,
+          "improvement_percent": -Infinity,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.003125,
+          "spacy_yake_value": 0.003125,
+          "improvement_percent": 0.0,
+          "better_than_baseline": false
+        }
+      },
+      "confidence_score": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.6896823243543811,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 0.10050378152592121,
+          "spacy_yake_value": 0.6896823243543811,
+          "improvement_percent": 586.2252483271023,
+          "better_than_baseline": true
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.42888496184151687,
+          "spacy_yake_value": 0.6896823243543811,
+          "improvement_percent": 60.808231977421265,
+          "better_than_baseline": true
+        }
+      },
+      "accuracy": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": NaN,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.16000000000000003,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": -100.0,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.08000000000000002,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": -100.0,
+          "better_than_baseline": false
+        }
+      },
+      "keywords_count": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 16.0,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 20.0,
+          "spacy_yake_value": 16.0,
+          "improvement_percent": -20.0,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 20.0,
+          "spacy_yake_value": 16.0,
+          "improvement_percent": -20.0,
+          "better_than_baseline": false
+        }
+      }
+    },
+    "statistical_significance": {
+      "mean_accuracy": 0.0,
+      "std_accuracy": 0.0,
+      "confidence_interval_95": 0.0,
+      "confidence_range": [
+        0.0,
+        0.0
+      ],
+      "sample_size": 5
+    }
+  },
+  "TECH_002": {
+    "test_case_info": {
+      "id": "TECH_002",
+      "category": "technical",
+      "text": "Blockchain technology implementation for secure and transparent supply chain management. Smart contracts enable automated verification and compliance tracking.",
+      "expected_keywords": [
+        "blockchain technology",
+        "supply chain management",
+        "smart contracts",
+        "automated verification",
+        "compliance tracking"
+      ],
+      "complexity": "medium",
+      "hashtags": false,
+      "mentions": false,
+      "emojis": false
+    },
+    "spacy_yake_stats": {
+      "processing_time": {
+        "mean": 0.007647323608398438,
+        "std": 0.0002915339021918662,
+        "min": 0.007277250289916992,
+        "max": 0.007971048355102539
+      },
+      "memory_usage": {
+        "mean": 0.01875,
+        "std": 0.022963966338592292,
+        "min": 0.0,
+        "max": 0.0625
+      },
+      "confidence_score": {
+        "mean": 0.8042898983574279,
+        "std": 0.0
+      },
+      "accuracy": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "keywords_count": {
+        "mean": 15.0,
+        "std": 0.0
+      },
+      "success_rate": 1.0
+    },
+    "baseline_stats": {
+      "rake": {
+        "processing_time": 0.0002181529998779297,
+        "memory_usage": 0.0,
+        "confidence_score": 0.0,
+        "accuracy": 0.0,
+        "keywords_count": 0.0,
+        "success_rate": 1.0
+      },
+      "tfidf": {
+        "processing_time": 0.0005958080291748047,
+        "memory_usage": 0.0,
+        "confidence_score": 0.09245003270420486,
+        "accuracy": 0.32000000000000006,
+        "keywords_count": 20.0,
+        "success_rate": 1.0
+      },
+      "hybrid_ensemble": {
+        "processing_time": 0.008820915222167968,
+        "memory_usage": 0.009375,
+        "confidence_score": 0.49644144392008754,
+        "accuracy": 0.16000000000000003,
+        "keywords_count": 20.0,
+        "success_rate": 1.0
+      }
+    },
+    "performance_comparison": {
+      "processing_time": {
+        "rake": {
+          "baseline_value": 0.0002181529998779297,
+          "spacy_yake_value": 0.007647323608398438,
+          "improvement_percent": -3405.4863387978144,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.0005958080291748047,
+          "spacy_yake_value": 0.007647323608398438,
+          "improvement_percent": -1183.5214085634254,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.008820915222167968,
+          "spacy_yake_value": 0.007647323608398438,
+          "improvement_percent": 13.30464678789975,
+          "better_than_baseline": true
+        }
+      },
+      "memory_usage": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.01875,
+          "improvement_percent": -Infinity,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.01875,
+          "improvement_percent": -Infinity,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.009375,
+          "spacy_yake_value": 0.01875,
+          "improvement_percent": -100.0,
+          "better_than_baseline": false
+        }
+      },
+      "confidence_score": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.8042898983574279,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 0.09245003270420486,
+          "spacy_yake_value": 0.8042898983574279,
+          "improvement_percent": 769.972540659628,
+          "better_than_baseline": true
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.49644144392008754,
+          "spacy_yake_value": 0.8042898983574279,
+          "improvement_percent": 62.011030345583904,
+          "better_than_baseline": true
+        }
+      },
+      "accuracy": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": NaN,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.32000000000000006,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": -100.0,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.16000000000000003,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": -100.0,
+          "better_than_baseline": false
+        }
+      },
+      "keywords_count": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 15.0,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 20.0,
+          "spacy_yake_value": 15.0,
+          "improvement_percent": -25.0,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 20.0,
+          "spacy_yake_value": 15.0,
+          "improvement_percent": -25.0,
+          "better_than_baseline": false
+        }
+      }
+    },
+    "statistical_significance": {
+      "mean_accuracy": 0.0,
+      "std_accuracy": 0.0,
+      "confidence_interval_95": 0.0,
+      "confidence_range": [
+        0.0,
+        0.0
+      ],
+      "sample_size": 5
+    }
+  },
+  "SHORT_001": {
+    "test_case_info": {
+      "id": "SHORT_001",
+      "category": "short_text",
+      "text": "AI startup funding trends 2024",
+      "expected_keywords": [
+        "ai startup",
+        "funding trends"
+      ],
+      "complexity": "low",
+      "hashtags": false,
+      "mentions": false,
+      "emojis": false
+    },
+    "spacy_yake_stats": {
+      "processing_time": {
+        "mean": 0.002455472946166992,
+        "std": 0.00015364519022481024,
+        "min": 0.0022220611572265625,
+        "max": 0.0026340484619140625
+      },
+      "memory_usage": {
+        "mean": 0.003125,
+        "std": 0.006250000000000001,
+        "min": 0.0,
+        "max": 0.015625
+      },
+      "confidence_score": {
+        "mean": 0.9489839686998607,
+        "std": 1.1102230246251565e-16
+      },
+      "accuracy": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "keywords_count": {
+        "mean": 4.0,
+        "std": 0.0
+      },
+      "success_rate": 1.0
+    },
+    "baseline_stats": {
+      "rake": {
+        "processing_time": 0.00019354820251464843,
+        "memory_usage": 0.0,
+        "confidence_score": 0.0,
+        "accuracy": 0.0,
+        "keywords_count": 0.0,
+        "success_rate": 1.0
+      },
+      "tfidf": {
+        "processing_time": 0.0005244731903076172,
+        "memory_usage": 0.0,
+        "confidence_score": 0.3333333333333333,
+        "accuracy": 0.3636363636363636,
+        "keywords_count": 9.0,
+        "success_rate": 1.0
+      },
+      "hybrid_ensemble": {
+        "processing_time": 0.003318309783935547,
+        "memory_usage": 0.003125,
+        "confidence_score": 0.6193903812199164,
+        "accuracy": 0.3636363636363636,
+        "keywords_count": 9.0,
+        "success_rate": 1.0
+      }
+    },
+    "performance_comparison": {
+      "processing_time": {
+        "rake": {
+          "baseline_value": 0.00019354820251464843,
+          "spacy_yake_value": 0.002455472946166992,
+          "improvement_percent": -1168.6622320768663,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.0005244731903076172,
+          "spacy_yake_value": 0.002455472946166992,
+          "improvement_percent": -368.1789253568506,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.003318309783935547,
+          "spacy_yake_value": 0.002455472946166992,
+          "improvement_percent": 26.0022991809168,
+          "better_than_baseline": true
+        }
+      },
+      "memory_usage": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.003125,
+          "improvement_percent": -Infinity,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.003125,
+          "improvement_percent": -Infinity,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.003125,
+          "spacy_yake_value": 0.003125,
+          "improvement_percent": 0.0,
+          "better_than_baseline": false
+        }
+      },
+      "confidence_score": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.9489839686998607,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 0.3333333333333333,
+          "spacy_yake_value": 0.9489839686998607,
+          "improvement_percent": 184.69519060995822,
+          "better_than_baseline": true
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.6193903812199164,
+          "spacy_yake_value": 0.9489839686998607,
+          "improvement_percent": 53.212577636545674,
+          "better_than_baseline": true
+        }
+      },
+      "accuracy": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": NaN,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.3636363636363636,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": -100.0,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.3636363636363636,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": -100.0,
+          "better_than_baseline": false
+        }
+      },
+      "keywords_count": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 4.0,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 9.0,
+          "spacy_yake_value": 4.0,
+          "improvement_percent": -55.55555555555556,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 9.0,
+          "spacy_yake_value": 4.0,
+          "improvement_percent": -55.55555555555556,
+          "better_than_baseline": false
+        }
+      }
+    },
+    "statistical_significance": {
+      "mean_accuracy": 0.0,
+      "std_accuracy": 0.0,
+      "confidence_interval_95": 0.0,
+      "confidence_range": [
+        0.0,
+        0.0
+      ],
+      "sample_size": 5
+    }
+  },
+  "SHORT_002": {
+    "test_case_info": {
+      "id": "SHORT_002",
+      "category": "short_text",
+      "text": "Sustainable fashion innovation",
+      "expected_keywords": [
+        "sustainable fashion",
+        "innovation"
+      ],
+      "complexity": "low",
+      "hashtags": false,
+      "mentions": false,
+      "emojis": false
+    },
+    "spacy_yake_stats": {
+      "processing_time": {
+        "mean": 0.0020543575286865235,
+        "std": 0.0002605954376719999,
+        "min": 0.0019049644470214844,
+        "max": 0.0025751590728759766
+      },
+      "memory_usage": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "confidence_score": {
+        "mean": 0.8453335199599368,
+        "std": 0.0
+      },
+      "accuracy": {
+        "mean": 0.4,
+        "std": 0.0
+      },
+      "keywords_count": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "success_rate": 1.0
+    },
+    "baseline_stats": {
+      "rake": {
+        "processing_time": 0.0002052783966064453,
+        "memory_usage": 0.0,
+        "confidence_score": 0.0,
+        "accuracy": 0.0,
+        "keywords_count": 0.0,
+        "success_rate": 1.0
+      },
+      "tfidf": {
+        "processing_time": 0.0005040168762207031,
+        "memory_usage": 0.0,
+        "confidence_score": 0.447213595499958,
+        "accuracy": 0.5714285714285715,
+        "keywords_count": 5.0,
+        "success_rate": 1.0
+      },
+      "hybrid_ensemble": {
+        "processing_time": 0.0031186580657958985,
+        "memory_usage": 0.0,
+        "confidence_score": 0.5742821513009557,
+        "accuracy": 0.5714285714285715,
+        "keywords_count": 5.0,
+        "success_rate": 1.0
+      }
+    },
+    "performance_comparison": {
+      "processing_time": {
+        "rake": {
+          "baseline_value": 0.0002052783966064453,
+          "spacy_yake_value": 0.0020543575286865235,
+          "improvement_percent": -900.766550522648,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.0005040168762207031,
+          "spacy_yake_value": 0.0020543575286865235,
+          "improvement_percent": -307.59697256386,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.0031186580657958985,
+          "spacy_yake_value": 0.0020543575286865235,
+          "improvement_percent": 34.12687491399477,
+          "better_than_baseline": true
+        }
+      },
+      "memory_usage": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": NaN,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": NaN,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": NaN,
+          "better_than_baseline": false
+        }
+      },
+      "confidence_score": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.8453335199599368,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 0.447213595499958,
+          "spacy_yake_value": 0.8453335199599368,
+          "improvement_percent": 89.02232142895937,
+          "better_than_baseline": true
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.5742821513009557,
+          "spacy_yake_value": 0.8453335199599368,
+          "improvement_percent": 47.198292345487694,
+          "better_than_baseline": true
+        }
+      },
+      "accuracy": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.4,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 0.5714285714285715,
+          "spacy_yake_value": 0.4,
+          "improvement_percent": -30.000000000000004,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.5714285714285715,
+          "spacy_yake_value": 0.4,
+          "improvement_percent": -30.000000000000004,
+          "better_than_baseline": false
+        }
+      },
+      "keywords_count": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 3.0,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 5.0,
+          "spacy_yake_value": 3.0,
+          "improvement_percent": -40.0,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 5.0,
+          "spacy_yake_value": 3.0,
+          "improvement_percent": -40.0,
+          "better_than_baseline": false
+        }
+      }
+    },
+    "statistical_significance": {
+      "mean_accuracy": 0.4,
+      "std_accuracy": 0.0,
+      "confidence_interval_95": 0.0,
+      "confidence_range": [
+        0.4,
+        0.4
+      ],
+      "sample_size": 5
+    }
+  },
+  "CHALLENGE_001": {
+    "test_case_info": {
+      "id": "CHALLENGE_001",
+      "category": "challenging",
+      "text": "The quantum computing paradigm shift necessitates interdisciplinary collaboration between physicists, computer scientists, and mathematicians to develop novel algorithms for optimization problems.",
+      "expected_keywords": [
+        "quantum computing",
+        "paradigm shift",
+        "interdisciplinary collaboration",
+        "physicists",
+        "computer scientists",
+        "mathematicians",
+        "novel algorithms",
+        "optimization problems"
+      ],
+      "complexity": "very_high",
+      "hashtags": false,
+      "mentions": false,
+      "emojis": false
+    },
+    "spacy_yake_stats": {
+      "processing_time": {
+        "mean": 0.009097051620483399,
+        "std": 0.0003859112498664811,
+        "min": 0.008684158325195312,
+        "max": 0.009808063507080078
+      },
+      "memory_usage": {
+        "mean": 0.009375,
+        "std": 0.012499999999999999,
+        "min": 0.0,
+        "max": 0.03125
+      },
+      "confidence_score": {
+        "mean": 0.8397140584478457,
+        "std": 0.0
+      },
+      "accuracy": {
+        "mean": 0.1739130434782609,
+        "std": 0.0
+      },
+      "keywords_count": {
+        "mean": 15.0,
+        "std": 0.0
+      },
+      "success_rate": 1.0
+    },
+    "baseline_stats": {
+      "rake": {
+        "processing_time": 0.00023245811462402344,
+        "memory_usage": 0.0,
+        "confidence_score": 0.0,
+        "accuracy": 0.0,
+        "keywords_count": 0.0,
+        "success_rate": 1.0
+      },
+      "tfidf": {
+        "processing_time": 0.0006489753723144531,
+        "memory_usage": 0.0,
+        "confidence_score": 0.08980265101338744,
+        "accuracy": 0.28571428571428575,
+        "keywords_count": 20.0,
+        "success_rate": 1.0
+      },
+      "hybrid_ensemble": {
+        "processing_time": 0.01016697883605957,
+        "memory_usage": 0.015625,
+        "confidence_score": 0.5172988327207155,
+        "accuracy": 0.21428571428571425,
+        "keywords_count": 20.0,
+        "success_rate": 1.0
+      }
+    },
+    "performance_comparison": {
+      "processing_time": {
+        "rake": {
+          "baseline_value": 0.00023245811462402344,
+          "spacy_yake_value": 0.009097051620483399,
+          "improvement_percent": -3813.415384615385,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.0006489753723144531,
+          "spacy_yake_value": 0.009097051620483399,
+          "improvement_percent": -1301.7560617193242,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.01016697883605957,
+          "spacy_yake_value": 0.009097051620483399,
+          "improvement_percent": 10.523551123972288,
+          "better_than_baseline": true
+        }
+      },
+      "memory_usage": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.009375,
+          "improvement_percent": -Infinity,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.009375,
+          "improvement_percent": -Infinity,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.015625,
+          "spacy_yake_value": 0.009375,
+          "improvement_percent": 40.0,
+          "better_than_baseline": true
+        }
+      },
+      "confidence_score": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.8397140584478457,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 0.08980265101338744,
+          "spacy_yake_value": 0.8397140584478457,
+          "improvement_percent": 835.0660019186565,
+          "better_than_baseline": true
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.5172988327207155,
+          "spacy_yake_value": 0.8397140584478457,
+          "improvement_percent": 62.32668727114623,
+          "better_than_baseline": true
+        }
+      },
+      "accuracy": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.1739130434782609,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 0.28571428571428575,
+          "spacy_yake_value": 0.1739130434782609,
+          "improvement_percent": -39.130434782608695,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.21428571428571425,
+          "spacy_yake_value": 0.1739130434782609,
+          "improvement_percent": -18.840579710144905,
+          "better_than_baseline": false
+        }
+      },
+      "keywords_count": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 15.0,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 20.0,
+          "spacy_yake_value": 15.0,
+          "improvement_percent": -25.0,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 20.0,
+          "spacy_yake_value": 15.0,
+          "improvement_percent": -25.0,
+          "better_than_baseline": false
+        }
+      }
+    },
+    "statistical_significance": {
+      "mean_accuracy": 0.1739130434782609,
+      "std_accuracy": 0.0,
+      "confidence_interval_95": 0.0,
+      "confidence_range": [
+        0.1739130434782609,
+        0.1739130434782609
+      ],
+      "sample_size": 5
+    }
+  },
+  "CHALLENGE_002": {
+    "test_case_info": {
+      "id": "CHALLENGE_002",
+      "category": "challenging",
+      "text": "Neuroscience-inspired artificial intelligence approaches leverage computational neuroscience principles to develop brain-like learning systems with enhanced cognitive capabilities.",
+      "expected_keywords": [
+        "neuroscience-inspired",
+        "artificial intelligence",
+        "computational neuroscience",
+        "brain-like learning systems",
+        "cognitive capabilities"
+      ],
+      "complexity": "very_high",
+      "hashtags": false,
+      "mentions": false,
+      "emojis": false
+    },
+    "spacy_yake_stats": {
+      "processing_time": {
+        "mean": 0.009427595138549804,
+        "std": 0.0006789289677075608,
+        "min": 0.008944034576416016,
+        "max": 0.010776758193969727
+      },
+      "memory_usage": {
+        "mean": 0.003125,
+        "std": 0.006250000000000001,
+        "min": 0.0,
+        "max": 0.015625
+      },
+      "confidence_score": {
+        "mean": 0.8211742379438155,
+        "std": 0.0
+      },
+      "accuracy": {
+        "mean": 0.1,
+        "std": 0.0
+      },
+      "keywords_count": {
+        "mean": 15.0,
+        "std": 0.0
+      },
+      "success_rate": 1.0
+    },
+    "baseline_stats": {
+      "rake": {
+        "processing_time": 0.00020427703857421874,
+        "memory_usage": 0.0,
+        "confidence_score": 0.0,
+        "accuracy": 0.0,
+        "keywords_count": 0.0,
+        "success_rate": 1.0
+      },
+      "tfidf": {
+        "processing_time": 0.0005799293518066406,
+        "memory_usage": 0.0,
+        "confidence_score": 0.16903085094570328,
+        "accuracy": 0.24,
+        "keywords_count": 20.0,
+        "success_rate": 1.0
+      },
+      "hybrid_ensemble": {
+        "processing_time": 0.010691308975219726,
+        "memory_usage": 0.00625,
+        "confidence_score": 0.5180591704081449,
+        "accuracy": 0.16000000000000003,
+        "keywords_count": 20.0,
+        "success_rate": 1.0
+      }
+    },
+    "performance_comparison": {
+      "processing_time": {
+        "rake": {
+          "baseline_value": 0.00020427703857421874,
+          "spacy_yake_value": 0.009427595138549804,
+          "improvement_percent": -4515.102707749766,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.0005799293518066406,
+          "spacy_yake_value": 0.009427595138549804,
+          "improvement_percent": -1525.6454530504848,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.010691308975219726,
+          "spacy_yake_value": 0.009427595138549804,
+          "improvement_percent": 11.820010436504576,
+          "better_than_baseline": true
+        }
+      },
+      "memory_usage": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.003125,
+          "improvement_percent": -Infinity,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.003125,
+          "improvement_percent": -Infinity,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.00625,
+          "spacy_yake_value": 0.003125,
+          "improvement_percent": 50.0,
+          "better_than_baseline": true
+        }
+      },
+      "confidence_score": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.8211742379438155,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 0.16903085094570328,
+          "spacy_yake_value": 0.8211742379438155,
+          "improvement_percent": 385.81323075016417,
+          "better_than_baseline": true
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.5180591704081449,
+          "spacy_yake_value": 0.8211742379438155,
+          "improvement_percent": 58.509738819383536,
+          "better_than_baseline": true
+        }
+      },
+      "accuracy": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.1,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 0.24,
+          "spacy_yake_value": 0.1,
+          "improvement_percent": -58.33333333333333,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.16000000000000003,
+          "spacy_yake_value": 0.1,
+          "improvement_percent": -37.500000000000014,
+          "better_than_baseline": false
+        }
+      },
+      "keywords_count": {
+        "rake": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 15.0,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "tfidf": {
+          "baseline_value": 20.0,
+          "spacy_yake_value": 15.0,
+          "improvement_percent": -25.0,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 20.0,
+          "spacy_yake_value": 15.0,
+          "improvement_percent": -25.0,
+          "better_than_baseline": false
+        }
+      }
+    },
+    "statistical_significance": {
+      "mean_accuracy": 0.1,
+      "std_accuracy": 0.0,
+      "confidence_interval_95": 0.0,
+      "confidence_range": [
+        0.1,
+        0.1
+      ],
+      "sample_size": 5
+    }
+  }
+}
