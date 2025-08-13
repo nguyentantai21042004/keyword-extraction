@@ -8,22 +8,22 @@
       "tfidf",
       "hybrid_ensemble"
     ],
-    "experiment_timestamp": "2025-08-13T10:07:22.110545"
+    "experiment_timestamp": "2025-08-13T10:10:05.090936"
   },
   "spacy_yake_overall_performance": {
     "processing_time": {
-      "mean": 0.007519936561584473,
-      "std": 0.002929024641249901,
-      "min": 0.0020543575286865235,
-      "max": 0.010367250442504883,
-      "median": 0.008883213996887207
+      "mean": 0.007514472007751465,
+      "std": 0.0028012401830536117,
+      "min": 0.0022446155548095704,
+      "max": 0.010279035568237305,
+      "median": 0.008919668197631837
     },
     "memory_usage": {
-      "mean": 0.06281250000000001,
-      "std": 0.12241427166082393,
+      "mean": 0.0959375,
+      "std": 0.18003932947067425,
       "min": 0.0,
-      "max": 0.41875,
-      "median": 0.014062499999999999
+      "max": 0.590625,
+      "median": 0.0171875
     },
     "confidence_score": {
       "mean": 0.8529629124846954,
@@ -56,7 +56,7 @@
     "ranking": [
       [
         "spacy_yake",
-        0.669588381362139
+        0.6694228383304465
       ],
       [
         "rake",
@@ -72,9 +72,9 @@
       ]
     ],
     "best_method": "spacy_yake",
-    "best_score": 0.669588381362139,
+    "best_score": 0.6694228383304465,
     "score_details": {
-      "spacy_yake": 0.669588381362139,
+      "spacy_yake": 0.6694228383304465,
       "rake": 0.0,
       "tfidf": 0.0,
       "hybrid_ensemble": 0.0
@@ -85,37 +85,37 @@
       "test_cases_count": 2,
       "avg_accuracy": 0.43707093821510296,
       "avg_confidence": 0.9071854765047548,
-      "avg_processing_time": 0.0077995538711547845
+      "avg_processing_time": 0.007499146461486816
     },
     "business": {
       "test_cases_count": 2,
       "avg_accuracy": 0.03703703703703704,
       "avg_confidence": 0.8830400820370885,
-      "avg_processing_time": 0.010124540328979493
+      "avg_processing_time": 0.009995746612548827
     },
     "technical": {
       "test_cases_count": 2,
       "avg_accuracy": 0.0,
       "avg_confidence": 0.7469861113559045,
-      "avg_processing_time": 0.008158349990844726
+      "avg_processing_time": 0.008213996887207031
     },
     "short_text": {
       "test_cases_count": 2,
       "avg_accuracy": 0.2,
       "avg_confidence": 0.8971587443298987,
-      "avg_processing_time": 0.0022549152374267576
+      "avg_processing_time": 0.002428865432739258
     },
     "challenging": {
       "test_cases_count": 2,
       "avg_accuracy": 0.13695652173913045,
       "avg_confidence": 0.8304441481958307,
-      "avg_processing_time": 0.009262323379516602
+      "avg_processing_time": 0.00943460464477539
     }
   },
   "statistical_insights": {
     "performance_trends": {
       "accuracy_correlation_with_complexity": -0.2144191506123378,
-      "processing_time_vs_accuracy": -0.31073347187339095,
+      "processing_time_vs_accuracy": -0.3356957519444545,
       "overall_accuracy_consistency": 0.18455182601283443
     },
     "reliability_metrics": {},

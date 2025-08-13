@@ -7,15 +7,15 @@ Total Test Cases: 10
 Total Iterations: 50
 spaCy + YAKE Success Rate: 100.0%
 Baseline Methods Tested: rake, tfidf, hybrid_ensemble
-Experiment Timestamp: 2025-08-13T10:07:22.110545
+Experiment Timestamp: 2025-08-13T10:10:05.090936
 
 PERFORMANCE RANKING:
 --------------------
 Best Method: spacy_yake
-Best Score: 0.670
+Best Score: 0.669
 
 Method Rankings:
-1. spacy_yake: 0.670
+1. spacy_yake: 0.669
 2. rake: 0.000
 3. tfidf: 0.000
 4. hybrid_ensemble: 0.000
@@ -24,15 +24,15 @@ SPAÇY + YAKE OVERALL PERFORMANCE:
 ------------------------------
 Processing Time:
   Mean: 0.0075
-  Std: 0.0029
-  Range: 0.0021 - 0.0104
+  Std: 0.0028
+  Range: 0.0022 - 0.0103
   Median: 0.0089
 
 Memory Usage:
-  Mean: 0.0628
-  Std: 0.1224
-  Range: 0.0000 - 0.4188
-  Median: 0.0141
+  Mean: 0.0959
+  Std: 0.1800
+  Range: 0.0000 - 0.5906
+  Median: 0.0172
 
 Confidence Score:
   Mean: 0.8530
@@ -66,7 +66,7 @@ Social Media:
   Test Cases: 2
   Avg Accuracy: 0.437
   Avg Confidence: 0.907
-  Avg Processing Time: 0.008s
+  Avg Processing Time: 0.007s
 
 Business:
   Test Cases: 2
@@ -95,7 +95,7 @@ Challenging:
 STATISTICAL INSIGHTS:
 --------------------
 Accuracy-Complexity Correlation: -0.214
-Processing Time-Accuracy Correlation: -0.311
+Processing Time-Accuracy Correlation: -0.336
 Overall Accuracy Consistency (Std): 0.185
 
 OPTIMIZATION RECOMMENDATIONS:
