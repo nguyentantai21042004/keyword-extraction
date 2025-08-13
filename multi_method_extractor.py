@@ -91,12 +91,12 @@ class SpacyYakeExtractor(BaseExtractor):
                 spacy.cli.download("en_core_web_sm")
                 self.nlp = spacy.load("en_core_web_sm")
             
-            # Initialize YAKE
+            # Initialize YAKE with OPTIMIZED parameters (High Recall configuration)
             self.yake_extractor = yake.KeywordExtractor(
                 lan="en", 
-                n=1, 
-                dedupLim=0.9, 
-                top=20, 
+                n=2,                    # Bigrams for better phrase extraction
+                dedupLim=0.8,           # Allow more diversity
+                top=30,                 # More keywords
                 features=None
             )
             
@@ -142,27 +142,41 @@ class SpacyYakeExtractor(BaseExtractor):
                     'relevance': 1 - score
                 })
             
-            # Add named entities
-            for i, (entity, label) in enumerate(entities[:10]):
-                keywords.append({
-                    'keyword': entity,
-                    'score': 0.8,
-                    'rank': len(keywords) + 1,
-                    'type': f'entity_{label.lower()}',
-                    'relevance': 0.8
-                })
+            # Add named entities with OPTIMIZED weights
+            for i, (entity, label) in enumerate(entities[:15]):  # Increased from 10
+                # Filter entities by length for better quality
+                if len(entity.split()) <= 3:  # Only entities with <= 3 words
+                    keywords.append({
+                        'keyword': entity,
+                        'score': 0.7,  # Reduced from 0.8 for balance
+                        'rank': len(keywords) + 1,
+                        'type': f'entity_{label.lower()}',
+                        'relevance': 0.7
+                    })
+            
+            # Add noun chunks with OPTIMIZED weights
+            for i, chunk in enumerate(noun_chunks[:20]):  # Increased from 15
+                # Filter chunks by minimum length for relevance
+                if len(chunk.split()) >= 2:  # Only chunks with >= 2 words
+                    keywords.append({
+                        'keyword': chunk,
+                        'score': 0.5,  # Reduced from 0.6 for balance
+                        'rank': len(keywords) + 1,
+                        'type': 'noun_chunk',
+                        'relevance': 0.5
+                    })
             
             # Sort by score
             keywords.sort(key=lambda x: x['score'], reverse=True)
             
-            # Re-rank
-            for i, kw in enumerate(keywords[:20]):
+            # Re-rank with increased limit
+            for i, kw in enumerate(keywords[:30]):  # Increased from 20
                 kw['rank'] = i + 1
             
             confidence = self._calculate_spacy_yake_confidence(keywords, entities, noun_chunks)
             
             return ExtractionResult(
-                keywords=keywords[:20],
+                keywords=keywords[:30],  # Increased from 20
                 metadata={
                     'method': 'spacy_yake',
                     'entities_count': len(entities),
@@ -196,13 +210,17 @@ class SpacyYakeExtractor(BaseExtractor):
         yake_scores = [kw['score'] for kw in keywords if kw['type'] == 'yake_keyword']
         base_confidence = np.mean(yake_scores) if yake_scores else 0.5
         
-        # Bonus for entity detection
-        entity_bonus = min(len(entities) / 10, 0.2)
+        # Bonus for entity detection (OPTIMIZED)
+        entity_bonus = min(len(entities) / 15, 0.2)  # Adjusted divisor
         
-        # Bonus for noun chunks
-        chunk_bonus = min(len(noun_chunks) / 20, 0.1)
+        # Bonus for noun chunks (OPTIMIZED)
+        chunk_bonus = min(len(noun_chunks) / 25, 0.1)  # Adjusted divisor
         
-        return min(base_confidence + entity_bonus + chunk_bonus, 1.0)
+        # Additional bonus for keyword diversity
+        keyword_types = set(kw['type'] for kw in keywords)
+        diversity_bonus = min(len(keyword_types) / 5, 0.1)
+        
+        return min(base_confidence + entity_bonus + chunk_bonus + diversity_bonus, 1.0)
 
 class RakeExtractor(BaseExtractor):
     """Improved RAKE method for better keyword extraction"""
