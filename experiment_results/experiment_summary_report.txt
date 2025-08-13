@@ -1,0 +1,244 @@
+🧪 SPAÇY + YAKE ALGORITHM EXPERIMENT SUMMARY REPORT
+============================================================
+
+EXPERIMENT SUMMARY:
+--------------------
+Total Test Cases: 30
+Total Iterations: 150
+spaCy + YAKE Success Rate: 100.0%
+Baseline Methods Tested: rake, tfidf, textrank, keybert, hybrid_ensemble
+Experiment Timestamp: 2025-08-13T15:36:48.617158
+
+PERFORMANCE RANKING:
+--------------------
+Best Method: spacy_yake
+Best Score: 0.762
+
+Method Rankings:
+1. spacy_yake: 0.762
+2. rake: 0.757
+3. hybrid_ensemble: 0.749
+4. keybert: 0.627
+5. tfidf: 0.499
+6. textrank: 0.198
+
+SPAÇY + YAKE OVERALL PERFORMANCE:
+------------------------------
+Processing Time:
+  Mean: 0.0159
+  Std: 0.0093
+  Range: 0.0029 - 0.0373
+  Median: 0.0143
+
+Memory Usage:
+  Mean: -0.9903
+  Std: 5.0512
+  Range: -27.4719 - 0.5719
+  Median: 0.1141
+
+Confidence Score:
+  Mean: 0.8944
+  Std: 0.2040
+  Range: 0.3000 - 1.0000
+  Median: 1.0000
+
+Accuracy:
+  Mean: 0.3821
+  Std: 0.1348
+  Range: 0.0000 - 0.5833
+  Median: 0.3935
+
+Keywords Count:
+  Mean: 23.3667
+  Std: 8.2522
+  Range: 6.0000 - 30.0000
+  Median: 28.0000
+
+BASELINE METHODS PERFORMANCE:
+------------------------------
+RAKE:
+  Processing Time:
+    Mean: 0.0002
+    Std: 0.0004
+    Range: 0.0001 - 0.0022
+    Median: 0.0002
+  Memory Usage:
+    Mean: 0.0338
+    Std: 0.1800
+    Range: 0.0000 - 1.0031
+    Median: 0.0000
+  Confidence Score:
+    Mean: 0.9855
+    Std: 0.0762
+    Range: 0.5750 - 1.0000
+    Median: 1.0000
+  Accuracy:
+    Mean: 0.3169
+    Std: 0.1799
+    Range: 0.0000 - 0.7143
+    Median: 0.3333
+  Keywords Count:
+    Mean: 13.6333
+    Std: 5.7241
+    Range: 1.0000 - 20.0000
+    Median: 15.5000
+
+TFIDF:
+  Processing Time:
+    Mean: 0.0007
+    Std: 0.0001
+    Range: 0.0005 - 0.0010
+    Median: 0.0007
+  Memory Usage:
+    Mean: 0.0045
+    Std: 0.0095
+    Range: 0.0000 - 0.0500
+    Median: 0.0016
+  Confidence Score:
+    Mean: 0.1469
+    Std: 0.1478
+    Range: 0.0562 - 0.7920
+    Median: 0.0826
+  Accuracy:
+    Mean: 0.1767
+    Std: 0.0978
+    Range: 0.0000 - 0.4000
+    Median: 0.1703
+  Keywords Count:
+    Mean: 16.3667
+    Std: 5.6715
+    Range: 3.0000 - 20.0000
+    Median: 20.0000
+
+TEXTRANK:
+  Processing Time:
+    Mean: 0.0010
+    Std: 0.0015
+    Range: 0.0003 - 0.0092
+    Median: 0.0007
+  Memory Usage:
+    Mean: 0.3793
+    Std: 1.6531
+    Range: 0.0000 - 9.2719
+    Median: 0.0531
+  Confidence Score:
+    Mean: 0.0000
+    Std: 0.0000
+    Range: 0.0000 - 0.0000
+    Median: 0.0000
+  Accuracy:
+    Mean: 0.0000
+    Std: 0.0000
+    Range: 0.0000 - 0.0000
+    Median: 0.0000
+  Keywords Count:
+    Mean: 0.0000
+    Std: 0.0000
+    Range: 0.0000 - 0.0000
+    Median: 0.0000
+
+KEYBERT:
+  Processing Time:
+    Mean: 0.1022
+    Std: 0.2550
+    Range: 0.0178 - 1.4729
+    Median: 0.0590
+  Memory Usage:
+    Mean: 2.4483
+    Std: 5.3469
+    Range: -1.5250 - 30.5469
+    Median: 1.8469
+  Confidence Score:
+    Mean: 0.6914
+    Std: 0.0834
+    Range: 0.5782 - 0.9739
+    Median: 0.6763
+  Accuracy:
+    Mean: 0.1947
+    Std: 0.1755
+    Range: 0.0000 - 0.7500
+    Median: 0.1818
+  Keywords Count:
+    Mean: 5.0000
+    Std: 0.0000
+    Range: 5.0000 - 5.0000
+    Median: 5.0000
+
+HYBRID_ENSEMBLE:
+  Processing Time:
+    Mean: 0.0172
+    Std: 0.0091
+    Range: 0.0039 - 0.0389
+    Median: 0.0157
+  Memory Usage:
+    Mean: -0.8815
+    Std: 4.7664
+    Range: -26.1969 - 0.3031
+    Median: 0.1312
+  Confidence Score:
+    Mean: 0.9246
+    Std: 0.0462
+    Range: 0.7703 - 0.9581
+    Median: 0.9416
+  Accuracy:
+    Mean: 0.3235
+    Std: 0.1217
+    Range: 0.0606 - 0.5000
+    Median: 0.3333
+  Keywords Count:
+    Mean: 22.5333
+    Std: 5.6020
+    Range: 6.0000 - 25.0000
+    Median: 25.0000
+
+DOMAIN-SPECIFIC PERFORMANCE:
+------------------------------
+Social Media:
+  Test Cases: 5
+  Avg Accuracy: 0.472
+  Avg Confidence: 0.933
+  Avg Processing Time: 0.009s
+
+Business:
+  Test Cases: 5
+  Avg Accuracy: 0.374
+  Avg Confidence: 0.967
+  Avg Processing Time: 0.021s
+
+Technical:
+  Test Cases: 5
+  Avg Accuracy: 0.440
+  Avg Confidence: 1.000
+  Avg Processing Time: 0.019s
+
+Short Text:
+  Test Cases: 5
+  Avg Accuracy: 0.496
+  Avg Confidence: 0.467
+  Avg Processing Time: 0.004s
+
+Challenging:
+  Test Cases: 5
+  Avg Accuracy: 0.350
+  Avg Confidence: 1.000
+  Avg Processing Time: 0.029s
+
+Vietnamese:
+  Test Cases: 5
+  Avg Accuracy: 0.160
+  Avg Confidence: 1.000
+  Avg Processing Time: 0.014s
+
+STATISTICAL INSIGHTS:
+--------------------
+Accuracy-Complexity Correlation: -0.163
+Processing Time-Accuracy Correlation: -0.372
+Overall Accuracy Consistency (Std): 0.135
+
+OPTIMIZATION RECOMMENDATIONS:
+-------------------------
+• Consider tuning YAKE parameters for better accuracy
+
+============================================================
+Report generated automatically by spaCy + YAKE Experiment Framework
+For detailed analysis, check the JSON files in this directory.

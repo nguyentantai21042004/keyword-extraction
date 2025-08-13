@@ -1,253 +1,302 @@
-# 🎓 Multi-Method Keyword Extraction Research Framework
+# 🎓 Enhanced Multi-Method Keyword Extraction Research Framework
 
-**Comprehensive Comparative Analysis Framework for Đồ Án**
+A comprehensive research framework for comparing and benchmarking multiple keyword extraction methods with Vietnamese language support.
 
-This research framework implements and benchmarks multiple keyword extraction methods to provide evidence-based optimization decisions for your thesis project.
-
-## 🏗️ Architecture Overview
-
-The framework consists of 6 extraction methods:
-
-1. **spaCy + YAKE** - Primary hybrid method combining NLP and statistical extraction
-2. **RAKE + NLTK** - Fast baseline method for comparison
-3. **TextRank** - Graph-based method for semantic analysis
-4. **TF-IDF** - Statistical baseline method
-5. **KeyBERT** - High-accuracy semantic method
-6. **Hybrid Ensemble** - Intelligent combination of multiple methods
-
-## 📁 Project Structure
+## 🏗️ Project Structure
 
 ```
 smap-keyword-extraction/
-├── multi_method_extractor.py    # Core extraction methods
-├── hybrid_ensemble.py           # Ensemble method implementation
-├── benchmark_framework.py       # Benchmarking and testing framework
-├── visualization.py             # Charts and graphs generation
-├── optimization_analyzer.py     # Optimization analysis and justification
-├── main.py                     # Main orchestrator and entry point
-├── requirements.txt             # Python dependencies
-└── README.md                   # This file
+├── src/                          # Source code chính
+│   ├── __init__.py
+│   ├── core/                     # Core functionality
+│   │   ├── __init__.py
+│   │   ├── base_extractor.py     # Base classes và interfaces
+│   │   ├── extractors/           # Các thuật toán extraction
+│   │   │   ├── __init__.py
+│   │   │   ├── spacy_yake.py
+│   │   │   ├── rake.py
+│   │   │   ├── textrank.py
+│   │   │   ├── tfidf.py
+│   │   │   └── keybert.py
+│   │   ├── ensemble/             # Ensemble methods
+│   │   │   ├── __init__.py
+│   │   │   └── hybrid_ensemble.py
+│   │   └── utils/                # Utility functions
+│   │       ├── __init__.py
+│   │       ├── performance.py
+│   │       └── text_processing.py
+│   ├── benchmark/                 # Benchmarking framework
+│   │   ├── __init__.py
+│   │   ├── benchmark_framework.py
+│   │   ├── test_datasets.py
+│   │   └── metrics.py
+│   ├── analysis/                  # Analysis và optimization
+│   │   ├── __init__.py
+│   │   ├── optimization_analyzer.py
+│   │   └── performance_analyzer.py
+│   ├── visualization/             # Visualization
+│   │   ├── __init__.py
+│   │   └── charts.py
+│   └── config/                    # Configuration
+│       ├── __init__.py
+│       ├── settings.py
+│       └── constants.py
+├── experiments/                   # Experiments và research
+│   ├── __init__.py
+│   ├── guides/
+│ │   ├── __init__.py
+│ │   └── experiment_guide.md
+│   ├── scripts/
+│   │   ├── __init__.py
+│   │   ├── run_complete_experiment.py
+│   │   ├── run_enhanced_experiment.py
+│   │   └── run_optimized_experiment.py
+│   ├── results/
+│   └── visualizations/
+├── tests/                         # Test files
+│   ├── __init__.py
+│   ├── test_extractors.py
+│   ├── test_benchmark.py
+│   └── test_ensemble.py
+├── scripts/                       # Utility scripts
+│   ├── demo.py
+│   └── main.py
+├── requirements.txt
+└── README.md
 ```
 
-## 🚀 Quick Start
+## 🚀 Features
 
-### 1. Install Dependencies
+### Core Algorithms
+- **SpaCy + YAKE**: Primary method combining NLP and statistical extraction
+- **RAKE + NLTK**: Fast baseline method for phrase extraction
+- **TextRank**: Graph-based keyword extraction
+- **TF-IDF**: Statistical baseline method
+- **KeyBERT**: Semantic keyword extraction using transformers
+- **Hybrid Ensemble**: Intelligent combination of multiple methods
 
+### Enhanced Capabilities
+- **Multilingual Support**: English and Vietnamese text processing
+- **25+ Test Cases**: Comprehensive test dataset including social media, business, and technical content
+- **Performance Metrics**: Processing time, memory usage, accuracy, and confidence scoring
+- **Visualization**: Comprehensive charts and analysis plots
+- **Optimization Analysis**: Performance gap identification and recommendations
+
+### Research Features
+- **Benchmarking Framework**: Systematic comparison of all methods
+- **Domain Analysis**: Performance analysis across different text categories
+- **Language Analysis**: Cross-language performance comparison
+- **Complexity Analysis**: Performance based on text complexity levels
+
+## 📦 Installation
+
+1. **Clone the repository**:
+```bash
+git clone <repository-url>
+cd smap-keyword-extraction
+```
+
+2. **Create virtual environment**:
+```bash
+python -m venv myenv
+source myenv/bin/activate  # On Windows: myenv\Scripts\activate
+```
+
+3. **Install dependencies**:
 ```bash
 pip install -r requirements.txt
 ```
 
-**Note**: Some methods require additional setup:
-- **spaCy**: Will automatically download `en_core_web_sm` model
-- **KeyBERT**: Will download `all-MiniLM-L6-v2` model on first use
+4. **Install additional models** (if needed):
+```bash
+python -m spacy download en_core_web_sm
+```
 
-### 2. Run the Research Framework
+## 🎯 Usage
+
+### Quick Start
+
+Run the complete research framework:
 
 ```bash
-python main.py
+python scripts/main.py
 ```
 
-The framework will:
-- Run all 6 methods on test cases
-- Generate performance metrics
-- Create visualizations
-- Perform optimization analysis
-- Save comprehensive reports
-
-### 3. View Results
-
-After execution, you'll find:
-- `research_benchmark_results.csv` - Raw benchmark data
-- `research_performance_report.txt` - Performance analysis
-- `research_optimization_report.txt` - Optimization justification
-- Various PNG visualization files
-
-## 🔬 Research Methodology
-
-### Benchmark Process
-
-1. **Test Case Setup**: Predefined test cases across different categories
-   - Social media content
-   - Business documents
-   - Technical text
-   - Short text
-
-2. **Performance Metrics**:
-   - Processing time (seconds)
-   - Memory usage (MB)
-   - Confidence score (0-1)
-   - Keywords count
-   - Accuracy (F1 score when ground truth available)
-   - Success rate
-
-3. **Multi-Method Execution**: All methods run concurrently on each test case
-
-### Optimization Analysis
-
-The framework uses weighted criteria to determine the optimal method:
-
-- **Processing Time** (25%): Lower is better
-- **Memory Usage** (15%): Lower is better
-- **Confidence Score** (25%): Higher is better
-- **Accuracy** (25%): Higher is better
-- **Success Rate** (10%): Higher is better
-
-## 📊 Output Files
-
-### 1. Benchmark Results (`research_benchmark_results.csv`)
-Contains raw performance data for each method on each test case.
-
-### 2. Performance Report (`research_performance_report.txt`)
-Statistical analysis including:
-- Overall performance by method
-- Category-specific performance
-- Social media performance
-- Summary statistics
-
-### 3. Optimization Report (`research_optimization_report.txt`)
-Justification for method selection including:
-- Optimal method identification
-- Detailed comparison table
-- Performance insights
-- Optimization suggestions
-- Use case recommendations
-
-### 4. Visualizations
-- `method_performance_comparison.png` - Performance comparison charts
-- `accuracy_analysis.png` - Accuracy analysis
-- `method_comparison_heatmap.png` - Performance heatmap
-- `social_media_analysis.png` - Social media specific analysis
-- `summary_statistics.png` - Summary table
-- `optimization_radar_chart.png` - Radar chart comparison
-- `weighted_scores_comparison.png` - Weighted score comparison
-
-## 🎯 Customization
-
-### Adding Custom Test Cases
-
-Modify the `create_custom_test_cases()` function in `main.py`:
+### Individual Components
 
 ```python
-def create_custom_test_cases():
-    custom_cases = [
-        {
-            'text': "Your custom text here",
-            'expected_keywords': ['keyword1', 'keyword2'],
-            'category': 'custom_category'
-        }
-    ]
-    return custom_cases
+from src.core import SpacyYakeExtractor, RakeExtractor
+from src.benchmark import ExtractionBenchmark
+
+# Initialize extractors
+extractor = SpacyYakeExtractor()
+
+# Extract keywords
+result = await extractor.extract("Your text here")
+print(result.keywords)
+
+# Run benchmark
+benchmark = ExtractionBenchmark()
+# Add test cases and run...
 ```
 
-### Modifying Method Weights
-
-Adjust weights in `optimization_analyzer.py`:
+### Custom Configuration
 
 ```python
-weights = {
-    'processing_time': 0.30,    # Increase importance
-    'memory_usage': 0.10,       # Decrease importance
-    'confidence_score': 0.25,
-    'accuracy': 0.25,
-    'success_rate': 0.10
+from src.config import METHOD_CONFIGS, OPTIMIZATION_WEIGHTS
+
+# Customize method parameters
+config = METHOD_CONFIGS['spacy_yake'].copy()
+config['yake_max_keywords'] = 30
+
+extractor = SpacyYakeExtractor(config)
+```
+
+## 📊 Output
+
+The framework generates:
+
+- **CSV Results**: Detailed benchmark results
+- **JSON Reports**: Comprehensive analysis reports
+- **Visualizations**: Performance comparison charts
+- **Text Reports**: Human-readable optimization recommendations
+
+## 🔬 Experiments
+
+### Running Experiments
+
+```bash
+# Complete experiment
+python experiments/scripts/run_complete_experiment.py
+
+# Enhanced experiment
+python experiments/scripts/run_enhanced_experiment.py
+
+# Optimized experiment
+python experiments/scripts/run_optimized_experiment.py
+```
+
+### Custom Experiments
+
+Create your own experiment scripts in `experiments/scripts/` following the existing patterns.
+
+## 🧪 Testing
+
+Run the test suite:
+
+```bash
+python -m pytest tests/
+```
+
+Or run individual test files:
+
+```bash
+python tests/test_extractors.py
+```
+
+## 📈 Performance
+
+### Benchmark Results
+
+The framework provides comprehensive performance analysis:
+
+- **Accuracy Metrics**: Precision, recall, F1-score with exact and partial matching
+- **Performance Metrics**: Processing time and memory usage
+- **Confidence Scoring**: Method-specific confidence evaluation
+- **Cross-Domain Analysis**: Performance across different text categories
+
+### Optimization Recommendations
+
+Automatic identification of:
+- Performance bottlenecks
+- Accuracy gaps
+- Memory optimization opportunities
+- Processing time improvements
+
+## 🌍 Multilingual Support
+
+### Vietnamese Language Features
+
+- **Character Detection**: Automatic Vietnamese diacritic recognition
+- **Language-Specific Processing**: Optimized for Vietnamese text characteristics
+- **Cross-Language Comparison**: Performance analysis between English and Vietnamese
+
+### Supported Languages
+
+- **English**: Full support with optimized models
+- **Vietnamese**: Enhanced support with diacritic handling
+- **Mixed Content**: Automatic language detection and processing
+
+## 🔧 Configuration
+
+### Method Parameters
+
+Each extraction method can be configured independently:
+
+```python
+# SpaCy + YAKE configuration
+spacy_yake_config = {
+    'spacy_model': 'en_core_web_sm',
+    'yake_language': 'en',
+    'yake_max_keywords': 20,
+    'yake_dedup_lim': 0.9
+}
+
+# RAKE configuration
+rake_config = {
+    'min_phrase_length': 2,
+    'max_phrase_length': 4,
+    'min_frequency': 1
 }
 ```
 
-### Adding New Extraction Methods
+### Optimization Weights
 
-1. Create a new class inheriting from `BaseExtractor`
-2. Implement the `extract()` method
-3. Add it to the `ExtractionBenchmark` class
-4. Update the `ExtractionMethod` enum
+Customize performance evaluation criteria:
 
-## 🔍 Understanding Results
+```python
+# Balanced optimization
+balanced_weights = {
+    'processing_time': 0.20,
+    'memory_usage': 0.20,
+    'confidence_score': 0.20,
+    'accuracy': 0.25,
+    'success_rate': 0.15
+}
+```
 
-### Key Metrics Explained
+## 📚 Documentation
 
-- **Processing Time**: Actual execution time in seconds
-- **Memory Usage**: Additional memory consumed during extraction
-- **Confidence Score**: Method's confidence in extracted keywords (0-1)
-- **Accuracy**: F1 score when comparing with expected keywords
-- **Success Rate**: Percentage of successful extractions
+- **Algorithm Guides**: Detailed explanations in `docs/algorithms/`
+- **Experiment Guide**: Step-by-step experiment instructions
+- **API Reference**: Comprehensive code documentation
+- **Examples**: Usage examples and best practices
 
-### Interpreting Visualizations
+## 🤝 Contributing
 
-- **Box Plots**: Show distribution of performance metrics
-- **Heatmap**: Normalized comparison across all metrics
-- **Radar Chart**: Multi-dimensional performance comparison
-- **Bar Charts**: Direct metric comparisons
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests for new functionality
+5. Submit a pull request
 
-## 📚 Thesis Integration
+## 📄 License
 
-### What to Include in Your Report
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-1. **Methodology Section**:
-   - "Implemented 6 different keyword extraction methods"
-   - "Conducted comprehensive benchmarking on X test cases"
-   - "Used weighted optimization criteria for method selection"
+## 🙏 Acknowledgments
 
-2. **Results Section**:
-   - Include generated visualizations
-   - Reference performance metrics from reports
-   - Use optimization justification for method selection
+- Research team for algorithm implementations
+- Open source community for dependencies
+- Academic institutions for research support
 
-3. **Discussion Section**:
-   - Explain why your chosen method is optimal
-   - Reference the quantitative evidence
-   - Discuss trade-offs between methods
+## 📞 Contact
 
-### Sample Thesis Text
-
-> "The research framework evaluated 6 keyword extraction methods across multiple text categories. 
-> Quantitative analysis using weighted criteria (processing time: 25%, confidence: 25%, accuracy: 25%, 
-> memory: 15%, success rate: 10%) identified [METHOD] as optimal with a score of X.XX. 
-> This method provides the best balance of performance, accuracy, and resource efficiency for 
-> real-time social media analysis."
-
-## 🛠️ Troubleshooting
-
-### Common Issues
-
-1. **Import Errors**: Ensure all dependencies are installed
-2. **Model Download Issues**: Check internet connection for spaCy/KeyBERT models
-3. **Memory Issues**: Some methods (KeyBERT) require significant RAM
-4. **Timeout Errors**: Increase timeout values for slow methods
-
-### Performance Tips
-
-- Run on a machine with sufficient RAM (8GB+ recommended)
-- Close other applications during benchmarking
-- Use SSD storage for faster model loading
-- Consider running overnight for large datasets
-
-## 📈 Extending the Framework
-
-### Future Enhancements
-
-1. **Additional Methods**: BERT-based, transformer models
-2. **Language Support**: Multi-language extraction
-3. **Real-time Analysis**: Streaming text processing
-4. **Custom Metrics**: Domain-specific evaluation criteria
-5. **Web Interface**: GUI for easier interaction
-
-### Contributing
-
-Feel free to extend the framework by:
-- Adding new extraction methods
-- Improving visualization quality
-- Enhancing optimization algorithms
-- Adding more test case categories
-
-## 📞 Support
-
-For questions or issues:
-1. Check the generated error logs
-2. Verify all dependencies are installed
-3. Ensure sufficient system resources
-4. Review the console output for specific error messages
+For questions and support:
+- Create an issue in the repository
+- Contact the research team
+- Check the documentation
 
 ---
 
-**Happy Researching! 🎓✨**
-
-This framework provides the quantitative evidence you need to justify your method selection in your thesis. The comprehensive benchmarking and optimization analysis will demonstrate your systematic approach to solving the keyword extraction problem.
+**Note**: This framework is designed for research purposes and may require additional dependencies for production use.
