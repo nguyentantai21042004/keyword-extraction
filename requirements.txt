@@ -1,0 +1,14 @@
+spacy>=3.7.0
+yake>=0.4.8
+rake-nltk>=1.0.6
+textrank4zh>=0.3
+keybert>=0.3.0
+sentence-transformers>=2.2.0
+scikit-learn>=1.3.0
+pandas>=1.5.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+psutil>=5.9.0
+asyncio
+textrank
