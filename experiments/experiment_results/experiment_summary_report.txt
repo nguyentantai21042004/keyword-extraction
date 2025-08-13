@@ -3,161 +3,161 @@
 
 EXPERIMENT SUMMARY:
 --------------------
-Total Test Cases: 10
-Total Iterations: 50
+Total Test Cases: 30
+Total Iterations: 150
 spaCy + YAKE Success Rate: 100.0%
 Baseline Methods Tested: rake, tfidf, textrank, keybert, hybrid_ensemble
-Experiment Timestamp: 2025-08-13T13:28:13.338488
+Experiment Timestamp: 2025-08-13T14:43:17.417235
 
 PERFORMANCE RANKING:
 --------------------
 Best Method: spacy_yake
-Best Score: 0.765
+Best Score: 0.776
 
 Method Rankings:
-1. spacy_yake: 0.765
-2. hybrid_ensemble: 0.745
-3. rake: 0.691
-4. tfidf: 0.572
-5. keybert: 0.555
-6. textrank: 0.502
+1. spacy_yake: 0.776
+2. hybrid_ensemble: 0.744
+3. rake: 0.695
+4. tfidf: 0.592
+5. keybert: 0.560
+6. textrank: 0.532
 
 SPAÇY + YAKE OVERALL PERFORMANCE:
 ------------------------------
 Processing Time:
-  Mean: 0.0183
-  Std: 0.0105
-  Range: 0.0026 - 0.0365
-  Median: 0.0222
+  Mean: 0.0157
+  Std: 0.0093
+  Range: 0.0028 - 0.0392
+  Median: 0.0142
 
 Memory Usage:
-  Mean: -0.0131
-  Std: 0.4771
-  Range: -1.3594 - 0.5750
-  Median: 0.0609
+  Mean: 0.2127
+  Std: 0.6452
+  Range: -1.4156 - 3.1313
+  Median: 0.0984
 
 Confidence Score:
-  Mean: 0.9580
-  Std: 0.0576
+  Mean: 0.9739
+  Std: 0.0474
   Range: 0.8598 - 1.0000
-  Median: 0.9987
+  Median: 1.0000
 
 Accuracy:
-  Mean: 0.3586
-  Std: 0.1174
-  Range: 0.2353 - 0.5833
-  Median: 0.3050
+  Mean: 0.3821
+  Std: 0.1348
+  Range: 0.0000 - 0.5833
+  Median: 0.3935
 
 Keywords Count:
-  Mean: 23.9000
-  Std: 9.0934
+  Mean: 23.3667
+  Std: 8.2522
   Range: 6.0000 - 30.0000
-  Median: 29.0000
+  Median: 28.0000
 
 BASELINE METHODS PERFORMANCE:
 ------------------------------
 RAKE:
   Processing Time:
-    Mean: 0.0004
-    Std: 0.0006
-    Range: 0.0001 - 0.0022
+    Mean: 0.0002
+    Std: 0.0004
+    Range: 0.0001 - 0.0021
     Median: 0.0002
   Memory Usage:
-    Mean: 0.0669
-    Std: 0.2006
-    Range: 0.0000 - 0.6687
+    Mean: 0.0210
+    Std: 0.1233
+    Range: -0.0688 - 0.6813
     Median: 0.0000
   Confidence Score:
-    Mean: 0.9900
-    Std: 0.0300
-    Range: 0.9000 - 1.0000
+    Mean: 0.9743
+    Std: 0.1210
+    Range: 0.3300 - 1.0000
     Median: 1.0000
   Accuracy:
-    Mean: 0.1267
-    Std: 0.0741
-    Range: 0.0000 - 0.2353
-    Median: 0.1333
+    Mean: 0.1479
+    Std: 0.1269
+    Range: 0.0000 - 0.5714
+    Median: 0.1250
   Keywords Count:
-    Mean: 9.1000
-    Std: 2.7000
+    Mean: 9.3000
+    Std: 1.8824
     Range: 1.0000 - 10.0000
     Median: 10.0000
 
 TFIDF:
   Processing Time:
     Mean: 0.0006
-    Std: 0.0001
-    Range: 0.0005 - 0.0008
+    Std: 0.0002
+    Range: 0.0005 - 0.0013
     Median: 0.0006
   Memory Usage:
-    Mean: 0.0069
-    Std: 0.0186
-    Range: 0.0000 - 0.0625
+    Mean: -0.0182
+    Std: 0.1127
+    Range: -0.6219 - 0.0625
     Median: 0.0000
   Confidence Score:
-    Mean: 0.4810
-    Std: 0.3310
-    Range: 0.2088 - 1.3000
-    Median: 0.3455
+    Mean: 0.5918
+    Std: 0.5024
+    Range: 0.2088 - 1.9500
+    Median: 0.3825
   Accuracy:
-    Mean: 0.1490
-    Std: 0.1987
+    Mean: 0.1248
+    Std: 0.1562
     Range: 0.0000 - 0.6667
     Median: 0.0755
   Keywords Count:
-    Mean: 14.3000
-    Std: 7.0292
+    Mean: 13.0000
+    Std: 7.0333
     Range: 1.0000 - 20.0000
-    Median: 18.5000
+    Median: 15.5000
 
 TEXTRANK:
   Processing Time:
-    Mean: 0.0020
-    Std: 0.0026
-    Range: 0.0007 - 0.0098
+    Mean: 0.0015
+    Std: 0.0017
+    Range: 0.0007 - 0.0107
     Median: 0.0012
   Memory Usage:
-    Mean: 0.9416
-    Std: 2.4959
-    Range: 0.0000 - 8.4250
-    Median: 0.1609
+    Mean: 0.4200
+    Std: 1.6397
+    Range: -0.2625 - 9.2156
+    Median: 0.1172
   Confidence Score:
-    Mean: 0.2352
-    Std: 0.1008
-    Range: 0.1625 - 0.4333
-    Median: 0.1919
+    Mean: 0.2204
+    Std: 0.0783
+    Range: 0.1469 - 0.4333
+    Median: 0.1909
   Accuracy:
-    Mean: 0.1370
-    Std: 0.1689
-    Range: 0.0000 - 0.4706
-    Median: 0.0476
+    Mean: 0.2262
+    Std: 0.2159
+    Range: 0.0000 - 0.8571
+    Median: 0.1534
   Keywords Count:
-    Mean: 11.0000
-    Std: 4.4497
-    Range: 3.0000 - 16.0000
-    Median: 12.5000
+    Mean: 11.3000
+    Std: 4.8246
+    Range: 3.0000 - 20.0000
+    Median: 11.0000
 
 KEYBERT:
   Processing Time:
-    Mean: 0.2647
-    Std: 0.6387
-    Range: 0.0189 - 2.1803
-    Median: 0.0581
+    Mean: 0.1181
+    Std: 0.3003
+    Range: 0.0187 - 1.7329
+    Median: 0.0633
   Memory Usage:
-    Mean: 3.1534
-    Std: 7.3453
-    Range: -2.0063 - 24.6781
-    Median: 1.7125
+    Mean: 0.7708
+    Std: 4.9628
+    Range: -24.5250 - 3.8031
+    Median: 1.8750
   Confidence Score:
-    Mean: 0.4013
-    Std: 0.1048
-    Range: 0.2856 - 0.6739
-    Median: 0.3922
+    Mean: 0.3914
+    Std: 0.0834
+    Range: 0.2782 - 0.6739
+    Median: 0.3763
   Accuracy:
-    Mean: 0.2128
-    Std: 0.1896
-    Range: 0.0000 - 0.5714
-    Median: 0.1909
+    Mean: 0.1947
+    Std: 0.1755
+    Range: 0.0000 - 0.7500
+    Median: 0.1818
   Keywords Count:
     Mean: 5.0000
     Std: 0.0000
@@ -166,68 +166,74 @@ KEYBERT:
 
 HYBRID_ENSEMBLE:
   Processing Time:
-    Mean: 0.0198
-    Std: 0.0106
-    Range: 0.0038 - 0.0378
-    Median: 0.0239
+    Mean: 0.0174
+    Std: 0.0102
+    Range: 0.0042 - 0.0414
+    Median: 0.0157
   Memory Usage:
-    Mean: -0.3147
-    Std: 0.7388
-    Range: -1.8313 - 0.2625
-    Median: 0.1109
+    Mean: 0.3524
+    Std: 1.0693
+    Range: -1.5375 - 5.8219
+    Median: 0.1953
   Confidence Score:
-    Mean: 0.9170
-    Std: 0.0540
-    Range: 0.8232 - 1.0000
-    Median: 0.9218
+    Mean: 0.9312
+    Std: 0.0531
+    Range: 0.8185 - 1.0000
+    Median: 0.9369
   Accuracy:
-    Mean: 0.3267
-    Std: 0.1008
-    Range: 0.1111 - 0.5000
-    Median: 0.3200
+    Mean: 0.3230
+    Std: 0.1274
+    Range: 0.0000 - 0.5185
+    Median: 0.3324
   Keywords Count:
-    Mean: 18.2000
-    Std: 4.2379
+    Mean: 18.4667
+    Std: 3.6764
     Range: 6.0000 - 20.0000
     Median: 20.0000
 
 DOMAIN-SPECIFIC PERFORMANCE:
 ------------------------------
 Social Media:
-  Test Cases: 2
-  Avg Accuracy: 0.485
-  Avg Confidence: 0.935
-  Avg Processing Time: 0.011s
+  Test Cases: 5
+  Avg Accuracy: 0.472
+  Avg Confidence: 0.974
+  Avg Processing Time: 0.010s
 
 Business:
-  Test Cases: 2
-  Avg Accuracy: 0.305
-  Avg Confidence: 0.942
-  Avg Processing Time: 0.025s
+  Test Cases: 5
+  Avg Accuracy: 0.374
+  Avg Confidence: 0.955
+  Avg Processing Time: 0.019s
 
 Technical:
-  Test Cases: 2
-  Avg Accuracy: 0.243
-  Avg Confidence: 0.914
-  Avg Processing Time: 0.022s
+  Test Cases: 5
+  Avg Accuracy: 0.440
+  Avg Confidence: 0.942
+  Avg Processing Time: 0.019s
 
 Short Text:
-  Test Cases: 2
-  Avg Accuracy: 0.375
-  Avg Confidence: 0.999
+  Test Cases: 5
+  Avg Accuracy: 0.496
+  Avg Confidence: 0.992
   Avg Processing Time: 0.003s
 
 Challenging:
-  Test Cases: 2
-  Avg Accuracy: 0.385
+  Test Cases: 5
+  Avg Accuracy: 0.350
   Avg Confidence: 1.000
   Avg Processing Time: 0.030s
 
+Vietnamese:
+  Test Cases: 5
+  Avg Accuracy: 0.160
+  Avg Confidence: 0.980
+  Avg Processing Time: 0.013s
+
 STATISTICAL INSIGHTS:
 --------------------
-Accuracy-Complexity Correlation: -0.107
-Processing Time-Accuracy Correlation: -0.438
-Overall Accuracy Consistency (Std): 0.117
+Accuracy-Complexity Correlation: -0.163
+Processing Time-Accuracy Correlation: -0.334
+Overall Accuracy Consistency (Std): 0.135
 
 OPTIMIZATION RECOMMENDATIONS:
 -------------------------

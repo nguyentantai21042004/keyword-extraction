@@ -128,7 +128,37 @@ class SpacyYakeExperiment:
                 'mentions': False,
                 'emojis': False
             },
-            
+            {
+                'id': 'SM_003',
+                'category': 'social_media',
+                'text': "Excited to share our new #AI #startup journey! Building the future of #machinelearning #innovation #tech #entrepreneurship 🚀",
+                'expected_keywords': ['ai', 'startup', 'machine learning', 'innovation', 'tech', 'entrepreneurship'],
+                'complexity': 'medium',
+                'hashtags': True,
+                'mentions': False,
+                'emojis': True
+            },
+            {
+                'id': 'SM_004',
+                'category': 'social_media',
+                'text': "Just finished reading about #blockchain #cryptocurrency trends in 2024. #DeFi #Web3 #crypto #technology #finance",
+                'expected_keywords': ['blockchain', 'cryptocurrency', 'defi', 'web3', 'crypto', 'technology', 'finance'],
+                'complexity': 'high',
+                'hashtags': True,
+                'mentions': False,
+                'emojis': False
+            },
+            {
+                'id': 'SM_005',
+                'category': 'social_media',
+                'text': "Amazing #sustainability initiatives in #retail! #circular economy #green business #eco-friendly #innovation",
+                'expected_keywords': ['sustainability', 'retail', 'circular economy', 'green business', 'eco-friendly', 'innovation'],
+                'complexity': 'medium',
+                'hashtags': True,
+                'mentions': False,
+                'emojis': False
+            },
+
             # ===== BUSINESS DOMAIN =====
             {
                 'id': 'BUS_001',
@@ -150,13 +180,43 @@ class SpacyYakeExperiment:
                 'mentions': False,
                 'emojis': False
             },
-            
+            {
+                'id': 'BUS_003',
+                'category': 'business',
+                'text': "Supply chain optimization through AI-driven demand forecasting and inventory management systems. Real-time analytics enable proactive decision-making.",
+                'expected_keywords': ['supply chain optimization', 'ai-driven', 'demand forecasting', 'inventory management', 'real-time analytics', 'decision-making'],
+                'complexity': 'high',
+                'hashtags': False,
+                'mentions': False,
+                'emojis': False
+            },
+            {
+                'id': 'BUS_004',
+                'category': 'business',
+                'text': "Customer experience enhancement through personalized marketing automation and behavioral analytics. ROI increased by 35% in Q4 2023.",
+                'expected_keywords': ['customer experience', 'personalized marketing', 'automation', 'behavioral analytics', 'roi', 'q4 2023'],
+                'complexity': 'medium',
+                'hashtags': False,
+                'mentions': False,
+                'emojis': False
+            },
+            {
+                'id': 'BUS_005',
+                'category': 'business',
+                'text': "Strategic partnerships in fintech ecosystem: blockchain payments, digital banking, and regulatory compliance solutions.",
+                'expected_keywords': ['strategic partnerships', 'fintech ecosystem', 'blockchain payments', 'digital banking', 'regulatory compliance'],
+                'complexity': 'high',
+                'hashtags': False,
+                'mentions': False,
+                'emojis': False
+            },
+
             # ===== TECHNICAL DOMAIN =====
             {
                 'id': 'TECH_001',
                 'category': 'technical',
                 'text': "Machine learning algorithms for natural language processing applications in social media sentiment analysis. Implementation using transformer models and attention mechanisms.",
-                'expected_keywords': ['machine learning', 'natural language processing', 'sentiment analysis', 'transformer models', 'attention mechanisms'],
+                'expected_keywords': ['machine learning', 'algorithms', 'natural language processing', 'social media', 'sentiment analysis', 'transformer models', 'attention mechanisms'],
                 'complexity': 'high',
                 'hashtags': False,
                 'mentions': False,
@@ -166,19 +226,49 @@ class SpacyYakeExperiment:
                 'id': 'TECH_002',
                 'category': 'technical',
                 'text': "Blockchain technology implementation for secure and transparent supply chain management. Smart contracts enable automated verification and compliance tracking.",
-                'expected_keywords': ['blockchain technology', 'supply chain management', 'smart contracts', 'automated verification', 'compliance tracking'],
-                'complexity': 'medium',
+                'expected_keywords': ['blockchain technology', 'implementation', 'secure', 'transparent', 'supply chain management', 'smart contracts', 'automated verification', 'compliance tracking'],
+                'complexity': 'high',
                 'hashtags': False,
                 'mentions': False,
                 'emojis': False
             },
-            
+            {
+                'id': 'TECH_003',
+                'category': 'technical',
+                'text': "Microservices architecture patterns for scalable cloud-native applications. Container orchestration with Kubernetes and service mesh implementation.",
+                'expected_keywords': ['microservices architecture', 'patterns', 'scalable', 'cloud-native', 'applications', 'container orchestration', 'kubernetes', 'service mesh'],
+                'complexity': 'high',
+                'hashtags': False,
+                'mentions': False,
+                'emojis': False
+            },
+            {
+                'id': 'TECH_004',
+                'category': 'technical',
+                'text': "Data pipeline optimization using Apache Spark and real-time streaming with Kafka. ETL processes enhanced through parallel processing.",
+                'expected_keywords': ['data pipeline', 'optimization', 'apache spark', 'real-time streaming', 'kafka', 'etl processes', 'parallel processing'],
+                'complexity': 'high',
+                'hashtags': False,
+                'mentions': False,
+                'emojis': False
+            },
+            {
+                'id': 'TECH_005',
+                'category': 'technical',
+                'text': "Cybersecurity frameworks for zero-trust architecture implementation. Multi-factor authentication and encryption protocols for data protection.",
+                'expected_keywords': ['cybersecurity frameworks', 'zero-trust architecture', 'multi-factor authentication', 'encryption protocols', 'data protection'],
+                'complexity': 'high',
+                'hashtags': False,
+                'mentions': False,
+                'emojis': False
+            },
+
             # ===== SHORT TEXT DOMAIN =====
             {
                 'id': 'SHORT_001',
                 'category': 'short_text',
                 'text': "AI startup funding trends 2024",
-                'expected_keywords': ['ai startup', 'funding trends'],
+                'expected_keywords': ['ai startup', 'funding trends', '2024'],
                 'complexity': 'low',
                 'hashtags': False,
                 'mentions': False,
@@ -194,8 +284,38 @@ class SpacyYakeExperiment:
                 'mentions': False,
                 'emojis': False
             },
-            
-            # ===== CHALLENGING CASES =====
+            {
+                'id': 'SHORT_003',
+                'category': 'short_text',
+                'text': "Cloud computing security best practices",
+                'expected_keywords': ['cloud computing', 'security', 'best practices'],
+                'complexity': 'medium',
+                'hashtags': False,
+                'mentions': False,
+                'emojis': False
+            },
+            {
+                'id': 'SHORT_004',
+                'category': 'short_text',
+                'text': "Digital marketing automation tools",
+                'expected_keywords': ['digital marketing', 'automation', 'tools'],
+                'complexity': 'medium',
+                'hashtags': False,
+                'mentions': False,
+                'emojis': False
+            },
+            {
+                'id': 'SHORT_005',
+                'category': 'short_text',
+                'text': "IoT device management platforms",
+                'expected_keywords': ['iot', 'device management', 'platforms'],
+                'complexity': 'medium',
+                'hashtags': False,
+                'mentions': False,
+                'emojis': False
+            },
+
+            # ===== CHALLENGING DOMAIN =====
             {
                 'id': 'CHALLENGE_001',
                 'category': 'challenging',
@@ -210,8 +330,90 @@ class SpacyYakeExperiment:
                 'id': 'CHALLENGE_002',
                 'category': 'challenging',
                 'text': "Neuroscience-inspired artificial intelligence approaches leverage computational neuroscience principles to develop brain-like learning systems with enhanced cognitive capabilities.",
-                'expected_keywords': ['neuroscience-inspired', 'artificial intelligence', 'computational neuroscience', 'brain-like learning systems', 'cognitive capabilities'],
+                'expected_keywords': ['neuroscience-inspired', 'artificial intelligence', 'computational neuroscience', 'principles', 'brain-like learning systems', 'cognitive capabilities'],
                 'complexity': 'very_high',
+                'hashtags': False,
+                'mentions': False,
+                'emojis': False
+            },
+            {
+                'id': 'CHALLENGE_003',
+                'category': 'challenging',
+                'text': "Epigenetic regulation mechanisms in cellular differentiation processes demonstrate complex feedback loops between transcription factors and chromatin remodeling complexes.",
+                'expected_keywords': ['epigenetic regulation', 'mechanisms', 'cellular differentiation', 'processes', 'feedback loops', 'transcription factors', 'chromatin remodeling complexes'],
+                'complexity': 'very_high',
+                'hashtags': False,
+                'mentions': False,
+                'emojis': False
+            },
+            {
+                'id': 'CHALLENGE_004',
+                'category': 'challenging',
+                'text': "Metamaterial design principles for electromagnetic wave manipulation require sophisticated computational modeling of subwavelength structures and resonant phenomena.",
+                'expected_keywords': ['metamaterial design', 'principles', 'electromagnetic wave manipulation', 'computational modeling', 'subwavelength structures', 'resonant phenomena'],
+                'complexity': 'very_high',
+                'hashtags': False,
+                'mentions': False,
+                'emojis': False
+            },
+            {
+                'id': 'CHALLENGE_005',
+                'category': 'challenging',
+                'text': "Quantum machine learning algorithms for drug discovery applications utilize variational quantum circuits and hybrid classical-quantum optimization strategies.",
+                'expected_keywords': ['quantum machine learning', 'algorithms', 'drug discovery', 'applications', 'variational quantum circuits', 'hybrid classical-quantum optimization'],
+                'complexity': 'very_high',
+                'hashtags': False,
+                'mentions': False,
+                'emojis': False
+            },
+
+            # ===== VIETNAMESE CONTENT DOMAIN =====
+            {
+                'id': 'VIET_001',
+                'category': 'vietnamese',
+                'text': "Xu hướng công nghệ AI và machine learning tại Việt Nam năm 2024. Các startup công nghệ đang phát triển mạnh mẽ trong lĩnh vực fintech và e-commerce.",
+                'expected_keywords': ['xu hướng công nghệ', 'ai', 'machine learning', 'việt nam', '2024', 'startup công nghệ', 'fintech', 'e-commerce'],
+                'complexity': 'medium',
+                'hashtags': False,
+                'mentions': False,
+                'emojis': False
+            },
+            {
+                'id': 'VIET_002',
+                'category': 'vietnamese',
+                'text': "Chuyển đổi số trong ngành bán lẻ truyền thống. Tích hợp công nghệ blockchain và AI để tối ưu hóa chuỗi cung ứng và trải nghiệm khách hàng.",
+                'expected_keywords': ['chuyển đổi số', 'ngành bán lẻ', 'truyền thống', 'blockchain', 'ai', 'tối ưu hóa', 'chuỗi cung ứng', 'trải nghiệm khách hàng'],
+                'complexity': 'high',
+                'hashtags': False,
+                'mentions': False,
+                'emojis': False
+            },
+            {
+                'id': 'VIET_003',
+                'category': 'vietnamese',
+                'text': "Phát triển bền vững trong ngành thời trang. Sử dụng vật liệu tái chế và công nghệ xanh để giảm thiểu tác động môi trường.",
+                'expected_keywords': ['phát triển bền vững', 'ngành thời trang', 'vật liệu tái chế', 'công nghệ xanh', 'giảm thiểu', 'tác động môi trường'],
+                'complexity': 'medium',
+                'hashtags': False,
+                'mentions': False,
+                'emojis': False
+            },
+            {
+                'id': 'VIET_004',
+                'category': 'vietnamese',
+                'text': "Giáo dục trực tuyến và EdTech tại Việt Nam. Ứng dụng công nghệ VR/AR và AI để nâng cao chất lượng học tập.",
+                'expected_keywords': ['giáo dục trực tuyến', 'edtech', 'việt nam', 'vr/ar', 'ai', 'nâng cao', 'chất lượng học tập'],
+                'complexity': 'medium',
+                'hashtags': False,
+                'mentions': False,
+                'emojis': False
+            },
+            {
+                'id': 'VIET_005',
+                'category': 'vietnamese',
+                'text': "Nông nghiệp thông minh với IoT và big data. Sử dụng cảm biến và phân tích dữ liệu để tối ưu hóa sản xuất nông nghiệp.",
+                'expected_keywords': ['nông nghiệp thông minh', 'iot', 'big data', 'cảm biến', 'phân tích dữ liệu', 'tối ưu hóa', 'sản xuất nông nghiệp'],
+                'complexity': 'high',
                 'hashtags': False,
                 'mentions': False,
                 'emojis': False
