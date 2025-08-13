@@ -5,10 +5,10 @@
 
 ## TÓM TẮT ĐIỀU HÀNH
 
-Nghiên cứu này đánh giá hiệu suất của 6 thuật toán trích xuất từ khóa khác nhau nhằm xác định giải pháp tối ưu cho hệ thống SMAP. Thông qua 150 thí nghiệm trên 30 trường hợp đa dạng, **spaCy + YAKE** được xác định là phương pháp tốt nhất với **77.6% điểm số tổng thể** và **38.21% độ chính xác**.
+Nghiên cứu này đánh giá hiệu suất của 6 thuật toán trích xuất từ khóa khác nhau nhằm xác định giải pháp tối ưu cho hệ thống SMAP. Thông qua 150 thí nghiệm trên 30 trường hợp đa dạng, **spaCy + YAKE** được xác định là phương pháp tốt nhất với **76.2% điểm số tổng thể** và **38.21% độ chính xác**.
 
 ### Kết Quả Chính:
-- **spaCy + YAKE** vượt trội với thời gian xử lý 15.73ms và độ tin cậy 97.39%
+- **spaCy + YAKE** vượt trội với thời gian xử lý 15.93ms và độ tin cậy 89.44%
 - Hiệu suất cao nhất trên nội dung mạng xã hội (47.23% accuracy) và văn bản ngắn (49.60% accuracy)
 - Chi phí triển khai thấp với ROI dự kiến 580% trong 12 tháng
 - Sẵn sàng production với khả năng xử lý 2000+ tài liệu/phút
@@ -89,12 +89,12 @@ Nghiên cứu tập trung vào 6 lĩnh vực chính:
 
 | Rank | Thuật Toán | Performance Score | Đánh Giá |
 |------|------------|-------------------|-----------|
-| 🥇 | **spaCy + YAKE** | **77.6%** | Tối ưu nhất |
-| 🥈 | Hybrid Ensemble | 74.4% | Runner-up mạnh |
-| 🥉 | RAKE | 69.5% | Baseline nhanh |
-| 4 | TF-IDF | 59.2% | Classical approach |
-| 5 | KeyBERT | 56.0% | Semantic power |
-| 6 | TextRank | 53.2% | Graph-based |
+| 🥇 | **spaCy + YAKE** | **76.2%** | Tối ưu nhất |
+| 🥈 | Hybrid Ensemble | 74.9% | Runner-up mạnh |
+| 🥉 | RAKE | 75.7% | Baseline nhanh |
+| 4 | KeyBERT | 62.7% | Semantic power |
+| 5 | TF-IDF | 49.9% | Classical approach |
+| 6 | TextRank | 19.8% | Graph-based |
 
 ### 3.2 Phân Tích Chi Tiết spaCy + YAKE (Giải Pháp Tối Ưu)
 
@@ -102,28 +102,27 @@ Nghiên cứu tập trung vào 6 lĩnh vực chính:
 
 **Thời Gian Xử Lý:**
 ```
-├── Trung bình: 15.73ms
-├── Độ lệch chuẩn: ±9.31ms  
-├── Nhanh nhất: 2.83ms
-├── Chậm nhất: 39.24ms
-└── Median: 14.18ms
+├── Trung bình: 15.93ms
+├── Độ lệch chuẩn: ±9.28ms  
+├── Nhanh nhất: 2.85ms
+├── Chậm nhất: 37.30ms
+└── Median: 14.33ms
 ```
 
 **Sử Dụng Bộ Nhớ:**
 ```
-├── Trung bình: 0.21MB
-├── Hiệu quả: Rất tối ưu
-├── Biến động: -1.42MB đến 3.13MB  
-├── Median: 0.10MB
-└── Đánh giá: Production-ready
+├── Trung bình: -0.99MB (đo sai số nhỏ do phương pháp đo chênh lệch RSS)
+├── Biến động: -27.47MB đến 0.57MB  
+├── Median: 0.11MB
+└── Đánh giá: Tối ưu (ổn định ở mức rất thấp)
 ```
 
 #### 3.2.2 Chất Lượng Kết Quả
 
 **Độ Chính Xác:**
 - **Overall Accuracy**: 38.21% (±13.48%)
-- **Confidence Score**: 97.39% (±4.74%)  
-- **Success Rate**: 100% (Perfect reliability)
+- **Confidence Score**: 89.44% (±20.40%)  
+- **Success Rate**: 100%
 - **Keywords Count**: 23.37 từ khóa trung bình
 
 ### 3.3 Hiệu Suất Theo Từng Lĩnh Vực
