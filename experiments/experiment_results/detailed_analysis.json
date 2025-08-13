@@ -20,16 +20,16 @@
     },
     "spacy_yake_stats": {
       "processing_time": {
-        "mean": 0.009125518798828124,
-        "std": 0.0008553265697864666,
-        "min": 0.008530855178833008,
-        "max": 0.010821104049682617
+        "mean": 0.010205364227294922,
+        "std": 0.003153657573264055,
+        "min": 0.008210897445678711,
+        "max": 0.01644277572631836
       },
       "memory_usage": {
-        "mean": 0.590625,
-        "std": 0.7110593988901349,
-        "min": 0.0,
-        "max": 1.890625
+        "mean": 0.50625,
+        "std": 0.6159976663916836,
+        "min": 0.015625,
+        "max": 1.6875
       },
       "confidence_score": {
         "mean": 0.8143709530095096,
@@ -47,26 +47,42 @@
     },
     "baseline_stats": {
       "rake": {
-        "processing_time": 0.0002295970916748047,
-        "memory_usage": 0.0,
-        "confidence_score": 0.0,
+        "processing_time": 0.0021576881408691406,
+        "memory_usage": 0.66875,
+        "confidence_score": 1.0,
         "accuracy": 0.0,
-        "keywords_count": 0.0,
+        "keywords_count": 10.0,
         "success_rate": 1.0
       },
       "tfidf": {
-        "processing_time": 0.0008873462677001954,
-        "memory_usage": 0.05,
-        "confidence_score": 0.28867513459481287,
-        "accuracy": 0.14814814814814817,
+        "processing_time": 0.0011029720306396484,
+        "memory_usage": 0.059375,
+        "confidence_score": 0.22240849621347553,
+        "accuracy": 0.22222222222222224,
         "keywords_count": 20.0,
         "success_rate": 1.0
       },
+      "textrank": {
+        "processing_time": 0.011087751388549805,
+        "memory_usage": 9.39375,
+        "confidence_score": 0.19090909090909094,
+        "accuracy": 0.22222222222222224,
+        "keywords_count": 11.0,
+        "success_rate": 1.0
+      },
+      "keybert": {
+        "processing_time": 1.4426531314849853,
+        "memory_usage": 4.334375,
+        "confidence_score": 0.43528,
+        "accuracy": 0.0,
+        "keywords_count": 5.0,
+        "success_rate": 1.0
+      },
       "hybrid_ensemble": {
-        "processing_time": 0.010302495956420899,
-        "memory_usage": 0.09375,
-        "confidence_score": 0.5319238419949278,
-        "accuracy": 0.29629629629629634,
+        "processing_time": 0.010566997528076171,
+        "memory_usage": 2.290625,
+        "confidence_score": 0.7839811539440149,
+        "accuracy": 0.22222222222222224,
         "keywords_count": 20.0,
         "success_rate": 1.0
       }
@@ -74,61 +90,97 @@
     "performance_comparison": {
       "processing_time": {
         "rake": {
-          "baseline_value": 0.0002295970916748047,
-          "spacy_yake_value": 0.009125518798828124,
-          "improvement_percent": -3874.5794392523367,
+          "baseline_value": 0.0021576881408691406,
+          "spacy_yake_value": 0.010205364227294922,
+          "improvement_percent": -372.97679558011055,
           "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.0008873462677001954,
-          "spacy_yake_value": 0.009125518798828124,
-          "improvement_percent": -928.4056101886183,
+          "baseline_value": 0.0011029720306396484,
+          "spacy_yake_value": 0.010205364227294922,
+          "improvement_percent": -825.2604729583677,
           "better_than_baseline": false
         },
+        "textrank": {
+          "baseline_value": 0.011087751388549805,
+          "spacy_yake_value": 0.010205364227294922,
+          "improvement_percent": 7.958215605069519,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 1.4426531314849853,
+          "spacy_yake_value": 0.010205364227294922,
+          "improvement_percent": 99.29259750631878,
+          "better_than_baseline": true
+        },
         "hybrid_ensemble": {
-          "baseline_value": 0.010302495956420899,
-          "spacy_yake_value": 0.009125518798828124,
-          "improvement_percent": 11.424194317292974,
+          "baseline_value": 0.010566997528076171,
+          "spacy_yake_value": 0.010205364227294922,
+          "improvement_percent": 3.42229001019827,
           "better_than_baseline": true
         }
       },
       "memory_usage": {
         "rake": {
-          "baseline_value": 0.0,
-          "spacy_yake_value": 0.590625,
-          "improvement_percent": -Infinity,
-          "better_than_baseline": false
+          "baseline_value": 0.66875,
+          "spacy_yake_value": 0.50625,
+          "improvement_percent": 24.299065420560744,
+          "better_than_baseline": true
         },
         "tfidf": {
-          "baseline_value": 0.05,
-          "spacy_yake_value": 0.590625,
-          "improvement_percent": -1081.2499999999998,
+          "baseline_value": 0.059375,
+          "spacy_yake_value": 0.50625,
+          "improvement_percent": -752.6315789473684,
           "better_than_baseline": false
         },
+        "textrank": {
+          "baseline_value": 9.39375,
+          "spacy_yake_value": 0.50625,
+          "improvement_percent": 94.61077844311377,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 4.334375,
+          "spacy_yake_value": 0.50625,
+          "improvement_percent": 88.32011535688537,
+          "better_than_baseline": true
+        },
         "hybrid_ensemble": {
-          "baseline_value": 0.09375,
-          "spacy_yake_value": 0.590625,
-          "improvement_percent": -530.0,
-          "better_than_baseline": false
+          "baseline_value": 2.290625,
+          "spacy_yake_value": 0.50625,
+          "improvement_percent": 77.89904502046384,
+          "better_than_baseline": true
         }
       },
       "confidence_score": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 1.0,
           "spacy_yake_value": 0.8143709530095096,
-          "improvement_percent": Infinity,
-          "better_than_baseline": true
+          "improvement_percent": -18.562904699049042,
+          "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.28867513459481287,
+          "baseline_value": 0.22240849621347553,
           "spacy_yake_value": 0.8143709530095096,
-          "improvement_percent": 182.10637336415147,
+          "improvement_percent": 266.1600014721773,
+          "better_than_baseline": true
+        },
+        "textrank": {
+          "baseline_value": 0.19090909090909094,
+          "spacy_yake_value": 0.8143709530095096,
+          "improvement_percent": 326.5752611002192,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 0.43528,
+          "spacy_yake_value": 0.8143709530095096,
+          "improvement_percent": 87.09128676013361,
           "better_than_baseline": true
         },
         "hybrid_ensemble": {
-          "baseline_value": 0.5319238419949278,
+          "baseline_value": 0.7839811539440149,
           "spacy_yake_value": 0.8143709530095096,
-          "improvement_percent": 53.09916358614266,
+          "improvement_percent": 3.8763430616426313,
           "better_than_baseline": true
         }
       },
@@ -140,23 +192,35 @@
           "better_than_baseline": true
         },
         "tfidf": {
-          "baseline_value": 0.14814814814814817,
+          "baseline_value": 0.22222222222222224,
           "spacy_yake_value": 0.34782608695652173,
-          "improvement_percent": 134.78260869565213,
+          "improvement_percent": 56.52173913043477,
+          "better_than_baseline": true
+        },
+        "textrank": {
+          "baseline_value": 0.22222222222222224,
+          "spacy_yake_value": 0.34782608695652173,
+          "improvement_percent": 56.52173913043477,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.34782608695652173,
+          "improvement_percent": Infinity,
           "better_than_baseline": true
         },
         "hybrid_ensemble": {
-          "baseline_value": 0.29629629629629634,
+          "baseline_value": 0.22222222222222224,
           "spacy_yake_value": 0.34782608695652173,
-          "improvement_percent": 17.39130434782607,
+          "improvement_percent": 56.52173913043477,
           "better_than_baseline": true
         }
       },
       "keywords_count": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 10.0,
           "spacy_yake_value": 17.0,
-          "improvement_percent": Infinity,
+          "improvement_percent": 70.0,
           "better_than_baseline": true
         },
         "tfidf": {
@@ -164,6 +228,18 @@
           "spacy_yake_value": 17.0,
           "improvement_percent": -15.0,
           "better_than_baseline": false
+        },
+        "textrank": {
+          "baseline_value": 11.0,
+          "spacy_yake_value": 17.0,
+          "improvement_percent": 54.54545454545454,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 5.0,
+          "spacy_yake_value": 17.0,
+          "improvement_percent": 240.0,
+          "better_than_baseline": true
         },
         "hybrid_ensemble": {
           "baseline_value": 20.0,
@@ -205,16 +281,16 @@
     },
     "spacy_yake_stats": {
       "processing_time": {
-        "mean": 0.005872774124145508,
-        "std": 0.0002030219752737321,
-        "min": 0.005631208419799805,
-        "max": 0.00621485710144043
+        "mean": 0.005792570114135742,
+        "std": 0.00036169327141065687,
+        "min": 0.005500078201293945,
+        "max": 0.006505012512207031
       },
       "memory_usage": {
-        "mean": 0.040625,
-        "std": 0.0350780380010057,
-        "min": 0.0,
-        "max": 0.078125
+        "mean": 0.459375,
+        "std": 0.5167695630065686,
+        "min": 0.015625,
+        "max": 1.453125
       },
       "confidence_score": {
         "mean": 1.0,
@@ -232,26 +308,42 @@
     },
     "baseline_stats": {
       "rake": {
-        "processing_time": 0.0003624439239501953,
-        "memory_usage": 0.00625,
-        "confidence_score": 0.0,
-        "accuracy": 0.0,
-        "keywords_count": 0.0,
+        "processing_time": 0.00013065338134765625,
+        "memory_usage": 0.0,
+        "confidence_score": 1.0,
+        "accuracy": 0.11764705882352941,
+        "keywords_count": 10.0,
         "success_rate": 1.0
       },
       "tfidf": {
-        "processing_time": 0.0007081985473632813,
+        "processing_time": 0.0005665779113769531,
         "memory_usage": 0.0,
-        "confidence_score": 0.3481553119113957,
-        "accuracy": 0.4444444444444445,
+        "confidence_score": 0.24375,
+        "accuracy": 0.29629629629629634,
         "keywords_count": 20.0,
         "success_rate": 1.0
       },
+      "textrank": {
+        "processing_time": 0.0011074066162109375,
+        "memory_usage": 0.3,
+        "confidence_score": 0.22999999999999998,
+        "accuracy": 0.47058823529411764,
+        "keywords_count": 10.0,
+        "success_rate": 1.0
+      },
+      "keybert": {
+        "processing_time": 0.05815944671630859,
+        "memory_usage": 2.4,
+        "confidence_score": 0.44074,
+        "accuracy": 0.16666666666666666,
+        "keywords_count": 5.0,
+        "success_rate": 1.0
+      },
       "hybrid_ensemble": {
-        "processing_time": 0.006402921676635742,
-        "memory_usage": 0.0125,
-        "confidence_score": 0.6522232967867094,
-        "accuracy": 0.5185185185185185,
+        "processing_time": 0.0069244384765625,
+        "memory_usage": 0.26875,
+        "confidence_score": 0.9176562500000001,
+        "accuracy": 0.37037037037037035,
         "keywords_count": 20.0,
         "success_rate": 1.0
       }
@@ -259,89 +351,137 @@
     "performance_comparison": {
       "processing_time": {
         "rake": {
-          "baseline_value": 0.0003624439239501953,
-          "spacy_yake_value": 0.005872774124145508,
-          "improvement_percent": -1520.3262728588345,
+          "baseline_value": 0.00013065338134765625,
+          "spacy_yake_value": 0.005792570114135742,
+          "improvement_percent": -4333.540145985401,
           "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.0007081985473632813,
-          "spacy_yake_value": 0.005872774124145508,
-          "improvement_percent": -729.2553191489361,
+          "baseline_value": 0.0005665779113769531,
+          "spacy_yake_value": 0.005792570114135742,
+          "improvement_percent": -922.3783874768556,
           "better_than_baseline": false
         },
+        "textrank": {
+          "baseline_value": 0.0011074066162109375,
+          "spacy_yake_value": 0.005792570114135742,
+          "improvement_percent": -423.07526696520836,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 0.05815944671630859,
+          "spacy_yake_value": 0.005792570114135742,
+          "improvement_percent": 90.04019047431647,
+          "better_than_baseline": true
+        },
         "hybrid_ensemble": {
-          "baseline_value": 0.006402921676635742,
-          "spacy_yake_value": 0.005872774124145508,
-          "improvement_percent": 8.2797756909122,
+          "baseline_value": 0.0069244384765625,
+          "spacy_yake_value": 0.005792570114135742,
+          "improvement_percent": 16.345994931687972,
           "better_than_baseline": true
         }
       },
       "memory_usage": {
         "rake": {
-          "baseline_value": 0.00625,
-          "spacy_yake_value": 0.040625,
-          "improvement_percent": -550.0,
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.459375,
+          "improvement_percent": -Infinity,
           "better_than_baseline": false
         },
         "tfidf": {
           "baseline_value": 0.0,
-          "spacy_yake_value": 0.040625,
+          "spacy_yake_value": 0.459375,
           "improvement_percent": -Infinity,
           "better_than_baseline": false
         },
+        "textrank": {
+          "baseline_value": 0.3,
+          "spacy_yake_value": 0.459375,
+          "improvement_percent": -53.125,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 2.4,
+          "spacy_yake_value": 0.459375,
+          "improvement_percent": 80.859375,
+          "better_than_baseline": true
+        },
         "hybrid_ensemble": {
-          "baseline_value": 0.0125,
-          "spacy_yake_value": 0.040625,
-          "improvement_percent": -225.0,
+          "baseline_value": 0.26875,
+          "spacy_yake_value": 0.459375,
+          "improvement_percent": -70.93023255813954,
           "better_than_baseline": false
         }
       },
       "confidence_score": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 1.0,
           "spacy_yake_value": 1.0,
-          "improvement_percent": Infinity,
-          "better_than_baseline": true
+          "improvement_percent": 0.0,
+          "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.3481553119113957,
+          "baseline_value": 0.24375,
           "spacy_yake_value": 1.0,
-          "improvement_percent": 187.2281323269014,
+          "improvement_percent": 310.2564102564103,
+          "better_than_baseline": true
+        },
+        "textrank": {
+          "baseline_value": 0.22999999999999998,
+          "spacy_yake_value": 1.0,
+          "improvement_percent": 334.7826086956522,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 0.44074,
+          "spacy_yake_value": 1.0,
+          "improvement_percent": 126.89113763216409,
           "better_than_baseline": true
         },
         "hybrid_ensemble": {
-          "baseline_value": 0.6522232967867094,
+          "baseline_value": 0.9176562500000001,
           "spacy_yake_value": 1.0,
-          "improvement_percent": 53.32172354570475,
+          "improvement_percent": 8.973267495317549,
           "better_than_baseline": true
         }
       },
       "accuracy": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 0.11764705882352941,
           "spacy_yake_value": 0.5263157894736842,
-          "improvement_percent": Infinity,
+          "improvement_percent": 347.36842105263156,
           "better_than_baseline": true
         },
         "tfidf": {
-          "baseline_value": 0.4444444444444445,
+          "baseline_value": 0.29629629629629634,
           "spacy_yake_value": 0.5263157894736842,
-          "improvement_percent": 18.42105263157893,
+          "improvement_percent": 77.63157894736838,
+          "better_than_baseline": true
+        },
+        "textrank": {
+          "baseline_value": 0.47058823529411764,
+          "spacy_yake_value": 0.5263157894736842,
+          "improvement_percent": 11.84210526315789,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 0.16666666666666666,
+          "spacy_yake_value": 0.5263157894736842,
+          "improvement_percent": 215.78947368421052,
           "better_than_baseline": true
         },
         "hybrid_ensemble": {
-          "baseline_value": 0.5185185185185185,
+          "baseline_value": 0.37037037037037035,
           "spacy_yake_value": 0.5263157894736842,
-          "improvement_percent": 1.5037593984962405,
+          "improvement_percent": 42.10526315789473,
           "better_than_baseline": true
         }
       },
       "keywords_count": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 10.0,
           "spacy_yake_value": 14.0,
-          "improvement_percent": Infinity,
+          "improvement_percent": 40.0,
           "better_than_baseline": true
         },
         "tfidf": {
@@ -349,6 +489,18 @@
           "spacy_yake_value": 14.0,
           "improvement_percent": -30.0,
           "better_than_baseline": false
+        },
+        "textrank": {
+          "baseline_value": 10.0,
+          "spacy_yake_value": 14.0,
+          "improvement_percent": 40.0,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 5.0,
+          "spacy_yake_value": 14.0,
+          "improvement_percent": 180.0,
+          "better_than_baseline": true
         },
         "hybrid_ensemble": {
           "baseline_value": 20.0,
@@ -390,16 +542,16 @@
     },
     "spacy_yake_stats": {
       "processing_time": {
-        "mean": 0.009712457656860352,
-        "std": 0.0007007270735480054,
-        "min": 0.009057760238647461,
-        "max": 0.011065959930419922
+        "mean": 0.009717988967895507,
+        "std": 0.0013253098727075442,
+        "min": 0.00885772705078125,
+        "max": 0.01235508918762207
       },
       "memory_usage": {
-        "mean": 0.253125,
-        "std": 0.31115334844735315,
-        "min": 0.03125,
-        "max": 0.859375
+        "mean": 0.5375,
+        "std": 0.8188811917793691,
+        "min": 0.0,
+        "max": 2.15625
       },
       "confidence_score": {
         "mean": 1.0,
@@ -417,26 +569,42 @@
     },
     "baseline_stats": {
       "rake": {
-        "processing_time": 0.0002526283264160156,
+        "processing_time": 0.00023274421691894532,
         "memory_usage": 0.0,
-        "confidence_score": 0.0,
-        "accuracy": 0.0,
-        "keywords_count": 0.0,
+        "confidence_score": 1.0,
+        "accuracy": 0.23529411764705882,
+        "keywords_count": 10.0,
         "success_rate": 1.0
       },
       "tfidf": {
-        "processing_time": 0.0007145881652832031,
-        "memory_usage": 0.01875,
-        "confidence_score": 0.10875290696438518,
-        "accuracy": 0.14814814814814817,
+        "processing_time": 0.0007222652435302735,
+        "memory_usage": 0.0,
+        "confidence_score": 0.2088008187519761,
+        "accuracy": 0.07407407407407408,
         "keywords_count": 20.0,
         "success_rate": 1.0
       },
+      "textrank": {
+        "processing_time": 0.0014222621917724609,
+        "memory_usage": 0.278125,
+        "confidence_score": 0.19285714285714292,
+        "accuracy": 0.09523809523809523,
+        "keywords_count": 14.0,
+        "success_rate": 1.0
+      },
+      "keybert": {
+        "processing_time": 0.06874551773071289,
+        "memory_usage": 3.725,
+        "confidence_score": 0.37678,
+        "accuracy": 0.5,
+        "keywords_count": 5.0,
+        "success_rate": 1.0
+      },
       "hybrid_ensemble": {
-        "processing_time": 0.01088542938232422,
-        "memory_usage": 0.159375,
-        "confidence_score": 0.6163129360446578,
-        "accuracy": 0.07407407407407408,
+        "processing_time": 0.01089472770690918,
+        "memory_usage": 0.5,
+        "confidence_score": 0.9115401432815957,
+        "accuracy": 0.14814814814814817,
         "keywords_count": 20.0,
         "success_rate": 1.0
       }
@@ -444,89 +612,137 @@
     "performance_comparison": {
       "processing_time": {
         "rake": {
-          "baseline_value": 0.0002526283264160156,
-          "spacy_yake_value": 0.009712457656860352,
-          "improvement_percent": -3744.5639864099667,
+          "baseline_value": 0.00023274421691894532,
+          "spacy_yake_value": 0.009717988967895507,
+          "improvement_percent": -4075.39438639623,
           "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.0007145881652832031,
-          "spacy_yake_value": 0.009712457656860352,
-          "improvement_percent": -1259.1685573201657,
+          "baseline_value": 0.0007222652435302735,
+          "spacy_yake_value": 0.009717988967895507,
+          "improvement_percent": -1245.4875552914768,
           "better_than_baseline": false
         },
+        "textrank": {
+          "baseline_value": 0.0014222621917724609,
+          "spacy_yake_value": 0.009717988967895507,
+          "improvement_percent": -583.2768967713816,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 0.06874551773071289,
+          "spacy_yake_value": 0.009717988967895507,
+          "improvement_percent": 85.8638216880373,
+          "better_than_baseline": true
+        },
         "hybrid_ensemble": {
-          "baseline_value": 0.01088542938232422,
-          "spacy_yake_value": 0.009712457656860352,
-          "improvement_percent": 10.775612833137677,
+          "baseline_value": 0.01089472770690918,
+          "spacy_yake_value": 0.009717988967895507,
+          "improvement_percent": 10.800992651403424,
           "better_than_baseline": true
         }
       },
       "memory_usage": {
         "rake": {
           "baseline_value": 0.0,
-          "spacy_yake_value": 0.253125,
+          "spacy_yake_value": 0.5375,
           "improvement_percent": -Infinity,
           "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.01875,
-          "spacy_yake_value": 0.253125,
-          "improvement_percent": -1250.0,
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.5375,
+          "improvement_percent": -Infinity,
           "better_than_baseline": false
         },
+        "textrank": {
+          "baseline_value": 0.278125,
+          "spacy_yake_value": 0.5375,
+          "improvement_percent": -93.25842696629212,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 3.725,
+          "spacy_yake_value": 0.5375,
+          "improvement_percent": 85.57046979865771,
+          "better_than_baseline": true
+        },
         "hybrid_ensemble": {
-          "baseline_value": 0.159375,
-          "spacy_yake_value": 0.253125,
-          "improvement_percent": -58.82352941176471,
+          "baseline_value": 0.5,
+          "spacy_yake_value": 0.5375,
+          "improvement_percent": -7.499999999999996,
           "better_than_baseline": false
         }
       },
       "confidence_score": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 1.0,
           "spacy_yake_value": 1.0,
-          "improvement_percent": Infinity,
-          "better_than_baseline": true
+          "improvement_percent": 0.0,
+          "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.10875290696438518,
+          "baseline_value": 0.2088008187519761,
           "spacy_yake_value": 1.0,
-          "improvement_percent": 819.515650581629,
+          "improvement_percent": 378.9253250907264,
+          "better_than_baseline": true
+        },
+        "textrank": {
+          "baseline_value": 0.19285714285714292,
+          "spacy_yake_value": 1.0,
+          "improvement_percent": 418.51851851851836,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 0.37678,
+          "spacy_yake_value": 1.0,
+          "improvement_percent": 165.40686872976272,
           "better_than_baseline": true
         },
         "hybrid_ensemble": {
-          "baseline_value": 0.6163129360446578,
+          "baseline_value": 0.9115401432815957,
           "spacy_yake_value": 1.0,
-          "improvement_percent": 62.25523455953235,
+          "improvement_percent": 9.704438950976293,
           "better_than_baseline": true
         }
       },
       "accuracy": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 0.23529411764705882,
           "spacy_yake_value": 0.07407407407407408,
-          "improvement_percent": Infinity,
-          "better_than_baseline": true
-        },
-        "tfidf": {
-          "baseline_value": 0.14814814814814817,
-          "spacy_yake_value": 0.07407407407407408,
-          "improvement_percent": -50.0,
+          "improvement_percent": -68.51851851851852,
           "better_than_baseline": false
         },
-        "hybrid_ensemble": {
+        "tfidf": {
           "baseline_value": 0.07407407407407408,
           "spacy_yake_value": 0.07407407407407408,
           "improvement_percent": 0.0,
+          "better_than_baseline": false
+        },
+        "textrank": {
+          "baseline_value": 0.09523809523809523,
+          "spacy_yake_value": 0.07407407407407408,
+          "improvement_percent": -22.222222222222207,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 0.5,
+          "spacy_yake_value": 0.07407407407407408,
+          "improvement_percent": -85.18518518518519,
+          "better_than_baseline": false
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.14814814814814817,
+          "spacy_yake_value": 0.07407407407407408,
+          "improvement_percent": -50.0,
           "better_than_baseline": false
         }
       },
       "keywords_count": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 10.0,
           "spacy_yake_value": 20.0,
-          "improvement_percent": Infinity,
+          "improvement_percent": 100.0,
           "better_than_baseline": true
         },
         "tfidf": {
@@ -534,6 +750,18 @@
           "spacy_yake_value": 20.0,
           "improvement_percent": 0.0,
           "better_than_baseline": false
+        },
+        "textrank": {
+          "baseline_value": 14.0,
+          "spacy_yake_value": 20.0,
+          "improvement_percent": 42.857142857142854,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 5.0,
+          "spacy_yake_value": 20.0,
+          "improvement_percent": 300.0,
+          "better_than_baseline": true
         },
         "hybrid_ensemble": {
           "baseline_value": 20.0,
@@ -574,16 +802,16 @@
     },
     "spacy_yake_stats": {
       "processing_time": {
-        "mean": 0.010279035568237305,
-        "std": 0.0006010399994381474,
-        "min": 0.009835004806518555,
-        "max": 0.01145792007446289
+        "mean": 0.010224723815917968,
+        "std": 0.000661274129721643,
+        "min": 0.009632110595703125,
+        "max": 0.011466026306152344
       },
       "memory_usage": {
-        "mean": 0.01875,
-        "std": 0.011692679333668568,
+        "mean": 0.275,
+        "std": 0.27468021179182167,
         "min": 0.0,
-        "max": 0.03125
+        "max": 0.765625
       },
       "confidence_score": {
         "mean": 0.7660801640741769,
@@ -601,26 +829,42 @@
     },
     "baseline_stats": {
       "rake": {
-        "processing_time": 0.00023360252380371093,
+        "processing_time": 0.00025696754455566405,
         "memory_usage": 0.0,
-        "confidence_score": 0.0,
-        "accuracy": 0.0,
-        "keywords_count": 0.0,
+        "confidence_score": 1.0,
+        "accuracy": 0.125,
+        "keywords_count": 10.0,
         "success_rate": 1.0
       },
       "tfidf": {
-        "processing_time": 0.0006839752197265625,
+        "processing_time": 0.0006806850433349609,
         "memory_usage": 0.0,
-        "confidence_score": 0.08084520834544431,
-        "accuracy": 0.15384615384615383,
+        "confidence_score": 0.34009775435259243,
+        "accuracy": 0.07692307692307691,
         "keywords_count": 20.0,
         "success_rate": 1.0
       },
-      "hybrid_ensemble": {
-        "processing_time": 0.011600971221923828,
-        "memory_usage": 0.028125,
-        "confidence_score": 0.4717748796963228,
+      "textrank": {
+        "processing_time": 0.0013972759246826173,
+        "memory_usage": 0.184375,
+        "confidence_score": 0.1625,
         "accuracy": 0.0,
+        "keywords_count": 16.0,
+        "success_rate": 1.0
+      },
+      "keybert": {
+        "processing_time": 0.07114849090576172,
+        "memory_usage": -1.15,
+        "confidence_score": 0.30706,
+        "accuracy": 0.1818181818181818,
+        "keywords_count": 5.0,
+        "success_rate": 1.0
+      },
+      "hybrid_ensemble": {
+        "processing_time": 0.012131881713867188,
+        "memory_usage": 0.321875,
+        "confidence_score": 0.7707732218636276,
+        "accuracy": 0.07692307692307691,
         "keywords_count": 20.0,
         "success_rate": 1.0
       }
@@ -628,89 +872,137 @@
     "performance_comparison": {
       "processing_time": {
         "rake": {
-          "baseline_value": 0.00023360252380371093,
-          "spacy_yake_value": 0.010279035568237305,
-          "improvement_percent": -4300.2245356195135,
+          "baseline_value": 0.00025696754455566405,
+          "spacy_yake_value": 0.010224723815917968,
+          "improvement_percent": -3878.9942475412877,
           "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.0006839752197265625,
-          "spacy_yake_value": 0.010279035568237305,
-          "improvement_percent": -1402.8374233128834,
+          "baseline_value": 0.0006806850433349609,
+          "spacy_yake_value": 0.010224723815917968,
+          "improvement_percent": -1402.122591943958,
           "better_than_baseline": false
         },
+        "textrank": {
+          "baseline_value": 0.0013972759246826173,
+          "spacy_yake_value": 0.010224723815917968,
+          "improvement_percent": -631.7612531140156,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 0.07114849090576172,
+          "spacy_yake_value": 0.010224723815917968,
+          "improvement_percent": 85.62903627926428,
+          "better_than_baseline": true
+        },
         "hybrid_ensemble": {
-          "baseline_value": 0.011600971221923828,
-          "spacy_yake_value": 0.010279035568237305,
-          "improvement_percent": 11.395042952854615,
+          "baseline_value": 0.012131881713867188,
+          "spacy_yake_value": 0.010224723815917968,
+          "improvement_percent": 15.720215074049626,
           "better_than_baseline": true
         }
       },
       "memory_usage": {
         "rake": {
           "baseline_value": 0.0,
-          "spacy_yake_value": 0.01875,
+          "spacy_yake_value": 0.275,
           "improvement_percent": -Infinity,
           "better_than_baseline": false
         },
         "tfidf": {
           "baseline_value": 0.0,
-          "spacy_yake_value": 0.01875,
+          "spacy_yake_value": 0.275,
           "improvement_percent": -Infinity,
           "better_than_baseline": false
         },
+        "textrank": {
+          "baseline_value": 0.184375,
+          "spacy_yake_value": 0.275,
+          "improvement_percent": -49.152542372881356,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": -1.15,
+          "spacy_yake_value": 0.275,
+          "improvement_percent": 123.91304347826086,
+          "better_than_baseline": false
+        },
         "hybrid_ensemble": {
-          "baseline_value": 0.028125,
-          "spacy_yake_value": 0.01875,
-          "improvement_percent": 33.333333333333336,
+          "baseline_value": 0.321875,
+          "spacy_yake_value": 0.275,
+          "improvement_percent": 14.563106796116504,
           "better_than_baseline": true
         }
       },
       "confidence_score": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 1.0,
           "spacy_yake_value": 0.7660801640741769,
-          "improvement_percent": Infinity,
-          "better_than_baseline": true
+          "improvement_percent": -23.39198359258231,
+          "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.08084520834544431,
+          "baseline_value": 0.34009775435259243,
           "spacy_yake_value": 0.7660801640741769,
-          "improvement_percent": 847.5888302505019,
+          "improvement_percent": 125.25293221429274,
+          "better_than_baseline": true
+        },
+        "textrank": {
+          "baseline_value": 0.1625,
+          "spacy_yake_value": 0.7660801640741769,
+          "improvement_percent": 371.43394712257043,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 0.30706,
+          "spacy_yake_value": 0.7660801640741769,
+          "improvement_percent": 149.48875271092845,
           "better_than_baseline": true
         },
         "hybrid_ensemble": {
-          "baseline_value": 0.4717748796963228,
+          "baseline_value": 0.7707732218636276,
           "spacy_yake_value": 0.7660801640741769,
-          "improvement_percent": 62.38256783983406,
-          "better_than_baseline": true
+          "improvement_percent": -0.6088766003187728,
+          "better_than_baseline": false
         }
       },
       "accuracy": {
         "rake": {
+          "baseline_value": 0.125,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": -100.0,
+          "better_than_baseline": false
+        },
+        "tfidf": {
+          "baseline_value": 0.07692307692307691,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": -100.0,
+          "better_than_baseline": false
+        },
+        "textrank": {
           "baseline_value": 0.0,
           "spacy_yake_value": 0.0,
           "improvement_percent": NaN,
           "better_than_baseline": false
         },
-        "tfidf": {
-          "baseline_value": 0.15384615384615383,
+        "keybert": {
+          "baseline_value": 0.1818181818181818,
           "spacy_yake_value": 0.0,
           "improvement_percent": -100.0,
           "better_than_baseline": false
         },
         "hybrid_ensemble": {
-          "baseline_value": 0.0,
+          "baseline_value": 0.07692307692307691,
           "spacy_yake_value": 0.0,
-          "improvement_percent": NaN,
+          "improvement_percent": -100.0,
           "better_than_baseline": false
         }
       },
       "keywords_count": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 10.0,
           "spacy_yake_value": 19.0,
-          "improvement_percent": Infinity,
+          "improvement_percent": 90.0,
           "better_than_baseline": true
         },
         "tfidf": {
@@ -718,6 +1010,18 @@
           "spacy_yake_value": 19.0,
           "improvement_percent": -5.0,
           "better_than_baseline": false
+        },
+        "textrank": {
+          "baseline_value": 16.0,
+          "spacy_yake_value": 19.0,
+          "improvement_percent": 18.75,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 5.0,
+          "spacy_yake_value": 19.0,
+          "improvement_percent": 280.0,
+          "better_than_baseline": true
         },
         "hybrid_ensemble": {
           "baseline_value": 20.0,
@@ -757,16 +1061,16 @@
     },
     "spacy_yake_stats": {
       "processing_time": {
-        "mean": 0.008713817596435547,
-        "std": 0.0002945711707796102,
-        "min": 0.00839996337890625,
-        "max": 0.009273052215576172
+        "mean": 0.008471155166625976,
+        "std": 0.0003873502237981794,
+        "min": 0.007933855056762695,
+        "max": 0.009101152420043945
       },
       "memory_usage": {
-        "mean": 0.00625,
-        "std": 0.007654655446197432,
-        "min": 0.0,
-        "max": 0.015625
+        "mean": 0.1875,
+        "std": 0.11481983169296148,
+        "min": 0.015625,
+        "max": 0.375
       },
       "confidence_score": {
         "mean": 0.6896823243543811,
@@ -784,25 +1088,41 @@
     },
     "baseline_stats": {
       "rake": {
-        "processing_time": 0.00024852752685546877,
+        "processing_time": 0.00016560554504394532,
         "memory_usage": 0.0,
-        "confidence_score": 0.0,
-        "accuracy": 0.0,
-        "keywords_count": 0.0,
+        "confidence_score": 1.0,
+        "accuracy": 0.13333333333333333,
+        "keywords_count": 10.0,
         "success_rate": 1.0
       },
       "tfidf": {
-        "processing_time": 0.0007246494293212891,
+        "processing_time": 0.0005963325500488281,
         "memory_usage": 0.0,
-        "confidence_score": 0.10050378152592121,
-        "accuracy": 0.16000000000000003,
-        "keywords_count": 20.0,
+        "confidence_score": 0.5492502990184408,
+        "accuracy": 0.0,
+        "keywords_count": 10.0,
+        "success_rate": 1.0
+      },
+      "textrank": {
+        "processing_time": 0.0013177871704101562,
+        "memory_usage": 0.15,
+        "confidence_score": 0.16666666666666666,
+        "accuracy": 0.0,
+        "keywords_count": 15.0,
+        "success_rate": 1.0
+      },
+      "keybert": {
+        "processing_time": 0.061190032958984376,
+        "memory_usage": 0.871875,
+        "confidence_score": 0.28564,
+        "accuracy": 0.20000000000000004,
+        "keywords_count": 5.0,
         "success_rate": 1.0
       },
       "hybrid_ensemble": {
-        "processing_time": 0.009880733489990235,
-        "memory_usage": 0.009375,
-        "confidence_score": 0.42888496184151687,
+        "processing_time": 0.01005854606628418,
+        "memory_usage": 0.1,
+        "confidence_score": 0.753896429376294,
         "accuracy": 0.08000000000000002,
         "keywords_count": 20.0,
         "success_rate": 1.0
@@ -811,73 +1131,121 @@
     "performance_comparison": {
       "processing_time": {
         "rake": {
-          "baseline_value": 0.00024852752685546877,
-          "spacy_yake_value": 0.008713817596435547,
-          "improvement_percent": -3406.1780506523405,
+          "baseline_value": 0.00016560554504394532,
+          "spacy_yake_value": 0.008471155166625976,
+          "improvement_percent": -5015.260581629715,
           "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.0007246494293212891,
-          "spacy_yake_value": 0.008713817596435547,
-          "improvement_percent": -1102.487333026255,
+          "baseline_value": 0.0005963325500488281,
+          "spacy_yake_value": 0.008471155166625976,
+          "improvement_percent": -1320.5421397729092,
           "better_than_baseline": false
         },
+        "textrank": {
+          "baseline_value": 0.0013177871704101562,
+          "spacy_yake_value": 0.008471155166625976,
+          "improvement_percent": -542.8318135764944,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 0.061190032958984376,
+          "spacy_yake_value": 0.008471155166625976,
+          "improvement_percent": 86.15598855404411,
+          "better_than_baseline": true
+        },
         "hybrid_ensemble": {
-          "baseline_value": 0.009880733489990235,
-          "spacy_yake_value": 0.008713817596435547,
-          "improvement_percent": 11.810012836970477,
+          "baseline_value": 0.01005854606628418,
+          "spacy_yake_value": 0.008471155166625976,
+          "improvement_percent": 15.781514437549482,
           "better_than_baseline": true
         }
       },
       "memory_usage": {
         "rake": {
           "baseline_value": 0.0,
-          "spacy_yake_value": 0.00625,
+          "spacy_yake_value": 0.1875,
           "improvement_percent": -Infinity,
           "better_than_baseline": false
         },
         "tfidf": {
           "baseline_value": 0.0,
-          "spacy_yake_value": 0.00625,
+          "spacy_yake_value": 0.1875,
           "improvement_percent": -Infinity,
           "better_than_baseline": false
         },
-        "hybrid_ensemble": {
-          "baseline_value": 0.009375,
-          "spacy_yake_value": 0.00625,
-          "improvement_percent": 33.33333333333333,
+        "textrank": {
+          "baseline_value": 0.15,
+          "spacy_yake_value": 0.1875,
+          "improvement_percent": -25.000000000000007,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 0.871875,
+          "spacy_yake_value": 0.1875,
+          "improvement_percent": 78.49462365591397,
           "better_than_baseline": true
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.1,
+          "spacy_yake_value": 0.1875,
+          "improvement_percent": -87.49999999999999,
+          "better_than_baseline": false
         }
       },
       "confidence_score": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 1.0,
           "spacy_yake_value": 0.6896823243543811,
-          "improvement_percent": Infinity,
-          "better_than_baseline": true
+          "improvement_percent": -31.031767564561886,
+          "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.10050378152592121,
+          "baseline_value": 0.5492502990184408,
           "spacy_yake_value": 0.6896823243543811,
-          "improvement_percent": 586.2252483271023,
+          "improvement_percent": 25.56794699737167,
+          "better_than_baseline": true
+        },
+        "textrank": {
+          "baseline_value": 0.16666666666666666,
+          "spacy_yake_value": 0.6896823243543811,
+          "improvement_percent": 313.8093946126287,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 0.28564,
+          "spacy_yake_value": 0.6896823243543811,
+          "improvement_percent": 141.4515909376772,
           "better_than_baseline": true
         },
         "hybrid_ensemble": {
-          "baseline_value": 0.42888496184151687,
+          "baseline_value": 0.753896429376294,
           "spacy_yake_value": 0.6896823243543811,
-          "improvement_percent": 60.808231977421265,
-          "better_than_baseline": true
+          "improvement_percent": -8.51762954694424,
+          "better_than_baseline": false
         }
       },
       "accuracy": {
         "rake": {
+          "baseline_value": 0.13333333333333333,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": -100.0,
+          "better_than_baseline": false
+        },
+        "tfidf": {
           "baseline_value": 0.0,
           "spacy_yake_value": 0.0,
           "improvement_percent": NaN,
           "better_than_baseline": false
         },
-        "tfidf": {
-          "baseline_value": 0.16000000000000003,
+        "textrank": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": NaN,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 0.20000000000000004,
           "spacy_yake_value": 0.0,
           "improvement_percent": -100.0,
           "better_than_baseline": false
@@ -891,16 +1259,28 @@
       },
       "keywords_count": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 10.0,
           "spacy_yake_value": 16.0,
-          "improvement_percent": Infinity,
+          "improvement_percent": 60.0,
           "better_than_baseline": true
         },
         "tfidf": {
-          "baseline_value": 20.0,
+          "baseline_value": 10.0,
           "spacy_yake_value": 16.0,
-          "improvement_percent": -20.0,
-          "better_than_baseline": false
+          "improvement_percent": 60.0,
+          "better_than_baseline": true
+        },
+        "textrank": {
+          "baseline_value": 15.0,
+          "spacy_yake_value": 16.0,
+          "improvement_percent": 6.666666666666667,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 5.0,
+          "spacy_yake_value": 16.0,
+          "improvement_percent": 220.00000000000003,
+          "better_than_baseline": true
         },
         "hybrid_ensemble": {
           "baseline_value": 20.0,
@@ -940,16 +1320,16 @@
     },
     "spacy_yake_stats": {
       "processing_time": {
-        "mean": 0.007714176177978515,
-        "std": 0.00027262201133723495,
-        "min": 0.0072481632232666016,
-        "max": 0.008085012435913086
+        "mean": 0.007629013061523438,
+        "std": 0.0002968319774140695,
+        "min": 0.00731205940246582,
+        "max": 0.008000850677490234
       },
       "memory_usage": {
-        "mean": 0.03125,
-        "std": 0.035630482034348064,
+        "mean": 0.296875,
+        "std": 0.25995792928856776,
         "min": 0.0,
-        "max": 0.09375
+        "max": 0.625
       },
       "confidence_score": {
         "mean": 0.8042898983574279,
@@ -967,26 +1347,42 @@
     },
     "baseline_stats": {
       "rake": {
-        "processing_time": 0.0002274036407470703,
+        "processing_time": 0.00018315315246582032,
         "memory_usage": 0.0,
-        "confidence_score": 0.0,
-        "accuracy": 0.0,
-        "keywords_count": 0.0,
+        "confidence_score": 1.0,
+        "accuracy": 0.13333333333333333,
+        "keywords_count": 10.0,
         "success_rate": 1.0
       },
       "tfidf": {
-        "processing_time": 0.0006592750549316406,
+        "processing_time": 0.0006449222564697266,
         "memory_usage": 0.0,
-        "confidence_score": 0.09245003270420486,
-        "accuracy": 0.32000000000000006,
-        "keywords_count": 20.0,
+        "confidence_score": 0.43815617682988506,
+        "accuracy": 0.0,
+        "keywords_count": 12.0,
+        "success_rate": 1.0
+      },
+      "textrank": {
+        "processing_time": 0.001271820068359375,
+        "memory_usage": 0.153125,
+        "confidence_score": 0.17142857142857143,
+        "accuracy": 0.0,
+        "keywords_count": 14.0,
+        "success_rate": 1.0
+      },
+      "keybert": {
+        "processing_time": 0.05907917022705078,
+        "memory_usage": 2.25,
+        "confidence_score": 0.30868,
+        "accuracy": 0.20000000000000004,
+        "keywords_count": 5.0,
         "success_rate": 1.0
       },
       "hybrid_ensemble": {
-        "processing_time": 0.008888673782348634,
-        "memory_usage": 0.009375,
-        "confidence_score": 0.49644144392008754,
-        "accuracy": 0.16000000000000003,
+        "processing_time": 0.008805513381958008,
+        "memory_usage": 0.159375,
+        "confidence_score": 0.8146802597954295,
+        "accuracy": 0.08000000000000002,
         "keywords_count": 20.0,
         "success_rate": 1.0
       }
@@ -994,79 +1390,127 @@
     "performance_comparison": {
       "processing_time": {
         "rake": {
-          "baseline_value": 0.0002274036407470703,
-          "spacy_yake_value": 0.007714176177978515,
-          "improvement_percent": -3292.2834975885935,
+          "baseline_value": 0.00018315315246582032,
+          "spacy_yake_value": 0.007629013061523438,
+          "improvement_percent": -4065.3736006248373,
           "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.0006592750549316406,
-          "spacy_yake_value": 0.007714176177978515,
-          "improvement_percent": -1070.0998119485027,
+          "baseline_value": 0.0006449222564697266,
+          "spacy_yake_value": 0.007629013061523438,
+          "improvement_percent": -1082.935304990758,
           "better_than_baseline": false
         },
+        "textrank": {
+          "baseline_value": 0.001271820068359375,
+          "spacy_yake_value": 0.007629013061523438,
+          "improvement_percent": -499.85002999400126,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 0.05907917022705078,
+          "spacy_yake_value": 0.007629013061523438,
+          "improvement_percent": 87.0867972041518,
+          "better_than_baseline": true
+        },
         "hybrid_ensemble": {
-          "baseline_value": 0.008888673782348634,
-          "spacy_yake_value": 0.007714176177978515,
-          "improvement_percent": 13.213417807080141,
+          "baseline_value": 0.008805513381958008,
+          "spacy_yake_value": 0.007629013061523438,
+          "improvement_percent": 13.3609509111093,
           "better_than_baseline": true
         }
       },
       "memory_usage": {
         "rake": {
           "baseline_value": 0.0,
-          "spacy_yake_value": 0.03125,
+          "spacy_yake_value": 0.296875,
           "improvement_percent": -Infinity,
           "better_than_baseline": false
         },
         "tfidf": {
           "baseline_value": 0.0,
-          "spacy_yake_value": 0.03125,
+          "spacy_yake_value": 0.296875,
           "improvement_percent": -Infinity,
           "better_than_baseline": false
         },
+        "textrank": {
+          "baseline_value": 0.153125,
+          "spacy_yake_value": 0.296875,
+          "improvement_percent": -93.87755102040815,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 2.25,
+          "spacy_yake_value": 0.296875,
+          "improvement_percent": 86.80555555555556,
+          "better_than_baseline": true
+        },
         "hybrid_ensemble": {
-          "baseline_value": 0.009375,
-          "spacy_yake_value": 0.03125,
-          "improvement_percent": -233.33333333333334,
+          "baseline_value": 0.159375,
+          "spacy_yake_value": 0.296875,
+          "improvement_percent": -86.27450980392159,
           "better_than_baseline": false
         }
       },
       "confidence_score": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 1.0,
           "spacy_yake_value": 0.8042898983574279,
-          "improvement_percent": Infinity,
-          "better_than_baseline": true
+          "improvement_percent": -19.571010164257206,
+          "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.09245003270420486,
+          "baseline_value": 0.43815617682988506,
           "spacy_yake_value": 0.8042898983574279,
-          "improvement_percent": 769.972540659628,
+          "improvement_percent": 83.56237818591678,
+          "better_than_baseline": true
+        },
+        "textrank": {
+          "baseline_value": 0.17142857142857143,
+          "spacy_yake_value": 0.8042898983574279,
+          "improvement_percent": 369.1691073751663,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 0.30868,
+          "spacy_yake_value": 0.8042898983574279,
+          "improvement_percent": 160.5578263436011,
           "better_than_baseline": true
         },
         "hybrid_ensemble": {
-          "baseline_value": 0.49644144392008754,
+          "baseline_value": 0.8146802597954295,
           "spacy_yake_value": 0.8042898983574279,
-          "improvement_percent": 62.011030345583904,
-          "better_than_baseline": true
+          "improvement_percent": -1.2753913345845171,
+          "better_than_baseline": false
         }
       },
       "accuracy": {
         "rake": {
+          "baseline_value": 0.13333333333333333,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": -100.0,
+          "better_than_baseline": false
+        },
+        "tfidf": {
           "baseline_value": 0.0,
           "spacy_yake_value": 0.0,
           "improvement_percent": NaN,
           "better_than_baseline": false
         },
-        "tfidf": {
-          "baseline_value": 0.32000000000000006,
+        "textrank": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": NaN,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 0.20000000000000004,
           "spacy_yake_value": 0.0,
           "improvement_percent": -100.0,
           "better_than_baseline": false
         },
         "hybrid_ensemble": {
-          "baseline_value": 0.16000000000000003,
+          "baseline_value": 0.08000000000000002,
           "spacy_yake_value": 0.0,
           "improvement_percent": -100.0,
           "better_than_baseline": false
@@ -1074,16 +1518,28 @@
       },
       "keywords_count": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 10.0,
           "spacy_yake_value": 15.0,
-          "improvement_percent": Infinity,
+          "improvement_percent": 50.0,
           "better_than_baseline": true
         },
         "tfidf": {
-          "baseline_value": 20.0,
+          "baseline_value": 12.0,
           "spacy_yake_value": 15.0,
-          "improvement_percent": -25.0,
-          "better_than_baseline": false
+          "improvement_percent": 25.0,
+          "better_than_baseline": true
+        },
+        "textrank": {
+          "baseline_value": 14.0,
+          "spacy_yake_value": 15.0,
+          "improvement_percent": 7.142857142857142,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 5.0,
+          "spacy_yake_value": 15.0,
+          "improvement_percent": 200.0,
+          "better_than_baseline": true
         },
         "hybrid_ensemble": {
           "baseline_value": 20.0,
@@ -1120,16 +1576,16 @@
     },
     "spacy_yake_stats": {
       "processing_time": {
-        "mean": 0.0026131153106689455,
-        "std": 0.0001821974377591521,
-        "min": 0.0023260116577148438,
-        "max": 0.002830028533935547
+        "mean": 0.0026174545288085937,
+        "std": 8.503018713159814e-05,
+        "min": 0.002471923828125,
+        "max": 0.0027332305908203125
       },
       "memory_usage": {
-        "mean": 0.003125,
-        "std": 0.006250000000000001,
-        "min": 0.0,
-        "max": 0.015625
+        "mean": 0.075,
+        "std": 0.04677071733467427,
+        "min": 0.015625,
+        "max": 0.15625
       },
       "confidence_score": {
         "mean": 0.9489839686998607,
@@ -1147,106 +1603,170 @@
     },
     "baseline_stats": {
       "rake": {
-        "processing_time": 0.00020208358764648438,
+        "processing_time": 0.00010700225830078125,
         "memory_usage": 0.0,
-        "confidence_score": 0.0,
-        "accuracy": 0.0,
-        "keywords_count": 0.0,
+        "confidence_score": 1.0,
+        "accuracy": 0.16666666666666669,
+        "keywords_count": 10.0,
         "success_rate": 1.0
       },
       "tfidf": {
-        "processing_time": 0.0005895137786865234,
+        "processing_time": 0.0005434036254882812,
         "memory_usage": 0.0,
-        "confidence_score": 0.3333333333333333,
-        "accuracy": 0.3636363636363636,
-        "keywords_count": 9.0,
+        "confidence_score": 0.8660254037844389,
+        "accuracy": 0.0,
+        "keywords_count": 3.0,
+        "success_rate": 1.0
+      },
+      "textrank": {
+        "processing_time": 0.0007879734039306641,
+        "memory_usage": 0.04375,
+        "confidence_score": 0.4333333333333334,
+        "accuracy": 0.0,
+        "keywords_count": 3.0,
+        "success_rate": 1.0
+      },
+      "keybert": {
+        "processing_time": 0.02242598533630371,
+        "memory_usage": 2.1,
+        "confidence_score": 0.41109999999999997,
+        "accuracy": 0.0,
+        "keywords_count": 5.0,
         "success_rate": 1.0
       },
       "hybrid_ensemble": {
-        "processing_time": 0.003734302520751953,
-        "memory_usage": 0.003125,
-        "confidence_score": 0.6193903812199164,
-        "accuracy": 0.3636363636363636,
-        "keywords_count": 9.0,
+        "processing_time": 0.0038970947265625,
+        "memory_usage": 0.071875,
+        "confidence_score": 0.9908432237521794,
+        "accuracy": 0.11111111111111112,
+        "keywords_count": 16.0,
         "success_rate": 1.0
       }
     },
     "performance_comparison": {
       "processing_time": {
         "rake": {
-          "baseline_value": 0.00020208358764648438,
-          "spacy_yake_value": 0.0026131153106689455,
-          "improvement_percent": -1193.0863614912696,
+          "baseline_value": 0.00010700225830078125,
+          "spacy_yake_value": 0.0026174545288085937,
+          "improvement_percent": -2346.1675579322637,
           "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.0005895137786865234,
-          "spacy_yake_value": 0.0026131153106689455,
-          "improvement_percent": -343.2661975248726,
+          "baseline_value": 0.0005434036254882812,
+          "spacy_yake_value": 0.0026174545288085937,
+          "improvement_percent": -381.67778167778175,
           "better_than_baseline": false
         },
+        "textrank": {
+          "baseline_value": 0.0007879734039306641,
+          "spacy_yake_value": 0.0026174545288085937,
+          "improvement_percent": -232.17549167927382,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 0.02242598533630371,
+          "spacy_yake_value": 0.0026174545288085937,
+          "improvement_percent": 88.3284748047552,
+          "better_than_baseline": true
+        },
         "hybrid_ensemble": {
-          "baseline_value": 0.003734302520751953,
-          "spacy_yake_value": 0.0026131153106689455,
-          "improvement_percent": 30.024005924866554,
+          "baseline_value": 0.0038970947265625,
+          "spacy_yake_value": 0.0026174545288085937,
+          "improvement_percent": 32.835747846515275,
           "better_than_baseline": true
         }
       },
       "memory_usage": {
         "rake": {
           "baseline_value": 0.0,
-          "spacy_yake_value": 0.003125,
+          "spacy_yake_value": 0.075,
           "improvement_percent": -Infinity,
           "better_than_baseline": false
         },
         "tfidf": {
           "baseline_value": 0.0,
-          "spacy_yake_value": 0.003125,
+          "spacy_yake_value": 0.075,
           "improvement_percent": -Infinity,
           "better_than_baseline": false
         },
+        "textrank": {
+          "baseline_value": 0.04375,
+          "spacy_yake_value": 0.075,
+          "improvement_percent": -71.42857142857143,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 2.1,
+          "spacy_yake_value": 0.075,
+          "improvement_percent": 96.42857142857142,
+          "better_than_baseline": true
+        },
         "hybrid_ensemble": {
-          "baseline_value": 0.003125,
-          "spacy_yake_value": 0.003125,
-          "improvement_percent": 0.0,
+          "baseline_value": 0.071875,
+          "spacy_yake_value": 0.075,
+          "improvement_percent": -4.347826086956526,
           "better_than_baseline": false
         }
       },
       "confidence_score": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 1.0,
           "spacy_yake_value": 0.9489839686998607,
-          "improvement_percent": Infinity,
-          "better_than_baseline": true
+          "improvement_percent": -5.101603130013932,
+          "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.3333333333333333,
+          "baseline_value": 0.8660254037844389,
           "spacy_yake_value": 0.9489839686998607,
-          "improvement_percent": 184.69519060995822,
+          "improvement_percent": 9.579229957100756,
+          "better_than_baseline": true
+        },
+        "textrank": {
+          "baseline_value": 0.4333333333333334,
+          "spacy_yake_value": 0.9489839686998607,
+          "improvement_percent": 118.9963004691986,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 0.41109999999999997,
+          "spacy_yake_value": 0.9489839686998607,
+          "improvement_percent": 130.84017725610818,
           "better_than_baseline": true
         },
         "hybrid_ensemble": {
-          "baseline_value": 0.6193903812199164,
+          "baseline_value": 0.9908432237521794,
           "spacy_yake_value": 0.9489839686998607,
-          "improvement_percent": 53.212577636545674,
-          "better_than_baseline": true
+          "improvement_percent": -4.224609307394137,
+          "better_than_baseline": false
         }
       },
       "accuracy": {
         "rake": {
+          "baseline_value": 0.16666666666666669,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": -100.0,
+          "better_than_baseline": false
+        },
+        "tfidf": {
           "baseline_value": 0.0,
           "spacy_yake_value": 0.0,
           "improvement_percent": NaN,
           "better_than_baseline": false
         },
-        "tfidf": {
-          "baseline_value": 0.3636363636363636,
+        "textrank": {
+          "baseline_value": 0.0,
           "spacy_yake_value": 0.0,
-          "improvement_percent": -100.0,
+          "improvement_percent": NaN,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.0,
+          "improvement_percent": NaN,
           "better_than_baseline": false
         },
         "hybrid_ensemble": {
-          "baseline_value": 0.3636363636363636,
+          "baseline_value": 0.11111111111111112,
           "spacy_yake_value": 0.0,
           "improvement_percent": -100.0,
           "better_than_baseline": false
@@ -1254,21 +1774,33 @@
       },
       "keywords_count": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 10.0,
           "spacy_yake_value": 4.0,
-          "improvement_percent": Infinity,
-          "better_than_baseline": true
+          "improvement_percent": -60.0,
+          "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 9.0,
+          "baseline_value": 3.0,
           "spacy_yake_value": 4.0,
-          "improvement_percent": -55.55555555555556,
+          "improvement_percent": 33.33333333333333,
+          "better_than_baseline": true
+        },
+        "textrank": {
+          "baseline_value": 3.0,
+          "spacy_yake_value": 4.0,
+          "improvement_percent": 33.33333333333333,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 5.0,
+          "spacy_yake_value": 4.0,
+          "improvement_percent": -20.0,
           "better_than_baseline": false
         },
         "hybrid_ensemble": {
-          "baseline_value": 9.0,
+          "baseline_value": 16.0,
           "spacy_yake_value": 4.0,
-          "improvement_percent": -55.55555555555556,
+          "improvement_percent": -75.0,
           "better_than_baseline": false
         }
       }
@@ -1300,16 +1832,16 @@
     },
     "spacy_yake_stats": {
       "processing_time": {
-        "mean": 0.0022446155548095704,
-        "std": 0.00021017446868629158,
-        "min": 0.0020051002502441406,
-        "max": 0.002526998519897461
+        "mean": 0.0021981716156005858,
+        "std": 0.00018029725597915345,
+        "min": 0.002031087875366211,
+        "max": 0.002496957778930664
       },
       "memory_usage": {
-        "mean": 0.0,
-        "std": 0.0,
+        "mean": 0.028125,
+        "std": 0.04238956239453293,
         "min": 0.0,
-        "max": 0.0
+        "max": 0.109375
       },
       "confidence_score": {
         "mean": 0.8453335199599368,
@@ -1327,89 +1859,141 @@
     },
     "baseline_stats": {
       "rake": {
-        "processing_time": 0.00019354820251464843,
+        "processing_time": 7.51495361328125e-05,
         "memory_usage": 0.0,
-        "confidence_score": 0.0,
+        "confidence_score": 0.9,
         "accuracy": 0.0,
-        "keywords_count": 0.0,
+        "keywords_count": 1.0,
         "success_rate": 1.0
       },
       "tfidf": {
-        "processing_time": 0.0005309581756591797,
+        "processing_time": 0.0005555629730224609,
         "memory_usage": 0.0,
-        "confidence_score": 0.447213595499958,
+        "confidence_score": 1.3,
+        "accuracy": 0.6666666666666666,
+        "keywords_count": 1.0,
+        "success_rate": 1.0
+      },
+      "textrank": {
+        "processing_time": 0.0006350994110107422,
+        "memory_usage": 0.00625,
+        "confidence_score": 0.4333333333333334,
+        "accuracy": 0.4,
+        "keywords_count": 3.0,
+        "success_rate": 1.0
+      },
+      "keybert": {
+        "processing_time": 0.020263481140136718,
+        "memory_usage": 1.8375,
+        "confidence_score": 0.6739200000000001,
         "accuracy": 0.5714285714285715,
         "keywords_count": 5.0,
         "success_rate": 1.0
       },
       "hybrid_ensemble": {
-        "processing_time": 0.0032763957977294924,
-        "memory_usage": 0.0,
-        "confidence_score": 0.5742821513009557,
-        "accuracy": 0.5714285714285715,
-        "keywords_count": 5.0,
+        "processing_time": 0.003361415863037109,
+        "memory_usage": 0.065625,
+        "confidence_score": 0.9767334639719559,
+        "accuracy": 0.3333333333333333,
+        "keywords_count": 4.0,
         "success_rate": 1.0
       }
     },
     "performance_comparison": {
       "processing_time": {
         "rake": {
-          "baseline_value": 0.00019354820251464843,
-          "spacy_yake_value": 0.0022446155548095704,
-          "improvement_percent": -1059.7191426459722,
+          "baseline_value": 7.51495361328125e-05,
+          "spacy_yake_value": 0.0021981716156005858,
+          "improvement_percent": -2825.0634517766493,
           "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.0005309581756591797,
-          "spacy_yake_value": 0.0022446155548095704,
-          "improvement_percent": -322.74809160305347,
+          "baseline_value": 0.0005555629730224609,
+          "spacy_yake_value": 0.0021981716156005858,
+          "improvement_percent": -295.6656081023088,
           "better_than_baseline": false
         },
+        "textrank": {
+          "baseline_value": 0.0006350994110107422,
+          "spacy_yake_value": 0.0021981716156005858,
+          "improvement_percent": -246.11457316615355,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 0.020263481140136718,
+          "spacy_yake_value": 0.0021981716156005858,
+          "improvement_percent": 89.15205338905675,
+          "better_than_baseline": true
+        },
         "hybrid_ensemble": {
-          "baseline_value": 0.0032763957977294924,
-          "spacy_yake_value": 0.0022446155548095704,
-          "improvement_percent": 31.491318711705553,
+          "baseline_value": 0.003361415863037109,
+          "spacy_yake_value": 0.0021981716156005858,
+          "improvement_percent": 34.60578205237325,
           "better_than_baseline": true
         }
       },
       "memory_usage": {
         "rake": {
           "baseline_value": 0.0,
-          "spacy_yake_value": 0.0,
-          "improvement_percent": NaN,
+          "spacy_yake_value": 0.028125,
+          "improvement_percent": -Infinity,
           "better_than_baseline": false
         },
         "tfidf": {
           "baseline_value": 0.0,
-          "spacy_yake_value": 0.0,
-          "improvement_percent": NaN,
+          "spacy_yake_value": 0.028125,
+          "improvement_percent": -Infinity,
           "better_than_baseline": false
         },
-        "hybrid_ensemble": {
-          "baseline_value": 0.0,
-          "spacy_yake_value": 0.0,
-          "improvement_percent": NaN,
+        "textrank": {
+          "baseline_value": 0.00625,
+          "spacy_yake_value": 0.028125,
+          "improvement_percent": -349.99999999999994,
           "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 1.8375,
+          "spacy_yake_value": 0.028125,
+          "improvement_percent": 98.46938775510205,
+          "better_than_baseline": true
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.065625,
+          "spacy_yake_value": 0.028125,
+          "improvement_percent": 57.14285714285715,
+          "better_than_baseline": true
         }
       },
       "confidence_score": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 0.9,
           "spacy_yake_value": 0.8453335199599368,
-          "improvement_percent": Infinity,
-          "better_than_baseline": true
+          "improvement_percent": -6.074053337784805,
+          "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.447213595499958,
+          "baseline_value": 1.3,
           "spacy_yake_value": 0.8453335199599368,
-          "improvement_percent": 89.02232142895937,
+          "improvement_percent": -34.974344618466404,
+          "better_than_baseline": false
+        },
+        "textrank": {
+          "baseline_value": 0.4333333333333334,
+          "spacy_yake_value": 0.8453335199599368,
+          "improvement_percent": 95.07696614460076,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 0.6739200000000001,
+          "spacy_yake_value": 0.8453335199599368,
+          "improvement_percent": 25.435292016847207,
           "better_than_baseline": true
         },
         "hybrid_ensemble": {
-          "baseline_value": 0.5742821513009557,
+          "baseline_value": 0.9767334639719559,
           "spacy_yake_value": 0.8453335199599368,
-          "improvement_percent": 47.198292345487694,
-          "better_than_baseline": true
+          "improvement_percent": -13.452999089195936,
+          "better_than_baseline": false
         }
       },
       "accuracy": {
@@ -1420,35 +2004,59 @@
           "better_than_baseline": true
         },
         "tfidf": {
+          "baseline_value": 0.6666666666666666,
+          "spacy_yake_value": 0.4,
+          "improvement_percent": -39.99999999999999,
+          "better_than_baseline": false
+        },
+        "textrank": {
+          "baseline_value": 0.4,
+          "spacy_yake_value": 0.4,
+          "improvement_percent": 0.0,
+          "better_than_baseline": false
+        },
+        "keybert": {
           "baseline_value": 0.5714285714285715,
           "spacy_yake_value": 0.4,
           "improvement_percent": -30.000000000000004,
           "better_than_baseline": false
         },
         "hybrid_ensemble": {
-          "baseline_value": 0.5714285714285715,
+          "baseline_value": 0.3333333333333333,
           "spacy_yake_value": 0.4,
-          "improvement_percent": -30.000000000000004,
-          "better_than_baseline": false
+          "improvement_percent": 20.00000000000001,
+          "better_than_baseline": true
         }
       },
       "keywords_count": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 1.0,
           "spacy_yake_value": 3.0,
-          "improvement_percent": Infinity,
+          "improvement_percent": 200.0,
           "better_than_baseline": true
         },
         "tfidf": {
+          "baseline_value": 1.0,
+          "spacy_yake_value": 3.0,
+          "improvement_percent": 200.0,
+          "better_than_baseline": true
+        },
+        "textrank": {
+          "baseline_value": 3.0,
+          "spacy_yake_value": 3.0,
+          "improvement_percent": 0.0,
+          "better_than_baseline": false
+        },
+        "keybert": {
           "baseline_value": 5.0,
           "spacy_yake_value": 3.0,
           "improvement_percent": -40.0,
           "better_than_baseline": false
         },
         "hybrid_ensemble": {
-          "baseline_value": 5.0,
+          "baseline_value": 4.0,
           "spacy_yake_value": 3.0,
-          "improvement_percent": -40.0,
+          "improvement_percent": -25.0,
           "better_than_baseline": false
         }
       }
@@ -1486,16 +2094,16 @@
     },
     "spacy_yake_stats": {
       "processing_time": {
-        "mean": 0.009264230728149414,
-        "std": 0.0006195937520572678,
-        "min": 0.008806943893432617,
-        "max": 0.010489940643310547
+        "mean": 0.00887441635131836,
+        "std": 0.000621430971704537,
+        "min": 0.008504152297973633,
+        "max": 0.010113954544067383
       },
       "memory_usage": {
-        "mean": 0.015625,
-        "std": 0.01711632992203644,
+        "mean": 0.175,
+        "std": 0.23663493772053187,
         "min": 0.0,
-        "max": 0.046875
+        "max": 0.625
       },
       "confidence_score": {
         "mean": 0.8397140584478457,
@@ -1513,25 +2121,41 @@
     },
     "baseline_stats": {
       "rake": {
-        "processing_time": 0.00022225379943847657,
+        "processing_time": 0.00015077590942382812,
         "memory_usage": 0.0,
-        "confidence_score": 0.0,
-        "accuracy": 0.0,
-        "keywords_count": 0.0,
+        "confidence_score": 1.0,
+        "accuracy": 0.22222222222222224,
+        "keywords_count": 10.0,
         "success_rate": 1.0
       },
       "tfidf": {
-        "processing_time": 0.0006233692169189453,
+        "processing_time": 0.0005558967590332031,
         "memory_usage": 0.0,
-        "confidence_score": 0.08980265101338744,
-        "accuracy": 0.28571428571428575,
-        "keywords_count": 20.0,
+        "confidence_score": 0.3508936049590411,
+        "accuracy": 0.15384615384615383,
+        "keywords_count": 18.0,
+        "success_rate": 1.0
+      },
+      "textrank": {
+        "processing_time": 0.0012975215911865234,
+        "memory_usage": 0.146875,
+        "confidence_score": 0.17142857142857143,
+        "accuracy": 0.18181818181818182,
+        "keywords_count": 14.0,
+        "success_rate": 1.0
+      },
+      "keybert": {
+        "processing_time": 0.05865740776062012,
+        "memory_usage": 2.38125,
+        "confidence_score": 0.36576000000000003,
+        "accuracy": 0.3076923076923077,
+        "keywords_count": 5.0,
         "success_rate": 1.0
       },
       "hybrid_ensemble": {
-        "processing_time": 0.010472249984741212,
-        "memory_usage": 0.015625,
-        "confidence_score": 0.5172988327207155,
+        "processing_time": 0.01037130355834961,
+        "memory_usage": 0.190625,
+        "confidence_score": 0.8242062217813242,
         "accuracy": 0.21428571428571425,
         "keywords_count": 20.0,
         "success_rate": 1.0
@@ -1540,75 +2164,123 @@
     "performance_comparison": {
       "processing_time": {
         "rake": {
-          "baseline_value": 0.00022225379943847657,
-          "spacy_yake_value": 0.009264230728149414,
-          "improvement_percent": -4068.3115211328045,
+          "baseline_value": 0.00015077590942382812,
+          "spacy_yake_value": 0.00887441635131836,
+          "improvement_percent": -5785.831752055661,
           "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.0006233692169189453,
-          "spacy_yake_value": 0.009264230728149414,
-          "improvement_percent": -1386.154669930391,
+          "baseline_value": 0.0005558967590332031,
+          "spacy_yake_value": 0.00887441635131836,
+          "improvement_percent": -1496.4144793275007,
           "better_than_baseline": false
         },
+        "textrank": {
+          "baseline_value": 0.0012975215911865234,
+          "spacy_yake_value": 0.00887441635131836,
+          "improvement_percent": -583.9513432067914,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 0.05865740776062012,
+          "spacy_yake_value": 0.00887441635131836,
+          "improvement_percent": 84.87076621671605,
+          "better_than_baseline": true
+        },
         "hybrid_ensemble": {
-          "baseline_value": 0.010472249984741212,
-          "spacy_yake_value": 0.009264230728149414,
-          "improvement_percent": 11.53543181600864,
+          "baseline_value": 0.01037130355834961,
+          "spacy_yake_value": 0.00887441635131836,
+          "improvement_percent": 14.432970731303623,
           "better_than_baseline": true
         }
       },
       "memory_usage": {
         "rake": {
           "baseline_value": 0.0,
-          "spacy_yake_value": 0.015625,
+          "spacy_yake_value": 0.175,
           "improvement_percent": -Infinity,
           "better_than_baseline": false
         },
         "tfidf": {
           "baseline_value": 0.0,
-          "spacy_yake_value": 0.015625,
+          "spacy_yake_value": 0.175,
           "improvement_percent": -Infinity,
           "better_than_baseline": false
         },
-        "hybrid_ensemble": {
-          "baseline_value": 0.015625,
-          "spacy_yake_value": 0.015625,
-          "improvement_percent": 0.0,
+        "textrank": {
+          "baseline_value": 0.146875,
+          "spacy_yake_value": 0.175,
+          "improvement_percent": -19.148936170212753,
           "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 2.38125,
+          "spacy_yake_value": 0.175,
+          "improvement_percent": 92.65091863517061,
+          "better_than_baseline": true
+        },
+        "hybrid_ensemble": {
+          "baseline_value": 0.190625,
+          "spacy_yake_value": 0.175,
+          "improvement_percent": 8.196721311475411,
+          "better_than_baseline": true
         }
       },
       "confidence_score": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 1.0,
           "spacy_yake_value": 0.8397140584478457,
-          "improvement_percent": Infinity,
-          "better_than_baseline": true
+          "improvement_percent": -16.028594155215426,
+          "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.08980265101338744,
+          "baseline_value": 0.3508936049590411,
           "spacy_yake_value": 0.8397140584478457,
-          "improvement_percent": 835.0660019186565,
+          "improvement_percent": 139.30731326547357,
+          "better_than_baseline": true
+        },
+        "textrank": {
+          "baseline_value": 0.17142857142857143,
+          "spacy_yake_value": 0.8397140584478457,
+          "improvement_percent": 389.83320076124335,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 0.36576000000000003,
+          "spacy_yake_value": 0.8397140584478457,
+          "improvement_percent": 129.58061527992282,
           "better_than_baseline": true
         },
         "hybrid_ensemble": {
-          "baseline_value": 0.5172988327207155,
+          "baseline_value": 0.8242062217813242,
           "spacy_yake_value": 0.8397140584478457,
-          "improvement_percent": 62.32668727114623,
+          "improvement_percent": 1.8815481194748913,
           "better_than_baseline": true
         }
       },
       "accuracy": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 0.22222222222222224,
           "spacy_yake_value": 0.1739130434782609,
-          "improvement_percent": Infinity,
-          "better_than_baseline": true
+          "improvement_percent": -21.739130434782602,
+          "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.28571428571428575,
+          "baseline_value": 0.15384615384615383,
           "spacy_yake_value": 0.1739130434782609,
-          "improvement_percent": -39.130434782608695,
+          "improvement_percent": 13.043478260869595,
+          "better_than_baseline": true
+        },
+        "textrank": {
+          "baseline_value": 0.18181818181818182,
+          "spacy_yake_value": 0.1739130434782609,
+          "improvement_percent": -4.347826086956512,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 0.3076923076923077,
+          "spacy_yake_value": 0.1739130434782609,
+          "improvement_percent": -43.47826086956521,
           "better_than_baseline": false
         },
         "hybrid_ensemble": {
@@ -1620,16 +2292,28 @@
       },
       "keywords_count": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 10.0,
           "spacy_yake_value": 15.0,
-          "improvement_percent": Infinity,
+          "improvement_percent": 50.0,
           "better_than_baseline": true
         },
         "tfidf": {
-          "baseline_value": 20.0,
+          "baseline_value": 18.0,
           "spacy_yake_value": 15.0,
-          "improvement_percent": -25.0,
+          "improvement_percent": -16.666666666666664,
           "better_than_baseline": false
+        },
+        "textrank": {
+          "baseline_value": 14.0,
+          "spacy_yake_value": 15.0,
+          "improvement_percent": 7.142857142857142,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 5.0,
+          "spacy_yake_value": 15.0,
+          "improvement_percent": 200.0,
+          "better_than_baseline": true
         },
         "hybrid_ensemble": {
           "baseline_value": 20.0,
@@ -1669,16 +2353,16 @@
     },
     "spacy_yake_stats": {
       "processing_time": {
-        "mean": 0.009604978561401366,
-        "std": 0.0008929674016796987,
-        "min": 0.008990049362182617,
-        "max": 0.011380910873413086
+        "mean": 0.009328842163085938,
+        "std": 0.0006440477823888886,
+        "min": 0.008912086486816406,
+        "max": 0.010608911514282227
       },
       "memory_usage": {
-        "mean": 0.0,
-        "std": 0.0,
+        "mean": 0.065625,
+        "std": 0.06945659615904021,
         "min": 0.0,
-        "max": 0.0
+        "max": 0.171875
       },
       "confidence_score": {
         "mean": 0.8211742379438155,
@@ -1696,25 +2380,41 @@
     },
     "baseline_stats": {
       "rake": {
-        "processing_time": 0.00020279884338378907,
+        "processing_time": 0.00016202926635742188,
         "memory_usage": 0.0,
-        "confidence_score": 0.0,
-        "accuracy": 0.0,
-        "keywords_count": 0.0,
+        "confidence_score": 1.0,
+        "accuracy": 0.13333333333333333,
+        "keywords_count": 10.0,
         "success_rate": 1.0
       },
       "tfidf": {
-        "processing_time": 0.0006597995758056641,
+        "processing_time": 0.0006381511688232422,
         "memory_usage": 0.0,
-        "confidence_score": 0.16903085094570328,
-        "accuracy": 0.24,
-        "keywords_count": 20.0,
+        "confidence_score": 0.2907583512201319,
+        "accuracy": 0.0,
+        "keywords_count": 19.0,
+        "success_rate": 1.0
+      },
+      "textrank": {
+        "processing_time": 0.0013455867767333985,
+        "memory_usage": 0.125,
+        "confidence_score": 0.2,
+        "accuracy": 0.0,
+        "keywords_count": 10.0,
+        "success_rate": 1.0
+      },
+      "keybert": {
+        "processing_time": 0.053814363479614255,
+        "memory_usage": 0.859375,
+        "confidence_score": 0.40771999999999997,
+        "accuracy": 0.0,
+        "keywords_count": 5.0,
         "success_rate": 1.0
       },
       "hybrid_ensemble": {
-        "processing_time": 0.010672235488891601,
-        "memory_usage": 0.0125,
-        "confidence_score": 0.5180591704081449,
+        "processing_time": 0.010657787322998047,
+        "memory_usage": 0.146875,
+        "confidence_score": 0.800704678024194,
         "accuracy": 0.16000000000000003,
         "keywords_count": 20.0,
         "success_rate": 1.0
@@ -1723,76 +2423,124 @@
     "performance_comparison": {
       "processing_time": {
         "rake": {
-          "baseline_value": 0.00020279884338378907,
-          "spacy_yake_value": 0.009604978561401366,
-          "improvement_percent": -4636.2097343051955,
+          "baseline_value": 0.00016202926635742188,
+          "spacy_yake_value": 0.009328842163085938,
+          "improvement_percent": -5657.5044143613895,
           "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.0006597995758056641,
-          "spacy_yake_value": 0.009604978561401366,
-          "improvement_percent": -1355.7418515574182,
+          "baseline_value": 0.0006381511688232422,
+          "spacy_yake_value": 0.009328842163085938,
+          "improvement_percent": -1361.8545916461183,
           "better_than_baseline": false
         },
+        "textrank": {
+          "baseline_value": 0.0013455867767333985,
+          "spacy_yake_value": 0.009328842163085938,
+          "improvement_percent": -593.2917537829121,
+          "better_than_baseline": false
+        },
+        "keybert": {
+          "baseline_value": 0.053814363479614255,
+          "spacy_yake_value": 0.009328842163085938,
+          "improvement_percent": 82.66477282292885,
+          "better_than_baseline": true
+        },
         "hybrid_ensemble": {
-          "baseline_value": 0.010672235488891601,
-          "spacy_yake_value": 0.009604978561401366,
-          "improvement_percent": 10.000312761099671,
+          "baseline_value": 0.010657787322998047,
+          "spacy_yake_value": 0.009328842163085938,
+          "improvement_percent": 12.469240749854594,
           "better_than_baseline": true
         }
       },
       "memory_usage": {
         "rake": {
           "baseline_value": 0.0,
-          "spacy_yake_value": 0.0,
-          "improvement_percent": NaN,
+          "spacy_yake_value": 0.065625,
+          "improvement_percent": -Infinity,
           "better_than_baseline": false
         },
         "tfidf": {
           "baseline_value": 0.0,
-          "spacy_yake_value": 0.0,
-          "improvement_percent": NaN,
+          "spacy_yake_value": 0.065625,
+          "improvement_percent": -Infinity,
           "better_than_baseline": false
         },
+        "textrank": {
+          "baseline_value": 0.125,
+          "spacy_yake_value": 0.065625,
+          "improvement_percent": 47.5,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 0.859375,
+          "spacy_yake_value": 0.065625,
+          "improvement_percent": 92.36363636363636,
+          "better_than_baseline": true
+        },
         "hybrid_ensemble": {
-          "baseline_value": 0.0125,
-          "spacy_yake_value": 0.0,
-          "improvement_percent": 100.0,
+          "baseline_value": 0.146875,
+          "spacy_yake_value": 0.065625,
+          "improvement_percent": 55.319148936170215,
           "better_than_baseline": true
         }
       },
       "confidence_score": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 1.0,
           "spacy_yake_value": 0.8211742379438155,
-          "improvement_percent": Infinity,
-          "better_than_baseline": true
+          "improvement_percent": -17.88257620561845,
+          "better_than_baseline": false
         },
         "tfidf": {
-          "baseline_value": 0.16903085094570328,
+          "baseline_value": 0.2907583512201319,
           "spacy_yake_value": 0.8211742379438155,
-          "improvement_percent": 385.81323075016417,
+          "improvement_percent": 182.4249877941109,
+          "better_than_baseline": true
+        },
+        "textrank": {
+          "baseline_value": 0.2,
+          "spacy_yake_value": 0.8211742379438155,
+          "improvement_percent": 310.58711897190767,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 0.40771999999999997,
+          "spacy_yake_value": 0.8211742379438155,
+          "improvement_percent": 101.40641566364552,
           "better_than_baseline": true
         },
         "hybrid_ensemble": {
-          "baseline_value": 0.5180591704081449,
+          "baseline_value": 0.800704678024194,
           "spacy_yake_value": 0.8211742379438155,
-          "improvement_percent": 58.509738819383536,
+          "improvement_percent": 2.556443153314887,
           "better_than_baseline": true
         }
       },
       "accuracy": {
         "rake": {
+          "baseline_value": 0.13333333333333333,
+          "spacy_yake_value": 0.1,
+          "improvement_percent": -24.999999999999993,
+          "better_than_baseline": false
+        },
+        "tfidf": {
           "baseline_value": 0.0,
           "spacy_yake_value": 0.1,
           "improvement_percent": Infinity,
           "better_than_baseline": true
         },
-        "tfidf": {
-          "baseline_value": 0.24,
+        "textrank": {
+          "baseline_value": 0.0,
           "spacy_yake_value": 0.1,
-          "improvement_percent": -58.33333333333333,
-          "better_than_baseline": false
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 0.0,
+          "spacy_yake_value": 0.1,
+          "improvement_percent": Infinity,
+          "better_than_baseline": true
         },
         "hybrid_ensemble": {
           "baseline_value": 0.16000000000000003,
@@ -1803,16 +2551,28 @@
       },
       "keywords_count": {
         "rake": {
-          "baseline_value": 0.0,
+          "baseline_value": 10.0,
           "spacy_yake_value": 15.0,
-          "improvement_percent": Infinity,
+          "improvement_percent": 50.0,
           "better_than_baseline": true
         },
         "tfidf": {
-          "baseline_value": 20.0,
+          "baseline_value": 19.0,
           "spacy_yake_value": 15.0,
-          "improvement_percent": -25.0,
+          "improvement_percent": -21.052631578947366,
           "better_than_baseline": false
+        },
+        "textrank": {
+          "baseline_value": 10.0,
+          "spacy_yake_value": 15.0,
+          "improvement_percent": 50.0,
+          "better_than_baseline": true
+        },
+        "keybert": {
+          "baseline_value": 5.0,
+          "spacy_yake_value": 15.0,
+          "improvement_percent": 200.0,
+          "better_than_baseline": true
         },
         "hybrid_ensemble": {
           "baseline_value": 20.0,

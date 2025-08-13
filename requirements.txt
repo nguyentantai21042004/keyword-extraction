@@ -10,5 +10,5 @@ numpy>=1.24.0
 matplotlib>=3.7.0
 seaborn>=0.12.0
 psutil>=5.9.0
-asyncio
-textrank
+nltk>=3.8.1
+networkx>=3.0

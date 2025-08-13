@@ -25,7 +25,7 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Import our algorithm
-from multi_method_extractor import SpacyYakeExtractor, RakeExtractor, TfIdfExtractor
+from multi_method_extractor import SpacyYakeExtractor, RakeExtractor, TfIdfExtractor, TextRankExtractor, KeyBertExtractor
 from hybrid_ensemble import HybridEnsembleExtractor
 
 class SpacyYakeExperiment:
@@ -62,6 +62,22 @@ class SpacyYakeExperiment:
             print("   ✅ TF-IDF loaded successfully")
         except Exception as e:
             print(f"   ❌ Failed to load TF-IDF: {e}")
+        
+        # Load TextRank
+        try:
+            print("   🔍 Loading TextRank...")
+            self.baseline_methods['textrank'] = TextRankExtractor()
+            print("   ✅ TextRank loaded successfully")
+        except Exception as e:
+            print(f"   ❌ Failed to load TextRank: {e}")
+        
+        # Load KeyBERT
+        try:
+            print("   🔍 Loading KeyBERT...")
+            self.baseline_methods['keybert'] = KeyBertExtractor()
+            print("   ✅ KeyBERT loaded successfully")
+        except Exception as e:
+            print(f"   ❌ Failed to load KeyBERT: {e}")
         
         # Load Hybrid Ensemble
         try:
@@ -524,16 +540,24 @@ class SpacyYakeExperiment:
         overall_stats = {}
         
         for metric in metrics:
-            if metric in results[0]:
-                values = [r[metric]['mean'] for r in results if metric in r and isinstance(r[metric], dict) and 'mean' in r[metric]]
-                if values:
-                    overall_stats[metric] = {
-                        'mean': np.mean(values),
-                        'std': np.std(values),
-                        'min': np.min(values),
-                        'max': np.max(values),
-                        'median': np.median(values)
-                    }
+            values = []
+            for r in results:
+                if metric in r:
+                    if isinstance(r[metric], dict) and 'mean' in r[metric]:
+                        # spaCy+YAKE format: {'mean': value, 'std': value, ...}
+                        values.append(r[metric]['mean'])
+                    elif isinstance(r[metric], (int, float)):
+                        # Baseline format: {'processing_time': value, ...}
+                        values.append(r[metric])
+            
+            if values:
+                overall_stats[metric] = {
+                    'mean': np.mean(values),
+                    'std': np.std(values),
+                    'min': np.min(values),
+                    'max': np.max(values),
+                    'median': np.median(values)
+                }
         
         return overall_stats
     

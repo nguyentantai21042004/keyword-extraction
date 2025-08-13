@@ -95,7 +95,7 @@ class ExperimentVisualizer:
             else:
                 if method in self.comprehensive_analysis['baseline_overall_performance']:
                     if 'accuracy' in self.comprehensive_analysis['baseline_overall_performance'][method]:
-                        accuracies.append(self.comprehensive_analysis['baseline_overall_performance'][method]['accuracy'])
+                        accuracies.append(self.comprehensive_analysis['baseline_overall_performance'][method]['accuracy']['mean'])
                     else:
                         accuracies.append(0)
                 else:
@@ -129,7 +129,7 @@ class ExperimentVisualizer:
             else:
                 if method in self.comprehensive_analysis['baseline_overall_performance']:
                     if 'processing_time' in self.comprehensive_analysis['baseline_overall_performance'][method]:
-                        processing_times.append(self.comprehensive_analysis['baseline_overall_performance'][method]['processing_time'])
+                        processing_times.append(self.comprehensive_analysis['baseline_overall_performance'][method]['processing_time']['mean'])
                     else:
                         processing_times.append(0)
                 else:
