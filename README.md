@@ -1,163 +1,119 @@
 # 🚀 SMAP Keyword Extraction Framework
 
-A production-ready, research-grade keyword extraction framework with comprehensive benchmarking capabilities. Features advanced spaCy + YAKE algorithm achieving **76.2% overall performance** and **38.21% accuracy** across diverse text domains.
+A production-ready keyword extraction framework with high performance, supporting English and Vietnamese. Achieves **76.2% overall performance** and **38.21% accuracy** across diverse text domains.
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-## 🎯 Key Features
+## ✨ Key Features
 
-- **🏆 Superior Performance**: 76.2% overall score, 38.21% accuracy across domains
+- **🏆 High Performance**: 76.2% overall score, 38.21% accuracy
 - **⚡ Fast Processing**: 15.93ms average response time
-- **🔧 Production Ready**: Robust error handling, logging, and monitoring
-- **📊 Comprehensive Benchmarking**: Compare 6 different extraction algorithms
-- **🌐 Multilingual Support**: English and Vietnamese text processing
-- **🎨 Rich Visualizations**: Automated chart generation and analysis reports
-
-## 🏗️ Architecture
-
-```
-📦 SMAP Keyword Extraction Framework
-├── 🧠 Core Algorithms
-│   ├── SpaCy + YAKE (Primary) - 76.2% performance
-│   ├── RAKE - Ultra-fast baseline
-│   ├── TF-IDF - Statistical approach  
-│   ├── TextRank - Graph-based
-│   ├── KeyBERT - Semantic embeddings
-│   └── Hybrid Ensemble - Multi-algorithm fusion
-├── 📊 Benchmarking System
-│   ├── Performance metrics (time, memory, accuracy)
-│   ├── Domain analysis (social media, business, technical)
-│   └── Statistical validation with confidence intervals
-├── 🔧 Configuration Management
-│   ├── YAML-based configuration
-│   ├── Runtime parameter tuning
-│   └── Environment-specific settings
-└── 📈 Analysis & Visualization
-    ├── Performance comparison charts
-    ├── Domain-specific analysis
-    └── Optimization recommendations
-```
-
----
+- **🌐 Multilingual**: English and Vietnamese text processing
+- **📊 Compare 6 Algorithms**: SpaCy+YAKE, RAKE, TF-IDF, TextRank, KeyBERT, Hybrid
+- **📈 Auto Charts**: Automated chart generation and analysis reports
 
 ## 🚀 Quick Start
-
-### Prerequisites
-- Python 3.8+
-- 4GB+ RAM recommended
-- Internet connection (for model downloads)
 
 ### 1. Installation
 
 ```bash
-# Clone the repository
+# Clone and install
 git clone https://github.com/nguyentantai21042004/smap-keyword-extraction.git
 cd smap-keyword-extraction
 
-# Create and activate virtual environment
+# Create virtual environment
 python -m venv venv
-
-# Activate virtual environment
-# On Windows:
-venv\Scripts\activate
-# On macOS/Linux:
-source venv/bin/activate
+source venv/bin/activate  # macOS/Linux
+# venv\Scripts\activate  # Windows
 
 # Install dependencies
 pip install -r requirements.txt
-
-# Install spaCy model
 python -m spacy download en_core_web_sm
 ```
 
-### 2. Các cách chạy Framework
+### 2. Run Tests
 
-#### **A. Demo cơ bản (Nhanh nhất)**
 ```bash
-# Test nhanh các thuật toán
-python scripts/demo.py
-```
-
-#### **B. Test chức năng cơ bản**
-```bash
-# Kiểm tra framework hoạt động
+# Quick test (recommended first)
 python scripts/test_simple.py
-```
 
-#### **C. Chạy experiments toàn diện (Khuyến nghị)**
-```bash
-# Chạy toàn bộ pipeline - tạo data và charts
+# Demo algorithms
+python scripts/demo.py
+
+# Run comprehensive experiments
 python scripts/run_experiments.py
 ```
 
-#### **D. Chạy experiments (Cách cũ)**
-```bash
-# Entry point chính
-python scripts/main.py
+### 3. Use in Code
 
-# Hoặc chạy trực tiếp module
-python -m src.experiments.run_all
-```
-
-#### **E. Chỉ tạo charts từ dữ liệu có sẵn**
-```bash
-# Tạo visualizations từ data đã có
-python scripts/generate_charts.py
-```
-
-#### **F. Sử dụng trong code Python**
 ```python
 import asyncio
 from src.core.extractors import SpacyYakeExtractor
 
 async def main():
     extractor = SpacyYakeExtractor()
-    result = await extractor.extract("Your text here")
+    result = await extractor.extract("Machine learning algorithms for natural language processing.")
     print(f"Keywords: {[kw['keyword'] for kw in result.keywords]}")
 
 asyncio.run(main())
 ```
 
-### 3. Kết quả sau khi chạy
+## 📊 Results
 
-Sau khi chạy experiments, bạn sẽ có:
+After running experiments, you'll have:
 
-**📁 `experiment_results/`** - Dữ liệu experiments:
-- `comprehensive_analysis.json` - Dữ liệu chính
-- `detailed_analysis.json` - Dữ liệu chi tiết  
-- `experiment_summary_report.txt` - Báo cáo tóm tắt
+**📁 `experiment_results/`** - Data:
+- `comprehensive_analysis.json` - Main data
+- `experiment_summary_report.txt` - Summary report
 
-**📊 `experiment_visualizations/`** - Biểu đồ:
-- `performance_comparison.png` - So sánh hiệu suất
-- `domain_performance.png` - Hiệu suất theo domain
-- `processing_time_analysis.png` - Phân tích thời gian
-- `radar_chart.png` - Biểu đồ radar đa chiều
+**📈 `experiment_visualizations/`** - Charts:
+- `performance_comparison.png` - Performance comparison
+- `domain_performance.png` - Domain performance
+- `radar_chart.png` - Radar chart
 
----
+## 🏆 Algorithm Comparison
 
-## 📋 Tóm tắt các cách sử dụng
+| Algorithm | Accuracy | Speed (ms) | Memory (MB) |
+|-----------|----------|------------|-------------|
+| **SpaCy + YAKE** | **38.21%** | **15.93** | **0.99** |
+| Hybrid Ensemble | 32.30% | 17.42 | 1.12 |
+| RAKE | 14.79% | 0.21 | 0.03 |
+| KeyBERT | 19.47% | 118.08 | 2.74 |
+| TF-IDF | 17.67% | 0.77 | 0.01 |
+| TextRank | 0.00% | 1.02 | 0.25 |
 
-### 🚀 **Cho người mới bắt đầu:**
-1. `python scripts/demo.py` - Xem demo nhanh
-2. `python scripts/test_simple.py` - Test cơ bản
-3. `python scripts/run_experiments.py` - Chạy toàn bộ experiments
+## 🛠️ Available Commands
 
-### 🔬 **Cho nghiên cứu:**
-1. `python scripts/run_experiments.py` - Tạo data và charts
-2. `python scripts/generate_charts.py` - Tạo charts từ data có sẵn
-3. Sử dụng code Python để tùy chỉnh
+| Command | Purpose |
+|---------|---------|
+| `python scripts/test_simple.py` | Basic test |
+| `python scripts/demo.py` | Quick demo |
+| `python scripts/run_experiments.py` | **Run everything** |
+| `python scripts/generate_charts.py` | Generate charts only |
 
-### 🛠️ **Cho developer:**
-1. Import modules trong code Python
-2. Tùy chỉnh configuration
-3. Tạo custom scripts
+## 🚨 Common Issues
 
-### 📊 **Kết quả mong đợi:**
-- **Data:** `experiment_results/` (JSON, CSV, TXT)
-- **Charts:** `experiment_visualizations/` (PNG files)
-- **Performance:** So sánh 6 thuật toán khác nhau
+### spaCy model error
+```bash
+python -m spacy download en_core_web_sm
+```
+
+### NLTK data missing
+```bash
+python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords')"
+```
+
+### Import module error
+```bash
+# Run from project root directory
+cd smap-keyword-extraction
+python scripts/test_simple.py
+```
+
+## 📖 Detailed Documentation
+
+See "End-to-End Usage Guide" below for advanced usage.
 
 ---
 
@@ -640,37 +596,37 @@ asyncio.run(production_demo())
 
 ## 🛠️ Command Line Usage
 
-### Tất cả các lệnh có thể chạy
+### All Available Commands
 
-| Lệnh | Mục đích | Kết quả |
-|------|----------|---------|
-| `python scripts/demo.py` | Demo nhanh các thuật toán | Hiển thị kết quả trích xuất |
-| `python scripts/test_simple.py` | Test chức năng cơ bản | Kiểm tra framework hoạt động |
-| `python scripts/run_experiments.py` | **Chạy experiments toàn diện** | Tạo data + charts |
-| `python scripts/main.py` | Entry point chính | Tương tự run_experiments.py |
-| `python -m src.experiments.run_all` | Chạy module trực tiếp | Tương tự main.py |
-| `python scripts/generate_charts.py` | Chỉ tạo charts | Tạo visualizations từ data có sẵn |
+| Command | Purpose | Result |
+|---------|---------|--------|
+| `python scripts/demo.py` | Quick algorithm demo | Show extraction results |
+| `python scripts/test_simple.py` | Basic functionality test | Check framework works |
+| `python scripts/run_experiments.py` | **Run comprehensive experiments** | Generate data + charts |
+| `python scripts/main.py` | Main entry point | Same as run_experiments.py |
+| `python -m src.experiments.run_all` | Run module directly | Same as main.py |
+| `python scripts/generate_charts.py` | Generate charts only | Create visualizations from existing data |
 
 ### Quick Commands
 
 ```bash
-# Demo nhanh nhất
+# Quickest demo
 python scripts/demo.py
 
-# Test cơ bản
+# Basic test
 python scripts/test_simple.py
 
-# Chạy experiments toàn diện (Khuyến nghị)
+# Run comprehensive experiments (Recommended)
 python scripts/run_experiments.py
 
-# Chỉ tạo charts từ data có sẵn
+# Generate charts from existing data
 python scripts/generate_charts.py
 ```
 
 ### Custom Scripts
 
 ```bash
-# Tạo script phân tích tùy chỉnh
+# Create custom analysis script
 cat > my_analysis.py << 'EOF'
 import asyncio
 from src.core.extractors import SpacyYakeExtractor
@@ -683,7 +639,7 @@ async def main():
 asyncio.run(main())
 EOF
 
-# Chạy script
+# Run script
 python my_analysis.py
 ```
 
@@ -794,9 +750,9 @@ python -m spacy download xx_ent_wiki_sm  # Multilingual
 ```python
 # Error: ModuleNotFoundError: No module named 'src'
 # Solution: Run from project root directory
-# ✅ Đã được sửa trong các scripts mới
+# ✅ Fixed in new scripts
 
-# Nếu vẫn gặp lỗi, thêm vào đầu script:
+# If still getting error, add to script beginning:
 import sys
 from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -854,12 +810,12 @@ accuracy_config = SpacyYakeConfig(
 )
 ```
 
-#### 7. **Script không chạy được**
+#### 7. **Scripts not working**
 ```bash
-# Kiểm tra thứ tự chạy:
-1. python scripts/test_simple.py  # Test cơ bản
-2. python scripts/demo.py         # Demo nhanh
-3. python scripts/run_experiments.py  # Experiments toàn diện
+# Check running order:
+1. python scripts/test_simple.py  # Basic test
+2. python scripts/demo.py         # Quick demo
+3. python scripts/run_experiments.py  # Comprehensive experiments
 ```
 
 ### Debugging Tips
@@ -913,57 +869,6 @@ async def extract_keywords(text):
 
 ---
 
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-### Development Setup
-
-```bash
-# Clone for development
-git clone https://github.com/nguyentantai21042004/smap-keyword-extraction.git
-cd smap-keyword-extraction
-
-# Install development dependencies
-pip install -r requirements.txt
-pip install -e .
-
-# Install pre-commit hooks
-pre-commit install
-
-# Run tests
-python -m pytest tests/ -v
-
-# Run with coverage
-python -m pytest tests/ --cov=src/ --cov-report=html
-```
-
----
-
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-- **spaCy Team** for excellent NLP library
-- **YAKE Authors** for the keyword extraction algorithm  
-- **Research Community** for algorithm development and validation
-- **Open Source Contributors** for dependencies and tools
-
----
-
-## 📞 Support & Contact
-
-- **Issues**: [GitHub Issues](https://github.com/nguyentantai21042004/smap-keyword-extraction/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/nguyentantai21042004/smap-keyword-extraction/discussions)
-- **Email**: [Contact Information]
-
----
-
-<p align="center">
-  <strong>Built with ❤️ for the research and NLP community</strong><br>
-  <em>Achieving 76.2% performance across diverse text domains</em>
-</p>
