@@ -16,6 +16,9 @@ sentence-transformers>=2.2.0
 # Graph processing
 networkx>=2.6.0
 
+# Configuration management
+pyyaml>=6.0
+
 # System monitoring
 psutil>=5.8.0
 

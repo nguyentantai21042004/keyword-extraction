@@ -1,10 +1,10 @@
 """
-Unified experiment runner that cleans, runs the original experiment workflow, and generates charts.
-Outputs are preserved in the same locations/names as before under experiments/experiment_results and experiments/experiment_visualizations.
+Unified experiment runner for the keyword extraction framework.
+Runs comprehensive benchmarks and generates visualizations.
 """
 
+import asyncio
 import os
-import subprocess
 import sys
 from pathlib import Path
 
@@ -13,13 +13,15 @@ RESULTS_DIR = REPO_ROOT / "experiment_results"
 VIS_DIR = REPO_ROOT / "experiment_visualizations"
 
 
-def run_cmd(cmd: str, desc: str) -> None:
-    print(f"\n🔄 {desc}...")
-    print(f"   Command: {cmd}")
-    subprocess.run(cmd, shell=True, check=True)
+def setup_directories() -> None:
+    """Ensure output directories exist"""
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    VIS_DIR.mkdir(parents=True, exist_ok=True)
+    print(f"✅ Output directories ready")
 
 
 def clean_outputs() -> None:
+    """Clean old results"""
     print("\n🧹 Cleaning old results...")
     if RESULTS_DIR.exists():
         import shutil
@@ -31,30 +33,59 @@ def clean_outputs() -> None:
         print("✅ Removed old visualizations")
 
 
-def run_complete() -> None:
+async def run_complete() -> None:
     """Run the end-to-end experiment and chart generation."""
     # Ensure we are at repo root
     os.chdir(REPO_ROOT)
-
+    
+    print("🚀 Starting comprehensive keyword extraction benchmark...")
+    
     clean_outputs()
-
-    # Run experiment to produce experiment_results/*.json using the current interpreter
-    run_cmd(f"{sys.executable} -m src.experiments.spacy_yake_experiment", "Running experiment")
-
-    # Generate charts to experiment_visualizations/ at repo root
-    # Use migrated charts module to write at root
-    from .charts import ExperimentVisualizer
-    viz = ExperimentVisualizer()
-    viz.create_all_charts()
-
-    print("\n🎉 All reports generated successfully!")
-    print("📁 Results: experiments/experiment_results/")
-    print("🖼️  Charts: experiments/experiment_visualizations/")
+    setup_directories()
+    
+    try:
+        # Run comprehensive benchmark using the new framework
+        from ..benchmark import ExtractionBenchmark
+        from ..benchmark.test_datasets import create_research_test_dataset
+        
+        # Initialize benchmark
+        benchmark = ExtractionBenchmark()
+        
+        # Load test cases
+        test_cases = create_research_test_dataset()
+        for case in test_cases:
+            benchmark.add_test_case(**case)
+        
+        print(f"📋 Added {len(test_cases)} test cases")
+        
+        # Run benchmark
+        results = await benchmark.run_comprehensive_benchmark()
+        
+        # Save results
+        results_file = RESULTS_DIR / "comprehensive_analysis.csv"
+        results.to_csv(results_file, index=False)
+        print(f"💾 Results saved to {results_file}")
+        
+        # Save benchmark report
+        benchmark.save_benchmark_report(RESULTS_DIR / "benchmark_report.json")
+        
+        # Generate visualizations
+        from ..visualization.charts import BenchmarkVisualizer
+        visualizer = BenchmarkVisualizer()
+        visualizer.create_comprehensive_charts(results, str(VIS_DIR))
+        
+        print("\n🎉 All reports generated successfully!")
+        print(f"📁 Results: {RESULTS_DIR}")
+        print(f"🖼️  Charts: {VIS_DIR}")
+        
+    except Exception as e:
+        print(f"❌ Error during experiment: {e}")
+        raise
 
 
 if __name__ == "__main__":
     try:
-        run_complete()
-    except subprocess.CalledProcessError as e:
+        asyncio.run(run_complete())
+    except Exception as e:
         print(f"❌ Failed: {e}")
         sys.exit(1)

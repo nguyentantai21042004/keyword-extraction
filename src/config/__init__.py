@@ -1,10 +1,28 @@
 """
-Configuration package for the Keyword Extraction Framework
+Configuration management module
 """
 
-from .settings import *
+from .config_manager import (
+    ConfigManager,
+    FrameworkConfig,
+    ExtractorConfig,
+    SpacyYakeConfig,
+    BenchmarkConfig,
+    LoggingConfig,
+    get_config,
+    get_config_manager,
+    get_extractor_config
+)
 from .constants import *
 
-__all__ = ['RESEARCH_CONFIG', 'METHOD_CONFIGS', 'OPTIMIZATION_WEIGHTS', 
-           'VISUALIZATION_CONFIG', 'OUTPUT_CONFIG', 'TEST_DATASET_CONFIG',
-           'LOGGING_CONFIG', 'PERFORMANCE_THRESHOLDS']
+__all__ = [
+    'ConfigManager',
+    'FrameworkConfig', 
+    'ExtractorConfig',
+    'SpacyYakeConfig',
+    'BenchmarkConfig',
+    'LoggingConfig',
+    'get_config',
+    'get_config_manager',
+    'get_extractor_config'
+]

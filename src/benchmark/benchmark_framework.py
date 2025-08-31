@@ -5,8 +5,9 @@ Enhanced comprehensive benchmarking and comparison framework
 import pandas as pd
 import numpy as np
 from typing import Dict, List
-from ..core import (
-    ExtractionMethod, SpacyYakeExtractor, RakeExtractor, 
+from ..core.base_extractor import ExtractionMethod
+from ..core.extractors import (
+    SpacyYakeExtractor, RakeExtractor, 
     TextRankExtractor, TfIdfExtractor, KeyBertExtractor
 )
 from ..core.ensemble import HybridEnsembleExtractor

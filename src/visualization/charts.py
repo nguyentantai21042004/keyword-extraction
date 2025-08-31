@@ -232,3 +232,176 @@ class BenchmarkVisualizer:
         plt.tight_layout()
         plt.savefig('method_comparison_heatmap.png', dpi=300, bbox_inches='tight')
         plt.show()
+
+    def create_comprehensive_charts(self, results_df: pd.DataFrame, output_dir: str = "./"):
+        """Create all comprehensive visualization charts"""
+        
+        print("📊 Creating comprehensive visualization charts...")
+        
+        # Set output directory
+        import os
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # Change to output directory for saving files
+        original_dir = os.getcwd()
+        os.chdir(output_dir)
+        
+        try:
+            # 1. Method Performance Comparison
+            print("   📈 Creating method performance comparison...")
+            self.create_method_performance_comparison(results_df)
+            plt.savefig('performance_comparison.png', dpi=300, bbox_inches='tight')
+            plt.close()
+            
+            # 2. Domain Performance Analysis
+            print("   🌐 Creating domain performance analysis...")
+            self.create_domain_performance_analysis(results_df)
+            plt.savefig('domain_performance.png', dpi=300, bbox_inches='tight')
+            plt.close()
+            
+            # 3. Processing Time Analysis
+            print("   ⏱️  Creating processing time analysis...")
+            self.create_processing_time_analysis(results_df)
+            plt.savefig('processing_time_analysis.png', dpi=300, bbox_inches='tight')
+            plt.close()
+            
+            # 4. Radar Chart
+            print("   📊 Creating radar chart...")
+            self.create_radar_chart(results_df)
+            plt.savefig('radar_chart.png', dpi=300, bbox_inches='tight')
+            plt.close()
+            
+            # 5. Enhanced Accuracy Analysis
+            print("   🎯 Creating enhanced accuracy analysis...")
+            self.create_enhanced_accuracy_analysis(results_df)
+            plt.savefig('enhanced_accuracy_analysis.png', dpi=300, bbox_inches='tight')
+            plt.close()
+            
+            # 6. Language Performance Analysis
+            print("   🌍 Creating language performance analysis...")
+            self.create_language_performance_analysis(results_df)
+            plt.savefig('language_performance_analysis.png', dpi=300, bbox_inches='tight')
+            plt.close()
+            
+            # 7. Complexity Performance Analysis
+            print("   📚 Creating complexity performance analysis...")
+            self.create_complexity_performance_analysis(results_df)
+            plt.savefig('complexity_performance_analysis.png', dpi=300, bbox_inches='tight')
+            plt.close()
+            
+            # 8. Method Comparison Heatmap
+            print("   🔥 Creating method comparison heatmap...")
+            self.create_method_comparison_heatmap(results_df)
+            plt.savefig('method_comparison_heatmap.png', dpi=300, bbox_inches='tight')
+            plt.close()
+            
+            print(f"✅ All charts created successfully in {output_dir}")
+            
+        finally:
+            # Return to original directory
+            os.chdir(original_dir)
+
+    def create_processing_time_analysis(self, results_df: pd.DataFrame):
+        """Create detailed processing time analysis"""
+        
+        fig, axes = plt.subplots(2, 2, figsize=(15, 10))
+        
+        # Processing time distribution by method
+        sns.boxplot(data=results_df, x='method', y='processing_time', ax=axes[0,0])
+        axes[0,0].set_title('Processing Time Distribution by Method', fontsize=12, fontweight='bold')
+        axes[0,0].set_xlabel('Method')
+        axes[0,0].set_ylabel('Processing Time (seconds)')
+        axes[0,0].tick_params(axis='x', rotation=45)
+        
+        # Processing time vs accuracy scatter
+        sns.scatterplot(data=results_df, x='processing_time', y='accuracy', hue='method', ax=axes[0,1])
+        axes[0,1].set_title('Processing Time vs Accuracy', fontsize=12, fontweight='bold')
+        axes[0,1].set_xlabel('Processing Time (seconds)')
+        axes[0,1].set_ylabel('Accuracy')
+        
+        # Processing time by category
+        sns.boxplot(data=results_df, x='category', y='processing_time', ax=axes[1,0])
+        axes[1,0].set_title('Processing Time by Category', fontsize=12, fontweight='bold')
+        axes[1,0].set_xlabel('Category')
+        axes[1,0].set_ylabel('Processing Time (seconds)')
+        axes[1,0].tick_params(axis='x', rotation=45)
+        
+        # Processing time statistics
+        time_stats = results_df.groupby('method')['processing_time'].agg(['mean', 'std', 'min', 'max']).round(4)
+        time_stats.plot(kind='bar', ax=axes[1,1])
+        axes[1,1].set_title('Processing Time Statistics by Method', fontsize=12, fontweight='bold')
+        axes[1,1].set_xlabel('Method')
+        axes[1,1].set_ylabel('Time (seconds)')
+        axes[1,1].tick_params(axis='x', rotation=45)
+        axes[1,1].legend()
+        
+        plt.tight_layout()
+
+    def create_radar_chart(self, results_df: pd.DataFrame):
+        """Create radar chart comparing methods across multiple metrics"""
+        
+        # Calculate average metrics for each method
+        method_metrics = results_df.groupby('method').agg({
+            'accuracy': 'mean',
+            'confidence_score': 'mean',
+            'success': 'mean',
+            'keywords_count': 'mean'
+        }).fillna(0)
+        
+        # Normalize metrics to 0-1 scale
+        normalized_metrics = method_metrics.copy()
+        for col in normalized_metrics.columns:
+            if normalized_metrics[col].max() > 0:
+                normalized_metrics[col] = normalized_metrics[col] / normalized_metrics[col].max()
+        
+        # Prepare data for radar chart
+        categories = list(normalized_metrics.columns)
+        N = len(categories)
+        
+        # Compute angle for each axis
+        angles = [n / float(N) * 2 * 3.14159 for n in range(N)]
+        angles += angles[:1]
+        
+        # Create figure
+        fig, ax = plt.subplots(figsize=(10, 10), subplot_kw=dict(projection='polar'))
+        
+        # Plot each method
+        colors = ['red', 'blue', 'green', 'orange', 'purple', 'brown']
+        for i, method in enumerate(normalized_metrics.index):
+            values = normalized_metrics.loc[method].values.flatten().tolist()
+            values += values[:1]
+            
+            ax.plot(angles, values, 'o-', linewidth=2, label=method, color=colors[i % len(colors)])
+            ax.fill(angles, values, alpha=0.25, color=colors[i % len(colors)])
+        
+        # Set labels
+        ax.set_xticks(angles[:-1])
+        ax.set_xticklabels(categories)
+        ax.set_ylim(0, 1)
+        
+        # Add legend
+        ax.legend(loc='upper right', bbox_to_anchor=(1.3, 1.0))
+        
+        plt.title('Method Performance Radar Chart', size=16, y=1.1)
+        plt.tight_layout()
+
+    def create_all_charts(self):
+        """Create all charts from existing data"""
+        
+        # Load existing results
+        import json
+        from pathlib import Path
+        
+        results_file = Path("experiment_results/comprehensive_analysis.json")
+        if results_file.exists():
+            with open(results_file, 'r') as f:
+                data = json.load(f)
+            
+            # Convert to DataFrame
+            import pandas as pd
+            results_df = pd.DataFrame(data)
+            
+            # Create charts
+            self.create_comprehensive_charts(results_df, "experiment_visualizations/")
+        else:
+            print("❌ No existing results found. Please run experiments first.")

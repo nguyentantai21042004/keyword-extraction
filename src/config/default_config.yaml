@@ -1,0 +1,90 @@
+# Default configuration for SMAP Keyword Extraction Framework
+
+spacy_yake:
+  enabled: true
+  spacy_model: "en_core_web_sm"
+  yake_language: "en"
+  yake_n: 2
+  yake_dedup_lim: 0.8
+  yake_max_keywords: 30
+  entity_weight: 0.7
+  chunk_weight: 0.5
+  max_keywords: 30
+  timeout: 30.0
+
+benchmark:
+  max_timeout: 30.0
+  iterations: 1
+  save_results: true
+  output_directory: "./results"
+  enable_memory_monitoring: true
+  enable_visualization: true
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_enabled: true
+  file_path: "keyword_extraction.log"
+  console_enabled: true
+
+# Framework settings
+max_text_length: 10000
+enable_caching: true
+cache_size: 1000
+output_format: "json"  # json, csv, yaml
+include_metadata: true
+
+# Method-specific configurations for other extractors
+extractors:
+  rake:
+    enabled: true
+    timeout: 5.0
+    max_keywords: 20
+    min_confidence: 0.1
+    parameters:
+      min_phrase_length: 2
+      max_phrase_length: 4
+      min_frequency: 1
+  
+  tfidf:
+    enabled: true
+    timeout: 10.0
+    max_keywords: 20
+    min_confidence: 0.05
+    parameters:
+      ngram_range: [1, 2]
+      max_features: 50
+      use_stop_words: true
+  
+  keybert:
+    enabled: true
+    timeout: 60.0
+    max_keywords: 20
+    min_confidence: 0.3
+    parameters:
+      model_name: "all-MiniLM-L6-v2"
+      keyphrase_ngram_range: [1, 2]
+      diversity: 0.5
+  
+  textrank:
+    enabled: true
+    timeout: 15.0
+    max_keywords: 20
+    min_confidence: 0.1
+    parameters:
+      window_size: 4
+      candidate_pos: ["NOUN", "PROPN"]
+      word_min_len: 2
+  
+  hybrid_ensemble:
+    enabled: true
+    timeout: 120.0
+    max_keywords: 25
+    min_confidence: 0.2
+    parameters:
+      method_weights:
+        spacy_yake: 0.4
+        rake: 0.2
+        tfidf: 0.2
+        keybert: 0.2
+      consensus_threshold: 0.5
