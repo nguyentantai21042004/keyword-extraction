@@ -1,244 +1,53 @@
-🧪 SPAÇY + YAKE ALGORITHM EXPERIMENT SUMMARY REPORT
+SMAP Keyword Extraction Framework - Experiment Summary Report
 ============================================================
 
-EXPERIMENT SUMMARY:
---------------------
-Total Test Cases: 30
-Total Iterations: 150
-spaCy + YAKE Success Rate: 100.0%
-Baseline Methods Tested: rake, tfidf, textrank, keybert, hybrid_ensemble
-Experiment Timestamp: 2025-08-15T16:21:39.462771
+Total Test Cases: 12
+Total Results: 72
+Methods Tested: 6
+Categories Tested: 5
+Languages Tested: 2
 
-PERFORMANCE RANKING:
---------------------
-Best Method: rake
-Best Score: 0.757
-
-Method Rankings:
-1. rake: 0.757
-2. spacy_yake: 0.757
-3. hybrid_ensemble: 0.743
-4. keybert: 0.626
-5. tfidf: 0.499
-6. textrank: 0.199
-
-SPAÇY + YAKE OVERALL PERFORMANCE:
+METHOD PERFORMANCE SUMMARY:
 ------------------------------
-Processing Time:
-  Mean: 0.0168
-  Std: 0.0098
-  Range: 0.0033 - 0.0399
-  Median: 0.0152
 
-Memory Usage:
-  Mean: 0.1083
-  Std: 0.0947
-  Range: 0.0000 - 0.5281
-  Median: 0.0875
+hybrid_ensemble:
+  Accuracy: 62.9%
+  Processing Time: 0.017s
+  Memory Usage: 0.22MB
+  Confidence: 92.7%
+  Success Rate: 100.0%
 
-Confidence Score:
-  Mean: 0.8944
-  Std: 0.2040
-  Range: 0.3000 - 1.0000
-  Median: 1.0000
+keybert:
+  Accuracy: 28.9%
+  Processing Time: 1.033s
+  Memory Usage: 25.89MB
+  Confidence: 71.7%
+  Success Rate: 83.3%
 
-Accuracy:
-  Mean: 0.3821
-  Std: 0.1348
-  Range: 0.0000 - 0.5833
-  Median: 0.3935
+rake_nltk:
+  Accuracy: 53.9%
+  Processing Time: 0.001s
+  Memory Usage: 0.28MB
+  Confidence: 100.0%
+  Success Rate: 91.7%
 
-Keywords Count:
-  Mean: 23.3667
-  Std: 8.2522
-  Range: 6.0000 - 30.0000
-  Median: 28.0000
+spacy_yake:
+  Accuracy: 80.5%
+  Processing Time: 0.015s
+  Memory Usage: 0.27MB
+  Confidence: 91.5%
+  Success Rate: 100.0%
 
-BASELINE METHODS PERFORMANCE:
-------------------------------
-RAKE:
-  Processing Time:
-    Mean: 0.0002
-    Std: 0.0004
-    Range: 0.0001 - 0.0024
-    Median: 0.0002
-  Memory Usage:
-    Mean: 0.0307
-    Std: 0.1655
-    Range: 0.0000 - 0.9219
-    Median: 0.0000
-  Confidence Score:
-    Mean: 0.9855
-    Std: 0.0762
-    Range: 0.5750 - 1.0000
-    Median: 1.0000
-  Accuracy:
-    Mean: 0.3169
-    Std: 0.1799
-    Range: 0.0000 - 0.7143
-    Median: 0.3333
-  Keywords Count:
-    Mean: 13.6333
-    Std: 5.7241
-    Range: 1.0000 - 20.0000
-    Median: 15.5000
+textrank:
+  Accuracy: 0.0%
+  Processing Time: 0.004s
+  Memory Usage: 3.57MB
+  Confidence: 0.0%
+  Success Rate: 0.0%
 
-TFIDF:
-  Processing Time:
-    Mean: 0.0008
-    Std: 0.0001
-    Range: 0.0006 - 0.0009
-    Median: 0.0008
-  Memory Usage:
-    Mean: 0.0019
-    Std: 0.0084
-    Range: 0.0000 - 0.0469
-    Median: 0.0000
-  Confidence Score:
-    Mean: 0.1469
-    Std: 0.1478
-    Range: 0.0562 - 0.7920
-    Median: 0.0826
-  Accuracy:
-    Mean: 0.1767
-    Std: 0.0978
-    Range: 0.0000 - 0.4000
-    Median: 0.1703
-  Keywords Count:
-    Mean: 16.3667
-    Std: 5.6715
-    Range: 3.0000 - 20.0000
-    Median: 20.0000
-
-TEXTRANK:
-  Processing Time:
-    Mean: 0.0010
-    Std: 0.0016
-    Range: 0.0003 - 0.0098
-    Median: 0.0008
-  Memory Usage:
-    Mean: 0.2515
-    Std: 1.3541
-    Range: 0.0000 - 7.5438
-    Median: 0.0000
-  Confidence Score:
-    Mean: 0.0000
-    Std: 0.0000
-    Range: 0.0000 - 0.0000
-    Median: 0.0000
-  Accuracy:
-    Mean: 0.0000
-    Std: 0.0000
-    Range: 0.0000 - 0.0000
-    Median: 0.0000
-  Keywords Count:
-    Mean: 0.0000
-    Std: 0.0000
-    Range: 0.0000 - 0.0000
-    Median: 0.0000
-
-KEYBERT:
-  Processing Time:
-    Mean: 0.0998
-    Std: 0.2338
-    Range: 0.0189 - 1.3560
-    Median: 0.0623
-  Memory Usage:
-    Mean: 2.7370
-    Std: 5.7219
-    Range: 0.0000 - 33.2313
-    Median: 1.9016
-  Confidence Score:
-    Mean: 0.6914
-    Std: 0.0834
-    Range: 0.5782 - 0.9739
-    Median: 0.6763
-  Accuracy:
-    Mean: 0.1947
-    Std: 0.1755
-    Range: 0.0000 - 0.7500
-    Median: 0.1818
-  Keywords Count:
-    Mean: 5.0000
-    Std: 0.0000
-    Range: 5.0000 - 5.0000
-    Median: 5.0000
-
-HYBRID_ENSEMBLE:
-  Processing Time:
-    Mean: 0.0183
-    Std: 0.0100
-    Range: 0.0043 - 0.0418
-    Median: 0.0167
-  Memory Usage:
-    Mean: 0.1214
-    Std: 0.0594
-    Range: 0.0000 - 0.2437
-    Median: 0.1234
-  Confidence Score:
-    Mean: 0.9246
-    Std: 0.0462
-    Range: 0.7703 - 0.9581
-    Median: 0.9416
-  Accuracy:
-    Mean: 0.3235
-    Std: 0.1217
-    Range: 0.0606 - 0.5000
-    Median: 0.3333
-  Keywords Count:
-    Mean: 22.5333
-    Std: 5.6020
-    Range: 6.0000 - 25.0000
-    Median: 25.0000
-
-DOMAIN-SPECIFIC PERFORMANCE:
-------------------------------
-Social Media:
-  Test Cases: 5
-  Avg Accuracy: 0.472
-  Avg Confidence: 0.933
-  Avg Processing Time: 0.010s
-
-Business:
-  Test Cases: 5
-  Avg Accuracy: 0.374
-  Avg Confidence: 0.967
-  Avg Processing Time: 0.021s
-
-Technical:
-  Test Cases: 5
-  Avg Accuracy: 0.440
-  Avg Confidence: 1.000
-  Avg Processing Time: 0.020s
-
-Short Text:
-  Test Cases: 5
-  Avg Accuracy: 0.496
-  Avg Confidence: 0.467
-  Avg Processing Time: 0.004s
-
-Challenging:
-  Test Cases: 5
-  Avg Accuracy: 0.350
-  Avg Confidence: 1.000
-  Avg Processing Time: 0.032s
-
-Vietnamese:
-  Test Cases: 5
-  Avg Accuracy: 0.160
-  Avg Confidence: 1.000
-  Avg Processing Time: 0.015s
-
-STATISTICAL INSIGHTS:
---------------------
-Accuracy-Complexity Correlation: -0.163
-Processing Time-Accuracy Correlation: -0.353
-Overall Accuracy Consistency (Std): 0.135
-
-OPTIMIZATION RECOMMENDATIONS:
--------------------------
-• Consider tuning YAKE parameters for better accuracy
-
-============================================================
-Report generated automatically by spaCy + YAKE Experiment Framework
-For detailed analysis, check the JSON files in this directory.
+tf_idf:
+  Accuracy: 31.5%
+  Processing Time: 0.001s
+  Memory Usage: 0.03MB
+  Confidence: 12.3%
+  Success Rate: 83.3%

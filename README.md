@@ -72,55 +72,92 @@ pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 ```
 
-### 2. Basic Usage
+### 2. Các cách chạy Framework
 
+#### **A. Demo cơ bản (Nhanh nhất)**
+```bash
+# Test nhanh các thuật toán
+python scripts/demo.py
+```
+
+#### **B. Test chức năng cơ bản**
+```bash
+# Kiểm tra framework hoạt động
+python scripts/test_simple.py
+```
+
+#### **C. Chạy experiments toàn diện (Khuyến nghị)**
+```bash
+# Chạy toàn bộ pipeline - tạo data và charts
+python scripts/run_experiments.py
+```
+
+#### **D. Chạy experiments (Cách cũ)**
+```bash
+# Entry point chính
+python scripts/main.py
+
+# Hoặc chạy trực tiếp module
+python -m src.experiments.run_all
+```
+
+#### **E. Chỉ tạo charts từ dữ liệu có sẵn**
+```bash
+# Tạo visualizations từ data đã có
+python scripts/generate_charts.py
+```
+
+#### **F. Sử dụng trong code Python**
 ```python
 import asyncio
 from src.core.extractors import SpacyYakeExtractor
 
-async def quick_demo():
-    # Initialize extractor
+async def main():
     extractor = SpacyYakeExtractor()
-    
-    # Extract keywords
-    text = """
-    Artificial intelligence and machine learning are transforming 
-    modern technology. Deep learning algorithms enable breakthrough 
-    innovations in computer vision and natural language processing.
-    """
-    
-    result = await extractor.extract(text)
-    
-    # Display results
-    print(f"📊 Extracted {len(result.keywords)} keywords:")
-    print(f"⏱️  Processing time: {result.processing_time:.3f}s")
-    print(f"🎯 Confidence: {result.confidence_score:.1%}")
-    print()
-    
-    for i, kw in enumerate(result.keywords[:10], 1):
-        print(f"{i:2d}. {kw['keyword']:25} (score: {kw['score']:.3f})")
+    result = await extractor.extract("Your text here")
+    print(f"Keywords: {[kw['keyword'] for kw in result.keywords]}")
 
-# Run the demo
-asyncio.run(quick_demo())
+asyncio.run(main())
 ```
 
-**Expected Output:**
-```
-📊 Extracted 15 keywords:
-⏱️  Processing time: 0.012s
-🎯 Confidence: 87.5%
+### 3. Kết quả sau khi chạy
 
- 1. artificial intelligence    (score: 0.892)
- 2. machine learning          (score: 0.845)
- 3. deep learning algorithms  (score: 0.798)
- 4. natural language processing (score: 0.756)
- 5. computer vision           (score: 0.723)
- 6. modern technology         (score: 0.687)
- 7. breakthrough innovations  (score: 0.654)
- 8. algorithms               (score: 0.612)
- 9. technology               (score: 0.578)
-10. innovations              (score: 0.534)
-```
+Sau khi chạy experiments, bạn sẽ có:
+
+**📁 `experiment_results/`** - Dữ liệu experiments:
+- `comprehensive_analysis.json` - Dữ liệu chính
+- `detailed_analysis.json` - Dữ liệu chi tiết  
+- `experiment_summary_report.txt` - Báo cáo tóm tắt
+
+**📊 `experiment_visualizations/`** - Biểu đồ:
+- `performance_comparison.png` - So sánh hiệu suất
+- `domain_performance.png` - Hiệu suất theo domain
+- `processing_time_analysis.png` - Phân tích thời gian
+- `radar_chart.png` - Biểu đồ radar đa chiều
+
+---
+
+## 📋 Tóm tắt các cách sử dụng
+
+### 🚀 **Cho người mới bắt đầu:**
+1. `python scripts/demo.py` - Xem demo nhanh
+2. `python scripts/test_simple.py` - Test cơ bản
+3. `python scripts/run_experiments.py` - Chạy toàn bộ experiments
+
+### 🔬 **Cho nghiên cứu:**
+1. `python scripts/run_experiments.py` - Tạo data và charts
+2. `python scripts/generate_charts.py` - Tạo charts từ data có sẵn
+3. Sử dụng code Python để tùy chỉnh
+
+### 🛠️ **Cho developer:**
+1. Import modules trong code Python
+2. Tùy chỉnh configuration
+3. Tạo custom scripts
+
+### 📊 **Kết quả mong đợi:**
+- **Data:** `experiment_results/` (JSON, CSV, TXT)
+- **Charts:** `experiment_visualizations/` (PNG files)
+- **Performance:** So sánh 6 thuật toán khác nhau
 
 ---
 
@@ -603,23 +640,37 @@ asyncio.run(production_demo())
 
 ## 🛠️ Command Line Usage
 
+### Tất cả các lệnh có thể chạy
+
+| Lệnh | Mục đích | Kết quả |
+|------|----------|---------|
+| `python scripts/demo.py` | Demo nhanh các thuật toán | Hiển thị kết quả trích xuất |
+| `python scripts/test_simple.py` | Test chức năng cơ bản | Kiểm tra framework hoạt động |
+| `python scripts/run_experiments.py` | **Chạy experiments toàn diện** | Tạo data + charts |
+| `python scripts/main.py` | Entry point chính | Tương tự run_experiments.py |
+| `python -m src.experiments.run_all` | Chạy module trực tiếp | Tương tự main.py |
+| `python scripts/generate_charts.py` | Chỉ tạo charts | Tạo visualizations từ data có sẵn |
+
 ### Quick Commands
 
 ```bash
-# Run single extraction demo
+# Demo nhanh nhất
 python scripts/demo.py
 
-# Run comprehensive benchmark
-python -m src.experiments.run_all
+# Test cơ bản
+python scripts/test_simple.py
 
-# Generate visualizations only
-python -c "from src.visualization.charts import BenchmarkVisualizer; BenchmarkVisualizer().create_all_charts()"
+# Chạy experiments toàn diện (Khuyến nghị)
+python scripts/run_experiments.py
+
+# Chỉ tạo charts từ data có sẵn
+python scripts/generate_charts.py
 ```
 
 ### Custom Scripts
 
 ```bash
-# Create custom analysis script
+# Tạo script phân tích tùy chỉnh
 cat > my_analysis.py << 'EOF'
 import asyncio
 from src.core.extractors import SpacyYakeExtractor
@@ -632,7 +683,7 @@ async def main():
 asyncio.run(main())
 EOF
 
-# Run it
+# Chạy script
 python my_analysis.py
 ```
 
@@ -743,15 +794,24 @@ python -m spacy download xx_ent_wiki_sm  # Multilingual
 ```python
 # Error: ModuleNotFoundError: No module named 'src'
 # Solution: Run from project root directory
+# ✅ Đã được sửa trong các scripts mới
+
+# Nếu vẫn gặp lỗi, thêm vào đầu script:
 import sys
 from pathlib import Path
-sys.path.append(str(Path(__file__).parent))
-
-# Or use proper package installation:
-pip install -e .
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 ```
 
-#### 3. **Memory Issues**
+#### 3. **NLTK Data Missing**
+```bash
+# Error: NLTK data not found
+# Solution:
+python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords'); nltk.download('averaged_perceptron_tagger')"
+```
+
+#### 4. **Memory Issues**
 ```python
 # Error: Out of memory during processing
 # Solution: Reduce batch size and text length
@@ -767,7 +827,7 @@ def chunk_text(text, chunk_size=1000):
         yield ' '.join(words[i:i+chunk_size])
 ```
 
-#### 4. **Slow Performance**
+#### 5. **Slow Performance**
 ```python
 # Solution: Optimize configuration for speed
 speed_config = SpacyYakeConfig(
@@ -782,7 +842,7 @@ from src.core.extractors import RakeExtractor
 fast_extractor = RakeExtractor()
 ```
 
-#### 5. **Low Accuracy**
+#### 6. **Low Accuracy**
 ```python
 # Solution: Tune parameters for better accuracy
 accuracy_config = SpacyYakeConfig(
@@ -792,6 +852,14 @@ accuracy_config = SpacyYakeConfig(
     chunk_weight=0.7,
     yake_dedup_lim=0.7,  # Less aggressive deduplication
 )
+```
+
+#### 7. **Script không chạy được**
+```bash
+# Kiểm tra thứ tự chạy:
+1. python scripts/test_simple.py  # Test cơ bản
+2. python scripts/demo.py         # Demo nhanh
+3. python scripts/run_experiments.py  # Experiments toàn diện
 ```
 
 ### Debugging Tips
