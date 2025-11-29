@@ -1,0 +1,28 @@
+[project]
+name = "keyword-extraction"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiohttp>=3.8.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+    "keybert>=0.7.0",
+    "matplotlib>=3.5.0",
+    "mypy>=0.950",
+    "networkx>=2.6.0",
+    "nltk>=3.7",
+    "numpy>=1.21.0",
+    "pandas>=1.3.0",
+    "psutil>=5.8.0",
+    "pytest>=6.2.0",
+    "pytest-asyncio>=0.18.0",
+    "pyyaml>=6.0",
+    "rake-nltk>=1.0.6",
+    "scikit-learn>=1.0.0",
+    "seaborn>=0.11.0",
+    "sentence-transformers>=2.2.0",
+    "spacy>=3.4.0",
+    "yake>=0.4.8",
+]

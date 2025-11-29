@@ -12,8 +12,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 import asyncio
-from src.core.extractors import SpacyYakeExtractor, RakeExtractor
-from src.core.ensemble import HybridEnsembleExtractor
+from src.core.extractors import SpacyYakeExtractor
 
 async def demo():
     """Run a simple demonstration"""
@@ -27,33 +26,28 @@ async def demo():
     print(f"📝 Sample text: {text}")
     print()
     
-    # Test individual extractors
-    extractors = {
-        "SpaCy + YAKE": SpacyYakeExtractor(),
-        "RAKE": RakeExtractor(),
-        "Hybrid Ensemble": HybridEnsembleExtractor()
-    }
+    # Test SpacyYakeExtractor
+    extractor = SpacyYakeExtractor()
     
-    for name, extractor in extractors.items():
-        try:
-            print(f"🔍 Testing {name}...")
-            result = await extractor.extract(text)
-            
-            if result.keywords:
-                print(f"   ✅ Extracted {len(result.keywords)} keywords:")
-                for i, kw in enumerate(result.keywords[:5], 1):  # Show top 5
-                    print(f"      {i}. {kw['keyword']} (score: {kw['score']:.3f})")
-            else:
-                print(f"   ❌ No keywords extracted")
-            
-            print(f"   ⏱️  Processing time: {result.processing_time:.3f}s")
-            print(f"   💾 Memory usage: {result.memory_usage:.1f}MB")
-            print(f"   🎯 Confidence: {result.confidence_score:.3f}")
-            print()
-            
-        except Exception as e:
-            print(f"   ❌ Error: {e}")
-            print()
+    try:
+        print(f"🔍 Testing SpaCy + YAKE...")
+        result = await extractor.extract(text)
+        
+        if result.keywords:
+            print(f"   ✅ Extracted {len(result.keywords)} keywords:")
+            for i, kw in enumerate(result.keywords[:5], 1):  # Show top 5
+                print(f"      {i}. {kw['keyword']} (score: {kw['score']:.3f})")
+        else:
+            print(f"   ❌ No keywords extracted")
+        
+        print(f"   ⏱️  Processing time: {result.processing_time:.3f}s")
+        print(f"   💾 Memory usage: {result.memory_usage:.1f}MB")
+        print(f"   🎯 Confidence: {result.confidence_score:.3f}")
+        print()
+        
+    except Exception as e:
+        print(f"   ❌ Error: {e}")
+        print()
     
     print("🎉 Demo completed!")
 

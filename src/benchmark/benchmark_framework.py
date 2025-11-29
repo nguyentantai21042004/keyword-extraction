@@ -6,11 +6,7 @@ import pandas as pd
 import numpy as np
 from typing import Dict, List
 from ..core.base_extractor import ExtractionMethod
-from ..core.extractors import (
-    SpacyYakeExtractor, RakeExtractor, 
-    TextRankExtractor, TfIdfExtractor, KeyBertExtractor
-)
-from ..core.ensemble import HybridEnsembleExtractor
+from ..core.extractors import SpacyYakeExtractor
 import time
 import psutil
 import asyncio
@@ -26,12 +22,7 @@ class ExtractionBenchmark:
     
     def __init__(self):
         self.extractors = {
-            ExtractionMethod.SPACY_YAKE: SpacyYakeExtractor(),
-            ExtractionMethod.RAKE_NLTK: RakeExtractor(),
-            ExtractionMethod.TEXTRANK: TextRankExtractor(),
-            ExtractionMethod.TF_IDF: TfIdfExtractor(),
-            ExtractionMethod.KEYBERT: KeyBertExtractor(),
-            ExtractionMethod.HYBRID_ENSEMBLE: HybridEnsembleExtractor()
+            ExtractionMethod.SPACY_YAKE: SpacyYakeExtractor()
         }
         
         self.test_cases = []

@@ -28,11 +28,6 @@ class ExtractionResult:
 class ExtractionMethod(Enum):
     """Enumeration of available extraction methods"""
     SPACY_YAKE = "spacy_yake"
-    RAKE_NLTK = "rake_nltk" 
-    TEXTRANK = "textrank"
-    KEYBERT = "keybert"
-    TF_IDF = "tf_idf"
-    HYBRID_ENSEMBLE = "hybrid_ensemble"
 
 class BaseExtractor(ABC):
     """Abstract base class for all extraction methods"""

@@ -1,6 +1,6 @@
 # 🚀 SMAP Keyword Extraction Framework
 
-A production-ready keyword extraction framework with high performance, supporting English and Vietnamese. Achieves **76.2% overall performance** and **38.21% accuracy** across diverse text domains.
+A production-ready keyword extraction framework focused on the **SpaCy + YAKE** method. Achieves **76.2% overall performance** and **38.21% accuracy** across diverse text domains. Supports English and Vietnamese text processing.
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -10,8 +10,30 @@ A production-ready keyword extraction framework with high performance, supportin
 - **🏆 High Performance**: 76.2% overall score, 38.21% accuracy
 - **⚡ Fast Processing**: 15.93ms average response time
 - **🌐 Multilingual**: English and Vietnamese text processing
-- **📊 Compare 6 Algorithms**: SpaCy+YAKE, RAKE, TF-IDF, TextRank, KeyBERT, Hybrid
-- **📈 Auto Charts**: Automated chart generation and analysis reports
+- **🔬 Hybrid Method**: Combines NLP (spaCy) and statistical analysis (YAKE)
+- **📊 Production-Ready**: Complete implementation with comprehensive tests
+
+## 🛠️ Tech Stack
+
+- **Python 3.8+** - Core language
+- **spaCy 3.4+** - Natural language processing and linguistic feature extraction
+- **YAKE 0.4.8+** - Statistical keyword extraction algorithm
+- **NumPy 1.21+** - Numerical computations
+- **Pandas 1.3+** - Data processing and analysis
+- **Matplotlib 3.5+ / Seaborn 0.11+** - Data visualization
+- **PyYAML 6.0+** - Configuration management
+- **psutil 5.8+** - System and performance monitoring
+- **pytest 6.2+ / pytest-asyncio 0.18+** - Testing framework
+
+## 🏗️ Architecture
+
+- **Abstract Base Classes**: All extractors inherit from `BaseExtractor` with abstract `extract()` method
+- **Configuration Management**: Centralized YAML-based configuration via `ConfigManager`
+- **Result Objects**: Structured `ExtractionResult` dataclass containing keywords, metadata, and performance metrics
+- **Performance Monitoring**: Built-in decorator tracks processing time and memory usage
+- **Error Handling**: Graceful error handling with error messages in result objects
+- **Logging**: Structured logging with context managers
+- **Modular Design**: Clear separation between core extractors, utilities, configuration, and analysis modules
 
 ## 🚀 Quick Start
 
@@ -59,29 +81,23 @@ async def main():
 asyncio.run(main())
 ```
 
-## 📊 Results
+## 🏆 Performance Metrics
 
-After running experiments, you'll have:
+### SpaCy + YAKE Performance
 
-**📁 `experiment_results/`** - Data:
-- `comprehensive_analysis.json` - Main data
-- `experiment_summary_report.txt` - Summary report
+| Metric | Value |
+|--------|-------|
+| **Accuracy** | **38.21%** |
+| **Processing Speed** | **15.93ms** |
+| **Memory Usage** | **0.99 MB** |
+| **Overall Score** | **76.2%** |
 
-**📈 `experiment_visualizations/`** - Charts:
-- `performance_comparison.png` - Performance comparison
-- `domain_performance.png` - Domain performance
-- `radar_chart.png` - Radar chart
+### How It Works
 
-## 🏆 Algorithm Comparison
-
-| Algorithm | Accuracy | Speed (ms) | Memory (MB) |
-|-----------|----------|------------|-------------|
-| **SpaCy + YAKE** | **38.21%** | **15.93** | **0.99** |
-| Hybrid Ensemble | 32.30% | 17.42 | 1.12 |
-| RAKE | 14.79% | 0.21 | 0.03 |
-| KeyBERT | 19.47% | 118.08 | 2.74 |
-| TF-IDF | 17.67% | 0.77 | 0.01 |
-| TextRank | 0.00% | 1.02 | 0.25 |
+The **SpaCy + YAKE** method combines:
+- **Linguistic Features** (from spaCy): Named entities, noun chunks
+- **Statistical Analysis** (from YAKE): Statistical keyword extraction
+- **Intelligent Scoring**: Weighted combination of multiple keyword sources
 
 ## 🛠️ Available Commands
 
@@ -273,17 +289,16 @@ async def process_batch():
 asyncio.run(process_batch())
 ```
 
-### Step 4: Comprehensive Benchmarking
+### Step 4: Benchmarking
 
 ```python
-# comprehensive_benchmark.py
+# benchmark.py
 import asyncio
 from src.benchmark import ExtractionBenchmark
 from src.benchmark.test_datasets import create_research_test_dataset
-from src.visualization.charts import BenchmarkVisualizer
 
-async def run_comprehensive_benchmark():
-    print("🧪 Starting Comprehensive Benchmark")
+async def run_benchmark():
+    print("🧪 Starting Benchmark")
     print("=" * 50)
     
     # Initialize benchmark
@@ -302,30 +317,23 @@ async def run_comprehensive_benchmark():
         )
     
     print(f"📋 Loaded {len(test_cases)} test cases")
-    print("🔄 Running benchmark (this may take a few minutes)...")
+    print("🔄 Running benchmark...")
     
-    # Run comprehensive benchmark
+    # Run benchmark
     results_df = await benchmark.run_comprehensive_benchmark()
     
     # Display summary results
     print("\n📊 BENCHMARK RESULTS SUMMARY")
     print("=" * 60)
     
-    # Method performance ranking
-    method_performance = results_df.groupby('method').agg({
-        'accuracy': 'mean',
-        'processing_time': 'mean',
-        'confidence_score': 'mean',
-        'success': 'mean'
-    }).round(4)
+    # Performance metrics
+    avg_accuracy = results_df['accuracy'].mean()
+    avg_time = results_df['processing_time'].mean()
+    avg_confidence = results_df['confidence_score'].mean()
     
-    method_performance = method_performance.sort_values('accuracy', ascending=False)
-    
-    print("🏆 Algorithm Rankings by Accuracy:")
-    for i, (method, metrics) in enumerate(method_performance.iterrows(), 1):
-        print(f"{i}. {method:15} | Accuracy: {metrics['accuracy']:.1%} | "
-              f"Time: {metrics['processing_time']:.3f}s | "
-              f"Confidence: {metrics['confidence_score']:.1%}")
+    print(f"Average Accuracy: {avg_accuracy:.1%}")
+    print(f"Average Processing Time: {avg_time:.3f}s")
+    print(f"Average Confidence: {avg_confidence:.1%}")
     
     # Category performance
     print("\n📈 Performance by Category:")
@@ -337,21 +345,12 @@ async def run_comprehensive_benchmark():
     results_df.to_csv("benchmark_results.csv", index=False)
     benchmark.save_benchmark_report("benchmark_report.json")
     
-    # Generate visualizations
-    visualizer = BenchmarkVisualizer()
-    visualizer.create_comprehensive_charts(results_df, "./benchmark_charts/")
-    
     print(f"\n💾 Results saved:")
     print(f"   📄 CSV: benchmark_results.csv")
-    print(f"   📋 Report: benchmark_report.json") 
-    print(f"   📊 Charts: ./benchmark_charts/")
-    
-    # Get best method recommendation
-    best_method, best_score = benchmark.get_best_method('accuracy')
-    print(f"\n🎯 RECOMMENDATION: Use '{best_method}' (accuracy: {best_score:.1%})")
+    print(f"   📋 Report: benchmark_report.json")
 
 # Run the benchmark
-asyncio.run(run_comprehensive_benchmark())
+asyncio.run(run_benchmark())
 ```
 
 ### Step 5: Advanced Configuration and Optimization
@@ -647,17 +646,6 @@ python my_analysis.py
 
 ## 📊 Performance Benchmarks
 
-### Algorithm Comparison (30 test cases, 150 iterations)
-
-| Algorithm | Accuracy | Speed (ms) | Memory (MB) | Use Case |
-|-----------|----------|------------|-------------|----------|
-| **spaCy + YAKE** | **38.21%** | **15.93** | **0.99** | **Recommended for all domains** |
-| Hybrid Ensemble | 32.30% | 17.42 | 1.12 | Multi-algorithm consensus |
-| RAKE | 14.79% | 0.21 | 0.03 | Ultra-fast processing |
-| KeyBERT | 19.47% | 118.08 | 2.74 | Semantic understanding |
-| TF-IDF | 17.67% | 0.77 | 0.01 | Statistical baseline |
-| TextRank | 0.00% | 1.02 | 0.25 | Graph-based approach |
-
 ### Domain-Specific Performance
 
 | Domain | spaCy+YAKE Accuracy | Processing Time | Confidence |
@@ -709,24 +697,6 @@ enable_caching: true          # Enable result caching
 cache_size: 1000             # Cache size limit
 output_format: "json"        # Output format: json, csv, yaml
 include_metadata: true       # Include processing metadata
-
-# Algorithm-specific settings
-extractors:
-  rake:
-    enabled: true
-    timeout: 5.0
-    max_keywords: 20
-    parameters:
-      min_phrase_length: 2
-      max_phrase_length: 4
-  
-  keybert:
-    enabled: true
-    timeout: 60.0
-    max_keywords: 20
-    parameters:
-      model_name: "all-MiniLM-L6-v2"
-      diversity: 0.5
 ```
 
 ---
@@ -792,10 +762,6 @@ speed_config = SpacyYakeConfig(
     chunk_weight=0.3,     # Lower chunk weight
     yake_n=2,            # Only bigrams
 )
-
-# Or use RAKE for ultra-fast processing:
-from src.core.extractors import RakeExtractor
-fast_extractor = RakeExtractor()
 ```
 
 #### 6. **Low Accuracy**
