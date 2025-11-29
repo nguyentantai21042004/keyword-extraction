@@ -1,41 +1,43 @@
-# 🚀 SMAP Keyword Extraction Framework
+# Keyword Extraction Framework
 
 A production-ready keyword extraction framework focused on the **SpaCy + YAKE** method. Achieves **76.2% overall performance** and **38.21% accuracy** across diverse text domains. Supports English and Vietnamese text processing.
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## ✨ Key Features
+## Key Features
 
-- **🏆 High Performance**: 76.2% overall score, 38.21% accuracy
-- **⚡ Fast Processing**: 15.93ms average response time
-- **🌐 Multilingual**: English and Vietnamese text processing
-- **🔬 Hybrid Method**: Combines NLP (spaCy) and statistical analysis (YAKE)
-- **📊 Production-Ready**: Complete implementation with comprehensive tests
+- High Performance: 76.2% overall score, 38.21% accuracy
+- Fast Processing: 15.93ms average response time
+- Multilingual: English and Vietnamese text processing
+- Hybrid Method: Combines NLP (spaCy) and statistical analysis (YAKE)
+- Aspect Mapping: Automatic semantic categorization (PERFORMANCE, DESIGN, PRICE, etc.)
+- Bilingual Dictionaries: 300+ keywords for aspect classification (English + Vietnamese)
+- Production-Ready: Complete implementation with comprehensive tests
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **Python 3.8+** - Core language
-- **spaCy 3.4+** - Natural language processing and linguistic feature extraction
-- **YAKE 0.4.8+** - Statistical keyword extraction algorithm
-- **NumPy 1.21+** - Numerical computations
-- **Pandas 1.3+** - Data processing and analysis
-- **Matplotlib 3.5+ / Seaborn 0.11+** - Data visualization
-- **PyYAML 6.0+** - Configuration management
-- **psutil 5.8+** - System and performance monitoring
-- **pytest 6.2+ / pytest-asyncio 0.18+** - Testing framework
+- Python 3.8+ - Core language
+- spaCy 3.4+ - Natural language processing and linguistic feature extraction
+- YAKE 0.4.8+ - Statistical keyword extraction algorithm
+- NumPy 1.21+ - Numerical computations
+- Pandas 1.3+ - Data processing and analysis
+- Matplotlib 3.5+ / Seaborn 0.11+ - Data visualization
+- PyYAML 6.0+ - Configuration management
+- psutil 5.8+ - System and performance monitoring
+- pytest 6.2+ / pytest-asyncio 0.18+ - Testing framework
 
-## 🏗️ Architecture
+## Architecture
 
-- **Abstract Base Classes**: All extractors inherit from `BaseExtractor` with abstract `extract()` method
-- **Configuration Management**: Centralized YAML-based configuration via `ConfigManager`
-- **Result Objects**: Structured `ExtractionResult` dataclass containing keywords, metadata, and performance metrics
-- **Performance Monitoring**: Built-in decorator tracks processing time and memory usage
-- **Error Handling**: Graceful error handling with error messages in result objects
-- **Logging**: Structured logging with context managers
-- **Modular Design**: Clear separation between core extractors, utilities, configuration, and analysis modules
+- Abstract Base Classes: All extractors inherit from `BaseExtractor` with abstract `extract()` method
+- Configuration Management: Centralized YAML-based configuration via `ConfigManager`
+- Result Objects: Structured `ExtractionResult` dataclass containing keywords, metadata, and performance metrics
+- Performance Monitoring: Built-in decorator tracks processing time and memory usage
+- Error Handling: Graceful error handling with error messages in result objects
+- Logging: Structured logging with context managers
+- Modular Design: Clear separation between core extractors, utilities, configuration, and analysis modules
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Installation
 
@@ -81,34 +83,140 @@ async def main():
 asyncio.run(main())
 ```
 
-## 🏆 Performance Metrics
+## Aspect Mapping (NEW)
+
+The framework now supports automatic semantic categorization of keywords into domain-specific aspects.
+
+### What is Aspect Mapping?
+
+Aspect mapping automatically labels keywords with their semantic category, enabling:
+- Topic Analysis: Understand which aspects (topics) are mentioned
+- Sentiment by Aspect: Analyze sentiment for specific aspects (e.g., PRICE vs PERFORMANCE)
+- Better Insights: Know not just *what* keywords appear, but *what they relate to*
+
+### Supported Aspects
+
+- PERFORMANCE - Battery, speed, reliability, crashes, lag
+- DESIGN - Appearance, colors, materials, build quality
+- PRICE - Cost, value, expensive, affordable
+- QUALITY - Durability, craftsmanship, defects
+- SERVICE - Customer service, warranty, delivery, support
+
+### Usage Example
+
+```python
+import asyncio
+from src.core.extractors import SpacyYakeExtractor
+
+async def main():
+    # Enable aspect mapping with English dictionary
+    config = {
+        'enable_aspect_mapping': True,
+        'aspect_dictionary_path': 'config/aspect_dictionaries/default.yaml',
+        'max_keywords': 10
+    }
+
+    extractor = SpacyYakeExtractor(config)
+    text = "The battery life is excellent but the price is too high."
+    result = await extractor.extract(text)
+
+    # Keywords now include aspect labels
+    for kw in result.keywords:
+        print(f"{kw['keyword']:20s} → {kw['aspect']:15s} (score: {kw['score']:.3f})")
+
+    # Aspect statistics in metadata
+    print(f"\nAspect Distribution: {result.metadata['aspect_distribution']}")
+    print(f"Aspect Coverage: {result.metadata['aspect_coverage']:.1%}")
+
+asyncio.run(main())
+```
+
+**Output:**
+```
+battery life         → PERFORMANCE     (score: 0.991)
+excellent            → QUALITY         (score: 0.904)
+price                → PRICE           (score: 0.904)
+high                 → UNKNOWN         (score: 0.923)
+
+Aspect Distribution: {'PERFORMANCE': 1, 'QUALITY': 1, 'PRICE': 1, 'UNKNOWN': 1}
+Aspect Coverage: 75.0%
+```
+
+### Vietnamese Support
+
+The framework includes a bilingual Vietnamese dictionary with 193 keywords:
+
+```python
+config = {
+    'spacy_model': 'vi_core_news_lg',  # Vietnamese model
+    'yake_language': 'vi',
+    'enable_aspect_mapping': True,
+    'aspect_dictionary_path': 'config/aspect_dictionaries/vietnamese.yaml',
+}
+
+extractor = SpacyYakeExtractor(config)
+text = "Pin tốt nhưng giá hơi đắt."  # Good battery but price is a bit expensive
+result = await extractor.extract(text)
+# "pin" → PERFORMANCE, "giá" → PRICE
+```
+
+### Custom Aspect Dictionaries
+
+Create your own domain-specific dictionaries:
+
+```yaml
+# config/aspect_dictionaries/custom.yaml
+aspects:
+  PERFORMANCE:
+    keywords:
+      - battery
+      - speed
+      - fast
+      - slow
+
+  DESIGN:
+    keywords:
+      - beautiful
+      - ugly
+      - color
+```
+
+Then use it:
+```python
+config = {
+    'enable_aspect_mapping': True,
+    'aspect_dictionary_path': 'config/aspect_dictionaries/custom.yaml'
+}
+```
+
+## Performance Metrics
 
 ### SpaCy + YAKE Performance
 
 | Metric | Value |
 |--------|-------|
-| **Accuracy** | **38.21%** |
-| **Processing Speed** | **15.93ms** |
-| **Memory Usage** | **0.99 MB** |
-| **Overall Score** | **76.2%** |
+| Accuracy | 38.21% |
+| Processing Speed | 15.93ms |
+| Memory Usage | 0.99 MB |
+| Overall Score | 76.2% |
 
 ### How It Works
 
-The **SpaCy + YAKE** method combines:
-- **Linguistic Features** (from spaCy): Named entities, noun chunks
-- **Statistical Analysis** (from YAKE): Statistical keyword extraction
-- **Intelligent Scoring**: Weighted combination of multiple keyword sources
+The SpaCy + YAKE method combines:
+- Linguistic Features (from spaCy): Named entities, noun chunks
+- Statistical Analysis (from YAKE): Statistical keyword extraction
+- Intelligent Scoring: Weighted combination of multiple keyword sources
 
-## 🛠️ Available Commands
+## Available Commands
 
 | Command | Purpose |
 |---------|---------|
 | `python scripts/test_simple.py` | Basic test |
 | `python scripts/demo.py` | Quick demo |
-| `python scripts/run_experiments.py` | **Run everything** |
+| `python scripts/run_experiments.py` | Run everything |
 | `python scripts/generate_charts.py` | Generate charts only |
 
-## 🚨 Common Issues
+## Common Issues
 
 ### spaCy model error
 ```bash
@@ -127,13 +235,13 @@ cd smap-keyword-extraction
 python scripts/test_simple.py
 ```
 
-## 📖 Detailed Documentation
+## Detailed Documentation
 
 See "End-to-End Usage Guide" below for advanced usage.
 
 ---
 
-## 📖 End-to-End Usage Guide
+## End-to-End Usage Guide
 
 ### Step 1: Configuration Setup
 
@@ -157,7 +265,7 @@ config.spacy_yake.yake_n = 3  # Use trigrams
 # Save configuration
 config_manager.save_config(config)
 
-print("✅ Configuration saved to my_config.yaml")
+print("Configuration saved to my_config.yaml")
 ```
 
 ### Step 2: Single Text Analysis
@@ -172,7 +280,7 @@ from src.core.utils import setup_logging
 async def analyze_single_text():
     # Setup logging
     logger = setup_logging(__name__)
-    logger.info("🚀 Starting single text analysis")
+    logger.info("Starting single text analysis")
     
     # Load custom configuration
     config_manager = get_config_manager("my_config.yaml")
@@ -194,13 +302,13 @@ async def analyze_single_text():
         
         # Detailed analysis
         print("=" * 60)
-        print("📈 BUSINESS TEXT ANALYSIS RESULTS")
+        print("BUSINESS TEXT ANALYSIS RESULTS")
         print("=" * 60)
-        print(f"📊 Keywords found: {len(result.keywords)}")
-        print(f"⏱️  Processing time: {result.processing_time:.3f}s")
-        print(f"💾 Memory usage: {result.memory_usage:.2f}MB")
-        print(f"🎯 Confidence score: {result.confidence_score:.1%}")
-        print(f"✅ Success: {result.success}")
+        print(f"Keywords found: {len(result.keywords)}")
+        print(f"Processing time: {result.processing_time:.3f}s")
+        print(f"Memory usage: {result.memory_usage:.2f}MB")
+        print(f"Confidence score: {result.confidence_score:.1%}")
+        print(f"Success: {result.success}")
         print()
         
         # Group keywords by type
@@ -213,13 +321,13 @@ async def analyze_single_text():
         
         # Display by type
         for kw_type, keywords in keyword_types.items():
-            print(f"🏷️  {kw_type.title()} Keywords:")
+            print(f"{kw_type.title()} Keywords:")
             for kw in keywords[:5]:  # Top 5 per type
                 print(f"   • {kw['keyword']} (score: {kw['score']:.3f})")
             print()
             
     except Exception as e:
-        logger.error(f"❌ Analysis failed: {e}")
+        logger.error(f"Analysis failed: {e}")
 
 # Run analysis
 asyncio.run(analyze_single_text())
@@ -241,7 +349,7 @@ async def process_batch():
     # Sample texts from different domains
     texts = {
         "social_media": """
-        Just discovered #sustainablefashion trends! 🌱 @patagonia's new eco-line 
+        Just discovered #sustainablefashion trends! @patagonia's new eco-line 
         is amazing. The collection features organic cotton and recycled materials. 
         #ecofriendly #fashiontech #innovation
         """,
@@ -268,14 +376,14 @@ async def process_batch():
             result = await extractor.extract(text)
             results[domain] = result
             
-            print(f"\n📋 {domain.title()} Domain Results:")
+            print(f"\n{domain.title()} Domain Results:")
             print(f"   Keywords: {len(result.keywords)}")
             print(f"   Top 3: {', '.join([kw['keyword'] for kw in result.keywords[:3]])}")
             print(f"   Time: {result.processing_time:.3f}s")
             print(f"   Confidence: {result.confidence_score:.1%}")
     
     # Performance summary
-    print("\n📊 BATCH PROCESSING SUMMARY")
+    print("\nBATCH PROCESSING SUMMARY")
     print("=" * 50)
     avg_time = sum(r.processing_time for r in results.values()) / len(results)
     avg_confidence = sum(r.confidence_score for r in results.values()) / len(results)
@@ -298,7 +406,7 @@ from src.benchmark import ExtractionBenchmark
 from src.benchmark.test_datasets import create_research_test_dataset
 
 async def run_benchmark():
-    print("🧪 Starting Benchmark")
+    print("Starting Benchmark")
     print("=" * 50)
     
     # Initialize benchmark
@@ -316,14 +424,14 @@ async def run_benchmark():
             language=case.get('language', 'en')
         )
     
-    print(f"📋 Loaded {len(test_cases)} test cases")
-    print("🔄 Running benchmark...")
+    print(f"Loaded {len(test_cases)} test cases")
+    print("Running benchmark...")
     
     # Run benchmark
     results_df = await benchmark.run_comprehensive_benchmark()
     
     # Display summary results
-    print("\n📊 BENCHMARK RESULTS SUMMARY")
+    print("\nBENCHMARK RESULTS SUMMARY")
     print("=" * 60)
     
     # Performance metrics
@@ -336,7 +444,7 @@ async def run_benchmark():
     print(f"Average Confidence: {avg_confidence:.1%}")
     
     # Category performance
-    print("\n📈 Performance by Category:")
+    print("\nPerformance by Category:")
     category_performance = results_df.groupby('category')['accuracy'].mean().sort_values(ascending=False)
     for category, accuracy in category_performance.items():
         print(f"   {category:15}: {accuracy:.1%}")
@@ -345,9 +453,9 @@ async def run_benchmark():
     results_df.to_csv("benchmark_results.csv", index=False)
     benchmark.save_benchmark_report("benchmark_report.json")
     
-    print(f"\n💾 Results saved:")
-    print(f"   📄 CSV: benchmark_results.csv")
-    print(f"   📋 Report: benchmark_report.json")
+    print(f"\nResults saved:")
+    print(f"   CSV: benchmark_results.csv")
+    print(f"   Report: benchmark_report.json")
 
 # Run the benchmark
 asyncio.run(run_benchmark())
@@ -363,7 +471,7 @@ from src.core.extractors import SpacyYakeExtractor
 from src.analysis import PerformanceAnalyzer
 
 async def optimize_for_domain():
-    print("🔬 Advanced Domain Optimization")
+    print("Advanced Domain Optimization")
     print("=" * 40)
     
     # Create domain-specific configurations
@@ -394,7 +502,7 @@ async def optimize_for_domain():
     test_texts = {
         "social_media": """
         Breaking: #OpenAI just released #GPT4Turbo with incredible performance improvements! 
-        🚀 Faster processing, lower costs, and better accuracy. The AI revolution continues! 
+        Faster processing, lower costs, and better accuracy. The AI revolution continues! 
         @developers are going to love this. #ArtificialIntelligence #MachineLearning #Tech
         """,
         
@@ -414,7 +522,7 @@ async def optimize_for_domain():
     # Test each configuration
     results = {}
     for domain, config in configs.items():
-        print(f"\n🎯 Testing {domain.title()} Configuration:")
+        print(f"\nTesting {domain.title()} Configuration:")
         
         extractor = SpacyYakeExtractor(config.__dict__)
         result = await extractor.extract(test_texts[domain])
@@ -426,7 +534,7 @@ async def optimize_for_domain():
         print(f"   Top 5: {', '.join([kw['keyword'] for kw in result.keywords[:5]])}")
     
     # Performance comparison
-    print(f"\n📊 OPTIMIZATION COMPARISON")
+    print(f"\nOPTIMIZATION COMPARISON")
     print("=" * 50)
     for domain, result in results.items():
         print(f"{domain:15} | Time: {result.processing_time:.3f}s | "
@@ -470,7 +578,7 @@ class ProductionKeywordExtractor:
         self.request_count = 0
         self.total_processing_time = 0.0
         
-        self.logger.info("🚀 Production KeywordExtractor initialized")
+        self.logger.info("Production KeywordExtractor initialized")
     
     async def extract_keywords(self, text: str, request_id: str = None) -> dict:
         """Extract keywords with production logging and monitoring"""
@@ -538,7 +646,7 @@ class ProductionKeywordExtractor:
 
 # Production usage example
 async def production_demo():
-    print("🏭 Production Deployment Demo")
+    print("Production Deployment Demo")
     print("=" * 40)
     
     # Initialize production service
@@ -548,7 +656,7 @@ async def production_demo():
     sample_requests = [
         {
             "id": "social_001",
-            "text": "Excited to announce our new #AI product launch! 🚀 #MachineLearning #Innovation"
+            "text": "Excited to announce our new #AI product launch! #MachineLearning #Innovation"
         },
         {
             "id": "business_001", 
@@ -561,7 +669,7 @@ async def production_demo():
     ]
     
     # Process requests
-    print("🔄 Processing production requests...\n")
+    print("Processing production requests...\n")
     
     for request in sample_requests:
         response = await service.extract_keywords(
@@ -569,20 +677,20 @@ async def production_demo():
             request["id"]
         )
         
-        print(f"📋 Request {response['request_id']}:")
+        print(f"Request {response['request_id']}:")
         if response["status"] == "success":
-            print(f"   ✅ Status: {response['status']}")
-            print(f"   ⏱️  Time: {response['metadata']['processing_time']:.3f}s")
-            print(f"   🎯 Confidence: {response['metadata']['confidence_score']:.1%}")
-            print(f"   📝 Keywords: {len(response['keywords'])}")
-            print(f"   🔑 Top 3: {', '.join([kw['keyword'] for kw in response['keywords'][:3]])}")
+            print(f"   Status: {response['status']}")
+            print(f"   Time: {response['metadata']['processing_time']:.3f}s")
+            print(f"   Confidence: {response['metadata']['confidence_score']:.1%}")
+            print(f"   Keywords: {len(response['keywords'])}")
+            print(f"   Top 3: {', '.join([kw['keyword'] for kw in response['keywords'][:3]])}")
         else:
-            print(f"   ❌ Error: {response['error']}")
+            print(f"   Error: {response['error']}")
         print()
     
     # Display performance statistics
     stats = service.get_performance_stats()
-    print("📊 Performance Statistics:")
+    print("Performance Statistics:")
     print(f"   Total requests: {stats['total_requests']}")
     print(f"   Average time: {stats['average_processing_time']:.3f}s")
     print(f"   Throughput: {stats['requests_per_second']:.1f} requests/second")
@@ -593,7 +701,7 @@ asyncio.run(production_demo())
 
 ---
 
-## 🛠️ Command Line Usage
+## Command Line Usage
 
 ### All Available Commands
 
@@ -601,7 +709,7 @@ asyncio.run(production_demo())
 |---------|---------|--------|
 | `python scripts/demo.py` | Quick algorithm demo | Show extraction results |
 | `python scripts/test_simple.py` | Basic functionality test | Check framework works |
-| `python scripts/run_experiments.py` | **Run comprehensive experiments** | Generate data + charts |
+| `python scripts/run_experiments.py` | Run comprehensive experiments | Generate data + charts |
 | `python scripts/main.py` | Main entry point | Same as run_experiments.py |
 | `python -m src.experiments.run_all` | Run module directly | Same as main.py |
 | `python scripts/generate_charts.py` | Generate charts only | Create visualizations from existing data |
@@ -644,22 +752,22 @@ python my_analysis.py
 
 ---
 
-## 📊 Performance Benchmarks
+## Performance Benchmarks
 
 ### Domain-Specific Performance
 
-| Domain | spaCy+YAKE Accuracy | Processing Time | Confidence |
-|---------|-------------------|-----------------|------------|
-| **Social Media** | **47.23%** | 9.91ms | 97.41% |
-| **Short Text** | **49.60%** | 3.20ms | 99.22% |
-| **Technical** | **44.03%** | 18.91ms | 94.22% |
-| **Business** | **37.40%** | 19.30ms | 95.48% |
-| **Challenging** | **35.01%** | 29.66ms | 100.0% |
-| **Vietnamese** | **15.96%** | 13.38ms | 98.01% |
+| Domain         | spaCy+YAKE Accuracy | Processing Time | Confidence |
+|----------------|--------------------|----------------|------------|
+| Social Media   | 47.23%             | 9.91ms         | 97.41%     |
+| Short Text     | 49.60%             | 3.20ms         | 99.22%     |
+| Technical      | 44.03%             | 18.91ms        | 94.22%     |
+| Business       | 37.40%             | 19.30ms        | 95.48%     |
+| Challenging    | 35.01%             | 29.66ms        | 100.0%     |
+| Vietnamese     | 15.96%             | 13.38ms        | 98.01%     |
 
 ---
 
-## 🔧 Configuration Reference
+## Configuration Reference
 
 ### YAML Configuration Example
 
@@ -701,11 +809,11 @@ include_metadata: true       # Include processing metadata
 
 ---
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### Common Issues and Solutions
 
-#### 1. **spaCy Model Not Found**
+#### 1. spaCy Model Not Found
 ```bash
 # Error: Can't find model 'en_core_web_sm'
 # Solution:
@@ -716,13 +824,11 @@ python -m spacy download en_core_web_lg  # Large model
 python -m spacy download xx_ent_wiki_sm  # Multilingual
 ```
 
-#### 2. **Import Errors**
+#### 2. Import Errors
 ```python
 # Error: ModuleNotFoundError: No module named 'src'
 # Solution: Run from project root directory
-# ✅ Fixed in new scripts
 
-# If still getting error, add to script beginning:
 import sys
 from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -730,14 +836,14 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 ```
 
-#### 3. **NLTK Data Missing**
+#### 3. NLTK Data Missing
 ```bash
 # Error: NLTK data not found
 # Solution:
 python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords'); nltk.download('averaged_perceptron_tagger')"
 ```
 
-#### 4. **Memory Issues**
+#### 4. Memory Issues
 ```python
 # Error: Out of memory during processing
 # Solution: Reduce batch size and text length
@@ -753,7 +859,7 @@ def chunk_text(text, chunk_size=1000):
         yield ' '.join(words[i:i+chunk_size])
 ```
 
-#### 5. **Slow Performance**
+#### 5. Slow Performance
 ```python
 # Solution: Optimize configuration for speed
 speed_config = SpacyYakeConfig(
@@ -764,7 +870,7 @@ speed_config = SpacyYakeConfig(
 )
 ```
 
-#### 6. **Low Accuracy**
+#### 6. Low Accuracy
 ```python
 # Solution: Tune parameters for better accuracy
 accuracy_config = SpacyYakeConfig(
@@ -776,7 +882,7 @@ accuracy_config = SpacyYakeConfig(
 )
 ```
 
-#### 7. **Scripts not working**
+#### 7. Scripts not working
 ```bash
 # Check running order:
 1. python scripts/test_simple.py  # Basic test
@@ -822,8 +928,8 @@ def monitor_performance(func):
         end_time = time.perf_counter()
         end_memory = psutil.Process().memory_info().rss / 1024 / 1024
         
-        print(f"⏱️  Time: {end_time - start_time:.3f}s")
-        print(f"💾 Memory: {end_memory - start_memory:.2f}MB")
+        print(f"Time: {end_time - start_time:.3f}s")
+        print(f"Memory: {end_memory - start_memory:.2f}MB")
         
         return result
     return wrapper
@@ -832,9 +938,3 @@ def monitor_performance(func):
 async def extract_keywords(text):
     return await extractor.extract(text)
 ```
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

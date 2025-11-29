@@ -1,0 +1,171 @@
+# Default Aspect Dictionary for Product Reviews (English)
+#
+# This dictionary maps keywords to semantic aspects/domains commonly found
+# in product reviews, customer feedback, and general text analysis.
+#
+# Format:
+#   aspects:
+#     ASPECT_NAME:
+#       keywords:
+#         - keyword1
+#         - keyword2
+#
+# Note: Keywords are matched case-insensitively
+
+aspects:
+  PERFORMANCE:
+    keywords:
+      # Battery and Power
+      - battery
+      - power
+      - charging
+      - charge
+      - battery life
+      - power consumption
+
+      # Speed and Responsiveness
+      - speed
+      - fast
+      - slow
+      - lag
+      - laggy
+      - responsive
+      - performance
+      - quick
+
+      # Reliability
+      - crash
+      - freeze
+      - hang
+      - bug
+      - error
+      - issue
+      - problem
+      - stable
+      - reliability
+      - reliable
+
+  DESIGN:
+    keywords:
+      # Appearance
+      - design
+      - appearance
+      - look
+      - looks
+      - aesthetic
+      - aesthetics
+      - beautiful
+      - ugly
+      - pretty
+
+      # Colors and Styles
+      - color
+      - colour
+      - style
+      - sleek
+      - modern
+      - classic
+
+      # Build and Materials
+      - build
+      - build quality
+      - material
+      - materials
+      - plastic
+      - metal
+      - glass
+      - premium
+      - cheap feel
+
+  PRICE:
+    keywords:
+      # Cost
+      - price
+      - cost
+      - expensive
+      - cheap
+      - affordable
+      - pricing
+      - overpriced
+      - underpriced
+
+      # Value
+      - value
+      - worth
+      - value for money
+      - bang for buck
+      - deal
+      - bargain
+
+      # Payment
+      - payment
+      - pay
+      - money
+      - dollar
+      - dollars
+
+  QUALITY:
+    keywords:
+      # Overall Quality
+      - quality
+      - high quality
+      - low quality
+      - premium
+      - excellent
+      - poor
+
+      # Durability
+      - durable
+      - durability
+      - sturdy
+      - solid
+      - fragile
+      - breaks
+      - broken
+      - defect
+      - defective
+
+      # Craftsmanship
+      - craftsmanship
+      - well-made
+      - poorly-made
+      - construction
+
+  SERVICE:
+    keywords:
+      # Customer Service
+      - service
+      - customer service
+      - support
+      - customer support
+      - help
+      - assistance
+
+      # Staff and Experience
+      - staff
+      - employee
+      - representative
+      - agent
+      - helpful
+      - unhelpful
+      - rude
+      - polite
+      - friendly
+
+      # Warranty and Repairs
+      - warranty
+      - guarantee
+      - repair
+      - replacement
+      - return
+      - refund
+      - exchange
+
+      # Delivery
+      - delivery
+      - shipping
+      - ship
+      - arrived
+      - delivery time
+      - fast delivery
+      - slow delivery

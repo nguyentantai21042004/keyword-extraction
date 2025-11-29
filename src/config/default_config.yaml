@@ -12,6 +12,29 @@ spacy_yake:
   max_keywords: 30
   timeout: 30.0
 
+  # Aspect mapping configuration (disabled by default for backward compatibility)
+  enable_aspect_mapping: false
+  aspect_dictionary_path: "config/aspect_dictionaries/default.yaml"
+  unknown_aspect_label: "UNKNOWN"
+
+# Vietnamese language profile for SpaCy+YAKE extractor
+spacy_yake_vi:
+  enabled: true
+  spacy_model: "vi_core_news_lg"  # Requires: python -m spacy download vi_core_news_lg
+  yake_language: "vi"
+  yake_n: 3  # Vietnamese multi-word terms often require larger N-grams
+  yake_dedup_lim: 0.9  # Higher deduplication threshold for Vietnamese
+  yake_max_keywords: 30
+  entity_weight: 0.7
+  chunk_weight: 0.5
+  max_keywords: 30
+  timeout: 30.0
+
+  # Aspect mapping enabled by default for Vietnamese (for product review analysis)
+  enable_aspect_mapping: true
+  aspect_dictionary_path: "config/aspect_dictionaries/vietnamese.yaml"
+  unknown_aspect_label: "UNKNOWN"
+
 benchmark:
   max_timeout: 30.0
   iterations: 1

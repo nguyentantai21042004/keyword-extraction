@@ -64,6 +64,10 @@ class BaseExtractor(ABC):
                     'type': str(kw.get('type', 'unknown')),
                     'relevance': float(kw.get('relevance', kw.get('score', 0.0)))
                 }
+                # Preserve aspect field if present
+                if 'aspect' in kw:
+                    normalized_kw['aspect'] = kw['aspect']
+
                 if normalized_kw['keyword']:  # Only add non-empty keywords
                     normalized.append(normalized_kw)
         return normalized

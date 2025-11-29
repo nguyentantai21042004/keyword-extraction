@@ -46,6 +46,11 @@ class SpacyYakeConfig(ExtractorConfig):
     entity_weight: float = 0.7
     chunk_weight: float = 0.5
 
+    # Aspect mapping configuration
+    enable_aspect_mapping: bool = False
+    aspect_dictionary_path: str = "config/aspect_dictionaries/default.yaml"
+    unknown_aspect_label: str = "UNKNOWN"
+
 
 @dataclass
 class BenchmarkConfig:

@@ -1,0 +1,248 @@
+# Vietnamese Aspect Dictionary for Product Reviews
+#
+# This dictionary maps both Vietnamese and English keywords to semantic aspects.
+# Many Vietnamese texts contain English loanwords and technical terms, so this
+# dictionary includes bilingual keywords for better coverage.
+#
+# Format:
+#   aspects:
+#     ASPECT_NAME:
+#       keywords:
+#         - keyword1 (Vietnamese)
+#         - keyword2 (English)
+#
+# Note: Keywords are matched case-insensitively
+
+aspects:
+  PERFORMANCE:
+    keywords:
+      # Battery and Power (Pin và Năng lượng)
+      - pin
+      - battery
+      - sạc
+      - charging
+      - charge
+      - năng lượng
+      - power
+      - pin yếu
+      - pin tốt
+      - hao pin
+      - tiêu thụ pin
+
+      # Speed and Responsiveness (Tốc độ)
+      - tốc độ
+      - speed
+      - nhanh
+      - fast
+      - chậm
+      - slow
+      - lag
+      - giật
+      - trơn tru
+      - mượt
+      - smooth
+      - responsive
+      - phản hồi
+      - hiệu suất
+      - performance
+
+      # Reliability (Độ tin cậy)
+      - lỗi
+      - error
+      - bug
+      - treo
+      - crash
+      - đơ
+      - freeze
+      - hang
+      - ổn định
+      - stable
+      - vấn đề
+      - problem
+      - sự cố
+      - hỏng
+
+  DESIGN:
+    keywords:
+      # Appearance (Ngoại hình)
+      - thiết kế
+      - design
+      - ngoại hình
+      - appearance
+      - đẹp
+      - beautiful
+      - xấu
+      - ugly
+      - sang trọng
+      - premium
+      - bắt mắt
+      - hấp dẫn
+
+      # Colors and Styles (Màu sắc và Phong cách)
+      - màu
+      - màu sắc
+      - color
+      - colour
+      - phong cách
+      - style
+      - hiện đại
+      - modern
+      - cổ điển
+      - classic
+      - kiểu dáng
+
+      # Build and Materials (Chất liệu)
+      - chất liệu
+      - material
+      - vật liệu
+      - nhựa
+      - plastic
+      - kim loại
+      - metal
+      - kính
+      - glass
+      - ngoại thất
+      - exterior
+      - nội thất
+      - interior
+      - hoàn thiện
+      - finish
+
+  PRICE:
+    keywords:
+      # Cost (Giá cả)
+      - giá
+      - price
+      - giá cả
+      - tiền
+      - money
+      - đắt
+      - expensive
+      - rẻ
+      - cheap
+      - mắc
+      - costly
+      - phải chăng
+      - affordable
+      - giá tốt
+      - good price
+      - giá cao
+      - high price
+
+      # Value (Giá trị)
+      - giá trị
+      - value
+      - xứng đáng
+      - worth
+      - đáng tiền
+      - value for money
+      - hời
+      - bargain
+      - đắt xắt ra miếng
+
+      # Payment (Thanh toán)
+      - thanh toán
+      - payment
+      - trả tiền
+      - pay
+      - lăn bánh
+      - cọc
+      - deposit
+      - trả góp
+      - installment
+
+  QUALITY:
+    keywords:
+      # Overall Quality (Chất lượng tổng thể)
+      - chất lượng
+      - quality
+      - tốt
+      - good
+      - kém
+      - poor
+      - xuất sắc
+      - excellent
+      - tệ
+      - bad
+      - cao cấp
+      - premium
+      - hạng sang
+      - luxury
+
+      # Durability (Độ bền)
+      - bền
+      - durable
+      - độ bền
+      - durability
+      - chắc chắn
+      - sturdy
+      - solid
+      - dễ hỏng
+      - fragile
+      - breaks
+      - vỡ
+      - broken
+      - lỗi sản xuất
+      - defect
+      - kém chất lượng
+
+  SERVICE:
+    keywords:
+      # Customer Service (Dịch vụ khách hàng)
+      - dịch vụ
+      - service
+      - chăm sóc khách hàng
+      - customer service
+      - hỗ trợ
+      - support
+      - customer support
+      - tư vấn
+      - consultation
+
+      # Staff and Experience (Nhân viên)
+      - nhân viên
+      - staff
+      - employee
+      - tư vấn viên
+      - sale
+      - sales
+      - thái độ
+      - attitude
+      - nhiệt tình
+      - helpful
+      - lịch sự
+      - polite
+      - thân thiện
+      - friendly
+      - hỗ trợ tốt
+      - good support
+
+      # Warranty and Repairs (Bảo hành)
+      - bảo hành
+      - warranty
+      - guarantee
+      - sửa chữa
+      - repair
+      - thay thế
+      - replacement
+      - đổi trả
+      - return
+      - hoàn tiền
+      - refund
+
+      # Delivery (Giao hàng)
+      - giao hàng
+      - delivery
+      - vận chuyển
+      - shipping
+      - ship
+      - đã nhận
+      - received
+      - arrived
+      - nhanh
+      - fast delivery
+      - chậm
+      - slow delivery
+      - showroom
+      - cứu hộ
+      - rescue
